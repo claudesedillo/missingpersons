@@ -1,0 +1,50 @@
+
+/* Nav Bar */
+	.menuBar{
+		padding: 20px;/*2%;*/
+		border-radius: 0px;
+		margin-bottom: 0px;	
+		border: none;
+		position: sticky;
+		top: -1px;
+		z-index: 100;
+	}
+
+	.menuBar *{
+		color: black;
+	}
+
+	#navBar, #navBarHeader, #collapsibleOptions{	
+	   // Animation
+	   -webkit-transition: all 0.4s ease;
+	   transition: all 0.4s ease;
+	}
+
+	#navBarHeader{
+		color: black;
+		font-size: 30px;
+	}
+
+	#collapsibleOptions{
+		width: fit-content;
+		font-size: medium;
+	}
+
+	#collapsibleButton{
+		border-color: black;
+		background: none;
+		margin-top: 15px;
+	}
+	
+	.icon-bar{
+		background-color: black;
+	}
+
+	#collapsibleOptions a:hover, 
+	#collapsibleOptions a:focus{
+		background-color: transparent;
+	}
+
+	.navbar-nav li a {
+		line-height: 50px;
+	}

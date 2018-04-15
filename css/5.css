@@ -1,0 +1,49 @@
+body{
+    padding-top:80px;
+}
+.padding-20{
+    padding: 20px;
+}
+.padding-10{
+    padding: 10px;
+}
+.width-85{
+    width: 85%;
+}
+#reply-field{
+    resize: none;
+}
+.thread-post-user-info{
+    background: black;
+}
+.message-div{
+    background: white;
+}
+#reply-header{
+    background: black;
+}
+.user-admin{
+    color: #0fa00f;
+}
+.user-normal{
+    color: white;
+}
+.user-poster{
+    color: #15e4ff;
+}
+.text-white{
+    color: white;
+}
+.border-black{
+    border: 1px solid black;
+}
+.float-right{
+    float: right;
+    margin: 2px;
+}
+.background-black{
+    background: black;
+}
+#description{
+    text-align: justify;
+}
