@@ -48,9 +48,15 @@
 
 
 #contactDivForm{
-	width: 60%
+	width: 60%;
 }
 
+@media only screen
+and (max-width: 800px){
+	#contactDivForm{
+		width: 90%;
+	}
+}
 input, textArea{
 	border-style: inset; 
 	width: 100%;
