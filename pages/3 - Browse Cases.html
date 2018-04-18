@@ -1,51 +1,38 @@
 <html>
 	<head>
-		<title>#9</title>
+		<title>3 - Browse Cases</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+        
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
 		<link rel="stylesheet" href="../css/general.css">
 		<link rel="stylesheet" href="../css/navBar.css">
+        
 		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
 				integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
 				crossorigin="anonymous"></script>
-
-
+        
+        <script type="text/javascript" src="../script/General.js"></script>
 	</head>
-	
 	<body>
-
-	
 		<nav id = "navBar" class = "menuBar navbar"></nav>
 
 		<div class = 'container'>
-			<ul class="breadcrumb">
-				<li><a href="#">About</a></li>
-				<li><a href="#">FAQ</a></li>
-			</ul>
+			<h3>CURRENTLY MISSING</h3><br>
 			
-			<h1><b>FREQUENTLY ASKED QUESTIONS</b></h1>
-
-			<div class = 'container'>
-				<button class="accordion">Question 1</button>
-					<div class="panel">
-					<p>Lorem ipsum...</p>
-				</div>
-
-				<button class="accordion">Question 2</button>
-					<div class="panel">
-					<p>Lorem ipsum...</p>
-				</div>
-
-				<button class="accordion">Question 3</button>
-					<div class="panel">
-					<p>Lorem ipsum...</p>
-				</div>
-			</div>
+			<ul class="breadcrumb">
+				<li><a href="#">2017</a></li>
+				<li><a href="#">2018</a></li>
+				<li><a href="#">2019</a></li>
+			</ul>
+			<div id="caseFeed"></div>
+			<button id = 'loadMoreButton'>LOAD MORE</button>
 		</div>
+        
 		
-		<script type="text/javascript" src="../script/General.js"></script>
 	</body>
 </html>
