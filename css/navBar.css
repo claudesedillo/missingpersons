@@ -1,47 +1,51 @@
-.menuBar{
-    border-radius: 0px;
-    margin-bottom: 0px;	
-    border: none;
-    position: sticky;
-    z-index: 100;
-    background-color: lightgray;
-}
-.menuBar * {
-    color: black;
-    font-size: 12px;
-}
 
-.menuBar .navbar-brand {
-    font-size: 18;
-}
+/* Nav Bar */
+	.menuBar{
+		padding: 20px;/*2%;*/
+		border-radius: 0px;
+		margin-bottom: 0px;	
+		border: none;
+		position: sticky;
+		top: -1px;
+		z-index: 100;
+		background: white;
+	}
 
-#navBar, #navBarHeader, #collapsibleOptions{	
-   // Animation
-   -webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
-}
+	.menuBar *{
+		color: black;
+	}
 
-#navBarHeader{
-    color: black;
-    font-size: 30px;
-}
+	#navBar, #navBarHeader, #collapsibleOptions{	
+	   // Animation
+	   -webkit-transition: all 0.4s ease;
+	   transition: all 0.4s ease;
+	}
 
-#collapsibleOptions{
-    width: fit-content;
-    font-size: medium;
-}
+	#navBarHeader{
+		color: black;
+		font-size: 30px;
+	}
 
-#collapsibleButton{
-    border-color: black;
-    background: none;
-    margin-top: 15px;
-}
+	#collapsibleOptions{
+		//width: fit-content;
+		font-size: medium;
+	}
 
-.icon-bar {
-    background-color: black;
-}
+	#collapsibleButton{
+		border-color: black;
+		background: none;
+		margin-top: 15px;
+	}
+	
+	.icon-bar{
+		background-color: black;
+	}
 
-#collapsibleOptions a:hover, 
-#collapsibleOptions a:focus{
-    background-color: transparent;
-}
+	#collapsibleOptions a:hover, 
+	#collapsibleOptions a:focus{
+		background-color: transparent;
+	}
+
+	.navbar-nav li a {
+		line-height: 50px;
+	}
