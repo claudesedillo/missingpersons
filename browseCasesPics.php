@@ -1,5 +1,5 @@
 <?php
-	/* Template Name: 3 - Browse Cases
+	/* Template Name: 3 - Browse Cases (With Pictures)
 	 */
 	get_header();
 ?>

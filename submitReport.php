@@ -1,5 +1,5 @@
 <?php
-	/* Template Name: 7c - Submit Report
+	/* Template Name: 7 - Submit Report
 	 */
 	get_header();
 ?>
