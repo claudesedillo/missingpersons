@@ -14,17 +14,17 @@
 
 	<div class = 'container'>
 		<button class="accordion">Question 1</button>
-			<div class="panel">
+			<div class="accordionPannel">
 			<p>Lorem ipsum...</p>
 		</div>
 
 		<button class="accordion">Question 2</button>
-			<div class="panel">
+			<div class="accordionPannel">
 			<p>Lorem ipsum...</p>
 		</div>
 
 		<button class="accordion">Question 3</button>
-			<div class="panel">
+			<div class="accordionPannel">
 			<p>Lorem ipsum...</p>
 		</div>
 	</div>
