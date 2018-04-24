@@ -269,6 +269,10 @@ h2{
     text-decoration: underline;
 }
 
+/*html, body, .container-fluid, .row {
+    height: 100%;
+}*/
+
 .sidebar {
     background-color: #CCCCCC;
 }
