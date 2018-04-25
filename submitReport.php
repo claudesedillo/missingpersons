@@ -17,7 +17,7 @@
 		$weight   	 = $_POST['weight'];
 		$details 	 = $_POST['details'];
 		
-		if($wpdb -> insert('case', array(
+		if($wpdb -> insert('casedetails', array(
 		   'fName'  => $fName,  'lName'   => $lName,
 		   'age'  => $age,  'height'   => $height,
 		   'weight' => $weight, 'details' => $details)) == false)
