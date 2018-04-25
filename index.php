@@ -9,7 +9,14 @@
 <div class="container-fluid"> 
 	<div class="row" id="cot-div"> <!-- call to action button -->
 		<div class="col-sm-7" id="cot-submit">
-			<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+			<br>Lorem ipsum dolor sit amet, consectetur 
+				adipiscing elit, sed do eiusmod tempor 
+				incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation 
+				ullamco laboris nisi ut aliquip ex ea 
+				commodo consequat. Duis aute irure dolor in 
+				reprehenderit in voluptate velit esse cillum 
+				dolore eu fugiat nulla pariatur. <br>
 		   <a class="btn btn-default" id="btn-submit">SUBMIT</a>
 		</div>
 		<div class="col-sm-5"><!-- image goes here --></div>
@@ -18,22 +25,26 @@
 	<div class="row maindivs" id="browsepics-div">
 		<h4>Have you seen these people?</h4>
 		<div class="col-sm-3">
-			<img class=" img-responsive" src="icon.png">
+			<img class=" img-responsive" 
+				 src="../wp-content/themes/missingPersons/images/icon.png">
 			<p>First Last, Taguig</p>
 			<p>Last seen: March 23, 2018</p>
 		</div>
 		<div class="col-sm-3">
-			<img class=" img-responsive" src="icon.png">
+			<img class=" img-responsive" 
+				 src="../wp-content/themes/missingPersons/images/icon.png">
 			<p>First Last, Taguig</p>
 			<p>Last seen: March 23, 2018</p>
 		</div>
 		<div class="col-sm-3">
-			<img class=" img-responsive" src="icon.png">
+			<img class=" img-responsive" 
+				 src="../wp-content/themes/missingPersons/images/icon.png">
 			<p>First Last, Taguig</p>
 			<p>Last seen: March 23, 2018</p>
 		</div>
 		<div class="col-sm-3">
-			<img class=" img-responsive" src="icon.png">
+			<img class=" img-responsive" 
+				 src="../wp-content/themes/missingPersons/images/icon.png">
 			<p>First Last, Taguig</p>
 			<p>Last seen: March 23, 2018</p>
 		</div><br><br>
