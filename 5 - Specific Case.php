@@ -5,8 +5,8 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
 	get_header();
-?>
 
+?>
 
 <div class = "container-fluid width-85 padding-20 border-black" id = "profile">
     <div id = "info" class = "row"> 
@@ -69,7 +69,7 @@
         <div class = "thread-post padding-10">
             <div class = "thread-post-message border-black">
                 <div class = "thread-post-user-info padding-10">
-                    <span class = "user-poster"><?php echo $threadpost->username;?></span>
+                    <span class = "user-poster"><?php echo $threadpost->userID;?></span>
                     <span class = "pull-right text-white"><?php echo $threadpost->postnumber;?></span>
                     <span class = "date-time pull-right text-white"><?php echo $threadpost->dateposted;?></span>
                 </div>
