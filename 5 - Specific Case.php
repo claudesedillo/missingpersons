@@ -6,19 +6,19 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
 	get_header();
 
-	If($_POST['reply']){
-		
-		$threadid  	 = $_POST[$caseid];
-		$userID  	 = $_POST[$posterID];
+	if($_POST['reply']){
+		$caseid = 1; //get this value dynamically
+        $posterID = 1; //get this value dynamically
+        
+		$threadid  	 = $caseid;
+		$userID  	 = $posterID;
 		$message 	 = $_POST['message'];
-		$height  	 = $_POST['height'];
-		$weight   	 = $_POST['weight'];
-		$details 	 = $_POST['details'];
+		$dateposted	 = date('Y-m-d H:i:s');
 		
 		if($wpdb -> insert('threadpost', array(
 		   'threadid'  => $threadid,
            'userID'   => $userID,
-		   'dateposted'  => date('Y-m-d H:i:s'),
+		   'dateposted'  => $dateposted,
 		   'message' => $message
         )) == false)
 			wp_die('Database Insertion Failed');
@@ -112,7 +112,7 @@
     <div id = "reply-header" class = "padding-10">
         <p class = "text-white">Leave a reply</p>
     </div>
-    <form method = "POST">
+    <form method = "POST" action = "">
         <div class = "form-group">
             <textarea type = "text" class = "form-control padding-10 border-black" id = "reply-field" rows = "5" placeholder = "Message" name = "message"></textarea>
         </div>
