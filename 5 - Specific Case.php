@@ -6,6 +6,24 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
 	get_header();
 
+	If($_POST['reply']){
+		
+		$threadid  	 = $_POST[$caseid];
+		$userID  	 = $_POST[$posterID];
+		$message 	 = $_POST['message'];
+		$height  	 = $_POST['height'];
+		$weight   	 = $_POST['weight'];
+		$details 	 = $_POST['details'];
+		
+		if($wpdb -> insert('threadpost', array(
+		   'threadid'  => $threadid,
+           'userID'   => $userID,
+		   'dateposted'  => date('Y-m-d H:i:s'),
+		   'message' => $message
+        )) == false)
+			wp_die('Database Insertion Failed');
+		else echo 'Database insertion successful<p/>';
+	}
 ?>
 
 <div class = "container-fluid width-85 padding-20 border-black" id = "profile">
@@ -15,9 +33,11 @@
         </div>
         <?php
             global $wpdb; 
-            $caseid = 1; //TODO: dynamically get caseID
+            global $caseid; //TODO: dynamically get caseID
+            global $posterID;
+            $posterid = 1;
+            $caseid = 1;
             $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE id='$caseid'");
-            //$posterID = get poster id here
             foreach ( $result as $caseprofile )   {
             ?>       
         <div class = "col-md-4">
@@ -52,8 +72,8 @@
 </div>
 <div class = "container width-85 padding-20" id = "thread">
     <?php
-        global $wpdb;
-        $threadid = 1; //TODO: dynamically get caseID
+        global $threadid;
+        $threadid = 1;//TODO: dynamically get caseID
         $result = $wpdb->get_results ( "SELECT * FROM thread WHERE id='$threadid'");
         foreach ( $result as $threaddetails )   {
     ?>
@@ -69,7 +89,14 @@
         <div class = "thread-post padding-10">
             <div class = "thread-post-message border-black">
                 <div class = "thread-post-user-info padding-10">
-                    <span class = "user-poster"><?php echo $threadpost->userID;?></span>
+                    <span class = "user-poster"><?php
+                                                $userID = $threadpost->userID;
+                                                $userName = $wpdb->get_results ( "SELECT * FROM users WHERE userID='$userID'");
+                                                foreach ( $userName as $userName )   {
+                                                    echo $userName->username;
+                                                }
+                                                ?>
+                    </span>
                     <span class = "pull-right text-white"><?php echo $threadpost->postnumber;?></span>
                     <span class = "date-time pull-right text-white"><?php echo $threadpost->dateposted;?></span>
                 </div>
@@ -85,13 +112,13 @@
     <div id = "reply-header" class = "padding-10">
         <p class = "text-white">Leave a reply</p>
     </div>
-    <form>
+    <form method = "POST">
         <div class = "form-group">
-            <textarea type = "text" class = "form-control padding-10 border-black" id = "reply-field" rows = "5" placeholder = "Message"></textarea>
+            <textarea type = "text" class = "form-control padding-10 border-black" id = "reply-field" rows = "5" placeholder = "Message" name = "message"></textarea>
         </div>
-        <button type="button" class="btn btn-primary float-right background-black">Reply</button>
-        <button type="button" class="btn btn-primary float-right background-black">Preview</button>
-        <button type="button" class="btn btn-primary float-right background-black">Cancel</button>
+        <input type="submit" class="btn btn-primary float-right background-black" id = "btn-reply" name = "reply" text = "Reply">
+        <button type="button" class="btn btn-primary float-right background-black" id = "btn-preview">Preview</button>
+        <button type="button" class="btn btn-primary float-right background-black" id = "btn-cancel">Cancel</button>
     </form>
 </div>
 <script type="text/javascript" src="../script/General.js"></script>
