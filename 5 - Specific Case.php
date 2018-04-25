@@ -5,7 +5,7 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
 	get_header();
-
+    
 	if($_POST['reply']){
 		$caseid = 1; //get this value dynamically
         $posterID = 1; //get this value dynamically
@@ -108,19 +108,39 @@
     <?php }
     ?>
 </div>
-<div class = "container width-85 padding-20" id = "reply-div">
-    <div id = "reply-header" class = "padding-10">
-        <p class = "text-white">Leave a reply</p>
-    </div>
-    <form method = "POST" action = "">
-        <div class = "form-group">
-            <textarea type = "text" class = "form-control padding-10 border-black" id = "reply-field" rows = "5" placeholder = "Message" name = "message"></textarea>
+<?php
+    if(!isset($_COOKIE["logged"])) {
+    ?>
+        <div class = "container width-85 padding-20" id = "signup-div">
+            <div id = "signup-header" class = "padding-10 background-black">
+                <p class = "text-white">Want to leave a comment? <a href = "#">Sign up</a> or <a href = "#">Login</a> now!</p>
+            </div>
         </div>
-        <input type="submit" class="btn btn-primary float-right background-black" id = "btn-reply" name = "reply" text = "Reply">
-        <button type="button" class="btn btn-primary float-right background-black" id = "btn-preview">Preview</button>
-        <button type="button" class="btn btn-primary float-right background-black" id = "btn-cancel">Cancel</button>
-    </form>
-</div>
+    <?php
+    }
+    else{
+    ?>
+        <div class = "container width-85 padding-20" id = "reply-div">
+            <div id = "reply-header" class = "padding-10 background-black">
+                <p class = "text-white">Leave a reply</p>
+            </div>
+            <form method = "POST" action = "">
+                <div class = "form-group">
+                    <textarea type = "text" class = "form-control padding-10 border-black" id = "reply-field" rows = "5" placeholder = "Message" name = "message"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary float-right background-black" id = "btn-reply" name = "reply" text = "Reply">
+                <button type="button" class="btn btn-primary float-right background-black" id = "btn-preview">Preview</button>
+                <button type="button" class="btn btn-primary float-right background-black" id = "btn-cancel">Cancel</button>
+            </form>
+        </div>
+    <?php
+        
+    }
+?>
+
+<!--
+
+-->
 <script type="text/javascript" src="../script/General.js"></script>
 <?php
 	get_footer();
