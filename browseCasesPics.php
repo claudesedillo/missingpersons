@@ -4,24 +4,6 @@
 	get_header();
 ?>
 
-<?php
-
-	If($_POST['Submit']){
-		// Run validation if you are not doing it in js
-		global $wpdb;
-		
-		$name  	 = $_POST['name'];
-		$email   = $_POST['email'];
-		$phone   = $_POST['phone'];
-		$message = $_POST['message'];
-		
-		if($wpdb -> insert('contactus', array(
-		   'name'  => $name,  'email'   => $email,
-		   'phone' => $phone, 'message' => $message)) == false)
-			wp_die('Database Insertion Failed');
-		else echo 'Database insertion successful<p/>';
-	}
-?>
 
 
 <div class = 'container'>
