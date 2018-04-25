@@ -7,13 +7,14 @@
 	get_header();
 ?>
 
+
 <div class = "container-fluid width-85 padding-20 border-black" id = "profile">
     <div id = "info" class = "row"> 
         <div class = "col-md-4">
             <img id = "mugshot" src = "../images/default-avatar.jpg">
         </div>
         <?php
-            global $wpdb;
+            global $wpdb; 
             $caseid = 1; //TODO: dynamically get caseID
             $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE id='$caseid'");
             //$posterID = get poster id here
@@ -56,27 +57,27 @@
         $result = $wpdb->get_results ( "SELECT * FROM thread WHERE id='$threadid'");
         foreach ( $result as $threaddetails )   {
     ?>
-    <h3 id = "thread-title"><?php echo $threaddetails->title;?></h3>
+        <h3 id = "thread-title"><?php echo $threaddetails->title;?></h3>
     <?php }
     ?>
     <?php
-    global $wpdb;
-    $threadid = 1;
-    $result = $wpdb->get_results ( "SELECT * FROM threadpost WHERE threadid='$threadid'");
-    foreach ( $result as $threadpost )   {
+        global $wpdb;
+        $threadid = 1;
+        $result = $wpdb->get_results ( "SELECT * FROM threadpost WHERE threadid='$threadid'");
+        foreach ( $result as $threadpost )   {
     ?>
-    <div class = "thread-post padding-10">
-        <div class = "thread-post-message border-black">
-            <div class = "thread-post-user-info padding-10">
-                <span class = "user-poster"><?php echo $threadpost->username;?></span>
-                <span class = "pull-right text-white"><?php echo $threadpost->postnumber;?></span>
-                <span class = "date-time pull-right text-white"><?php echo $threadpost->dateposted;?></span>
-            </div>
-            <div class = "message-div">
-                <p class = "message padding-10"><?php echo $threadpost->message;?></p>
+        <div class = "thread-post padding-10">
+            <div class = "thread-post-message border-black">
+                <div class = "thread-post-user-info padding-10">
+                    <span class = "user-poster"><?php echo $threadpost->username;?></span>
+                    <span class = "pull-right text-white"><?php echo $threadpost->postnumber;?></span>
+                    <span class = "date-time pull-right text-white"><?php echo $threadpost->dateposted;?></span>
+                </div>
+                <div class = "message-div">
+                    <p class = "message padding-10"><?php echo $threadpost->message;?></p>
+                </div>
             </div>
         </div>
-    </div>
     <?php }
     ?>
 </div>
