@@ -11,6 +11,7 @@
 					wp_enqueue_style( 'home.css', get_template_directory_uri() . '/css/home.css');
 					break;
                 case '5-specific-case':
+                    wp_enqueue_script('specific-case', get_template_directory_uri() . '/js/sc.js', array('jquery'), '', false);
                     wp_enqueue_style( '5.css', get_template_directory_uri() . '/css/5.css' );
                     break;
 				case 'some-post':
@@ -21,7 +22,6 @@
 	}
 
 	add_action('wp_enqueue_scripts', 'add_theme_scripts_styles');
-
     register_nav_menus(array(
         'nav' => __('NavBar')
     ));

@@ -10,22 +10,22 @@
             <div class="row maindivs" id="browsepics-div">
                 <h4>UNSOLVED CASES</h4>
                 <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
+                    <img class=" img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
                     <p>First Last, Taguig</p>
                     <p>Last seen: March 23, 2018</p>
                 </div>
                 <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
+                    <img class=" img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
                     <p>First Last, Taguig</p>
                     <p>Last seen: March 23, 2018</p>
                 </div>
                 <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
+                    <img class=" img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
                     <p>First Last, Taguig</p>
                     <p>Last seen: March 23, 2018</p>
                 </div>
                 <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
+                    <img class=" img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
                     <p>First Last, Taguig</p>
                     <p>Last seen: March 23, 2018</p>
                 </div><br><br>
