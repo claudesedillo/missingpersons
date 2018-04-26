@@ -1,0 +1,21 @@
+<?php
+	function add_theme_scripts_styles() {
+		global $post;
+
+		if( is_page() || is_single() )
+		{
+			switch($post->post_name) // post_name is the post slug which is more consistent for matching to here
+			{
+				case '1-home':
+					wp_enqueue_script('home', get_template_directory_uri() . '/js/home.js', array('jquery'), '', false);
+					wp_enqueue_style( 'style-name', 'path_to_the_style.css' );
+					break;
+				case 'some-post':
+					wp_enqueue_script('somepost', get_template_directory_uri() . '/js/somepost.js', array('jquery'), '1.6', true);
+					break;
+			}
+		} 
+	}
+
+	add_action('wp_enqueue_scripts', 'add_theme_scripts_styles');
+?>

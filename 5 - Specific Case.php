@@ -29,7 +29,8 @@
 <div class = "container-fluid width-85 padding-20 border-black" id = "profile">
     <div id = "info" class = "row"> 
         <div class = "col-md-4">
-            <img id = "mugshot" src = "../images/default-avatar.jpg">
+            <img id = "mugshot" class=" img-responsive" 
+				 src="../wp-content/themes/missingPersons/images/default-avatar.jpg">
         </div>
         <?php
             global $wpdb; 
@@ -138,10 +139,6 @@
     }
 ?>
 
-<!--
-
--->
-<script type="text/javascript" src="../script/General.js"></script>
 <?php
 	get_footer();
 ?>
