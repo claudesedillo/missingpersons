@@ -24,31 +24,23 @@
 	
 	<div class="row maindivs" id="browsepics-div">
 		<h4>Have you seen these people?</h4>
+        <?php
+            global $wpdb;
+            $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
+            for($i = 0; $i < 4; $i++){
+        ?> 
 		<div class="col-sm-3">
 			<img class=" img-responsive" 
 				 src="../wp-content/themes/missingPersons/images/icon.png">
-			<p>First Last, Taguig</p>
-			<p>Last seen: March 23, 2018</p>
+			<p><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></p>
+			<p>Last seen: <?php echo $result[$i]->lastseen;?></p>
 		</div>
-		<div class="col-sm-3">
-			<img class=" img-responsive" 
-				 src="../wp-content/themes/missingPersons/images/icon.png">
-			<p>First Last, Taguig</p>
-			<p>Last seen: March 23, 2018</p>
-		</div>
-		<div class="col-sm-3">
-			<img class=" img-responsive" 
-				 src="../wp-content/themes/missingPersons/images/icon.png">
-			<p>First Last, Taguig</p>
-			<p>Last seen: March 23, 2018</p>
-		</div>
-		<div class="col-sm-3">
-			<img class=" img-responsive" 
-				 src="../wp-content/themes/missingPersons/images/icon.png">
-			<p>First Last, Taguig</p>
-			<p>Last seen: March 23, 2018</p>
-		</div><br><br>
-		<button class="btn btn-default" id="btn-viewallBP">VIEW ALL</button>
+        <?php
+            }
+        ?>
+        <br><br>
+		<button class="btn btn-default" id="btn-viewallBP"><a href = "http://wordpress.local/3-browse-cases-with-pictures/">VIEW ALL</a></button>
+
 	</div>
 	<div class="row maindivs" id="unsolved-div"> <!-- unsolved cases -->
 		<div class="row headers">
@@ -60,26 +52,27 @@
 			</div>
 			<hr>
 		</div>
+        <?php
+            global $wpdb;
+            $result = $wpdb->get_results ( "SELECT id, title, dateposted, lastlocation
+                                            FROM thread t NATURAL JOIN casedetails cd
+                                            WHERE cd.status = 'unsolved'");
+            for($i = 0; $i < 2; $i++){
+        ?>
 		<div class="row" id="report-div">
 			<div class="col-sm-8">
-				<p>[ACTIVE] LOREM IPSUM</p>
-				<p>Date poster: March 23, 2018</p>
+				<p><?php echo $result[$i]->title; ?></p>
+				<p>Date posted: <?php echo $result[$i]->dateposted; ?></p>
 				<p>Replies: 10</p>
 			</div>
 			<div class="col-sm-4">
-				<p>Location <br> Taguig</p>
+				<p>Location <br> <?php echo $result[$i]->lastlocation; ?></p>
 			</div>
 		</div><hr>
-		<div class="row" id="report-div">
-			<div class="col-sm-8">
-				<p>[ACTIVE] LOREM IPSUM</p>
-				<p>Date poster: March 23, 2018</p>
-				<p>Replies: 10</p>
-			</div>
-			<div class="col-sm-4">
-				<p>Location <br> Taguig</p>
-			</div>
-		</div><hr>
+        <?php
+            }
+        ?>
+        <hr>
 	</div> 
 	
 	<div class="row maindivs" id="solved-div"> <!-- solved cases -->
@@ -92,26 +85,27 @@
 			</div>
 			<hr>
 		</div>
+        <?php
+            global $wpdb;
+            $result = $wpdb->get_results ( "SELECT id, title, dateposted, lastlocation
+                                            FROM thread t NATURAL JOIN casedetails cd
+                                            WHERE cd.status = 'solved'");
+            for($i = 0; $i < 2; $i++){
+        ?>
 		<div class="row" id="report-div">
 			<div class="col-sm-8">
-				<p>[ACTIVE] LOREM IPSUM</p>
-				<p>Date poster: March 23, 2018</p>
+				<p><?php echo $result[$i]->title; ?></p>
+				<p>Date posted: <?php echo $result[$i]->dateposted; ?></p>
 				<p>Replies: 10</p>
 			</div>
 			<div class="col-sm-4">
-				<p>Location <br> Taguig</p>
+				<p>Location <br> <?php echo $result[$i]->lastlocation; ?></p>
 			</div>
 		</div><hr>
-		<div class="row" id="report-div">
-			<div class="col-sm-8">
-				<p>[ACTIVE] LOREM IPSUM</p>
-				<p>Date poster: March 23, 2018</p>
-				<p>Replies: 10</p>
-			</div>
-			<div class="col-sm-4">
-				<p>Location <br> Taguig</p>
-			</div>
-		</div><hr>
+        <?php
+            }
+        ?>
+        <hr>
 	</div> 
 </div>
 

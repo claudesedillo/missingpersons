@@ -17,14 +17,14 @@ $("document").ready(function(){
 		});
 	}
 
-	for(var i = 0; i < 8; i++){
-		$('#caseFeed').append('<span class="casePreview">' + 
-							  '		<a href="#Custom Case Page"><img class="alignleft" ' +
-							  '		   src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg"' + 
-							  '		   alt="Poster" width="205" height="228"></a>' +
-							  '		<p class = \'caseDescription\'><strong>NAME, PLACE</strong><br><br>' +
-							  '		   Last seen: _________________<br>' +
-							  '		</p>' +
-							  '</span>');
-	}
+//	for(var i = 0; i < 8; i++){
+//		$('#caseFeed').append('<span class="casePreview">' + 
+//							  '		<a href="#Custom Case Page"><img class="alignleft" ' +
+//							  '		   src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg"' + 
+//							  '		   alt="Poster" width="205" height="228"></a>' +
+//							  '		<p class = \'caseDescription\'><strong>NAME, PLACE</strong><br><br>' +
+//							  '		   Last seen: _________________<br>' +
+//							  '		</p>' +
+//							  '</span>');
+//	}
 });
