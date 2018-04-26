@@ -4,11 +4,14 @@
 
 		if( is_page() || is_single() )
 		{
-			switch($post->post_name) // post_name is the post slug which is more consistent for matching to here
+			switch($post->post_name) // Post/Page slug used, not the Title
 			{
 				case '1-home':
 					wp_enqueue_script('home', get_template_directory_uri() . '/js/home.js', array('jquery'), '', false);
 					wp_enqueue_style( 'home.css', get_template_directory_uri() . '/css/home.css');
+					break;
+				case '7-submit-report':
+					wp_enqueue_script('submitReport.js', get_template_directory_uri() . '/js/submitReport.js', array('jquery'), '', false);
 					break;
                 case '5-specific-case':
                     wp_enqueue_style( '5.css', get_template_directory_uri() . '/css/5.css' );
