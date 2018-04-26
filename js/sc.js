@@ -1,6 +1,13 @@
 $("document").ready(function(){
 	$("#btn-cancel").click(function(){
         $("#reply-field").val('');
+        $("#thread-post-preview").remove();
+        $("#preview").remove();
+    });
+    
+    $("#btn-reply").click(function(){
+        $("#thread-post-preview").remove();
+        $("#preview").remove();      
     });
     
     $("#btn-preview").click(function(){
@@ -14,7 +21,7 @@ $("document").ready(function(){
            var message = $('textarea#reply-field').val();
            console.log("reply field value is " + message);
            var thread = $("#thread");
-           var previewText = "<div class = \"thread-post padding-10\" id = \"thread-post-preview\">" +
+           var previewText = "<span id = \"preview\">Preview:</span><br><div class = \"thread-post padding-10\" id = \"thread-post-preview\">" +
                                 "<div class = \"thread-post-message border-black\">" +
                                     "<div class = \"thread-post-user-info padding-10\"> " +
                                         "<span class = \"user-poster\"> your-name-here  </span>" +
@@ -27,7 +34,7 @@ $("document").ready(function(){
                                 "</div>" +
                             "</div>";
            console.log("previewText is " + previewText);
-           $(document.body).append(previewText);
+           $("#thread").append(previewText);
        }
     });
 });

@@ -35,26 +35,26 @@
 			<div class = 'row'>
 				<div class = 'col-lg-6'>
 					<b>First Name</b><br/>
-					<input name = "fName" type="text" placeholder="Input Value">
+					<input name = "fName" type="text" placeholder="Input Value" pattern = "^[a-zA-Z]+$">
 				</div>
 				<div class = 'col-lg-6'>
 					<b>Last Name</b><br/>
-					<input name = "lName" type="text" placeholder="Input Value">
+					<input name = "lName" type="text" placeholder="Input Value" pattern = "^[a-zA-Z]+$">
 				</div>
 			</div>
 			
 			<div class = 'row'>
 				<div class = 'col-lg-4'>
 					<b>Age</b><br/>
-					<input name = "age" type="number" placeholder="Input Value">
+					<input name = "age" type="number" placeholder="Input Value" pattern = "^\d+$">
 				</div>
 				<div class = 'col-lg-4'>
 					<b>Height</b><br/>
-					<input name = "height" type="number" placeholder="Input Value">
+					<input name = "height" type="number" placeholder="Input Value"  pattern = "^\d*\.?\d*$">
 				</div>
 				<div class = 'col-lg-4'>
 					<b>Weight</b><br/>
-					<input name = "weight" type="number" placeholder="Input Value">
+					<input name = "weight" type="number" placeholder="Input Value" pattern = "^\d*\.?\d*$">
 				</div>
 			</div>
 			<b>Report Details</b>
