@@ -27,13 +27,6 @@
 
 	<body>
 		<nav id = "navBar" class = "menuBar navbar">
-            <?php 
-                $args = array(
-                    'theme-location' => 'nav'
-                );
-                wp_nav_menu($args);
-            ?>
-<!--
 			<div class = 'container'>
 				<div class="navbar-header">
 					<button id = 'collapsibleButton' type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleOptions">
@@ -66,5 +59,4 @@
 					</ul>
 				</div>
 			</div>
--->
 		</nav>
