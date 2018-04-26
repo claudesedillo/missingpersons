@@ -34,7 +34,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<span><h3><a href="#"><b id = 'navBarHeader'>LOGO</b></a></h3></span>
+					<span><h3><a href="http://wordpress.local/"><b id = 'navBarHeader'>LOGO</b></a></h3></span>
 				</div>
 				<div class="collapse navbar-collapse" id="collapsibleOptions">
 					<ul class="nav navbar-nav navbar-right">
@@ -44,19 +44,20 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">CASES <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Unsolved</a></li>
-								<li><a href="#">Solved</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full/">Unsolved</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full/">Solved</a></li>
 							</ul>
 						</li>
-						<li><a href="#">SUBMIT A REPORT</a></li>
+						<li><a href="http://wordpress.local/7-submit-report/">SUBMIT A REPORT</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">FAQ</a></li>
+								<li><a href="http://wordpress.local/8-about/">Contact Us</a></li>
+								<li><a href="http://wordpress.local/9-faq/">FAQ</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 			</div>
+
 		</nav>
