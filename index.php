@@ -34,7 +34,7 @@
 				 src="../wp-content/themes/missingPersons/images/icon.png">
 			<p><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></p>
 			<p>Last seen: <?php echo $result[$i]->lastseen;?></p>
-		</div>
+		</div>ssss
         <?php
             }
         ?>
