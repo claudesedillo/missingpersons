@@ -27,14 +27,21 @@
 
 	<body>
 		<nav id = "navBar" class = "menuBar navbar">
-			<div class = \'container\'>
+            <?php 
+                $args = array(
+                    'theme-location' => 'nav'
+                );
+                wp_nav_menu($args);
+            ?>
+<!--
+			<div class = 'container'>
 				<div class="navbar-header">
-					<button id = \'collapsibleButton\' type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleOptions">
+					<button id = 'collapsibleButton' type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleOptions">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<span><h3><a href="#"><b id = \'navBarHeader\'>LOGO</b></a></h3></span>
+					<span><h3><a href="#"><b id = 'navBarHeader'>LOGO</b></a></h3></span>
 				</div>
 				<div class="collapse navbar-collapse" id="collapsibleOptions">
 					<ul class="nav navbar-nav navbar-right">
@@ -59,4 +66,5 @@
 					</ul>
 				</div>
 			</div>
+-->
 		</nav>
