@@ -27,37 +27,38 @@
 
 	<body>
 		<nav id = "navBar" class = "menuBar navbar">
-			<div class = 'container'>
+			<div class="container">
 				<div class="navbar-header">
-					<button id = 'collapsibleButton' type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleOptions">
+					<button id = "collapsibleButton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleOptions">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
 					</button>
-					<span><h3><a href="http://wordpress.local/"><b id = 'navBarHeader'>LOGO</b></a></h3></span>
+					<a class="navbar-brand" href="http://wordpress.local/"><b>LOGO</b></a>
 				</div>
-				<div class="collapse navbar-collapse" id="collapsibleOptions">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><b>LOGIN</b></a></li>
-					</ul>
-					<ul class="navbar-left nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">CASES <b class="caret"></b></a>
+
+				<div class="collapse navbar-collapse navbar-left" id="collapsibleOptions">
+				   <ul class="nav navbar-nav">
+						<li class=dropdown><a class="dropdown-toggler" data-toggle="dropdown">CASES <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="http://wordpress.local/2-browse-cases-full/">Unsolved</a></li>
-								<li><a href="http://wordpress.local/2-browse-cases-full/">Solved</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full/">Unsolved Cases</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full/">Solved Cases</a></li>   
 							</ul>
 						</li>
-						<li><a href="http://wordpress.local/7-submit-report/">SUBMIT A REPORT</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT <b class="caret"></b></a>
+						<li><a href="#">SUBMIT A REPORTS</a></li>
+						<li class="dropdown"><a class="dropdown-toggler" data-toggle="dropdown">ABOUT <span class="caret"></span></a>
 							<ul class="dropdown-menu">
+								<li><a href="http://wordpress.local/9-faq/">Frequently Asked Questions</a></li>
 								<li><a href="http://wordpress.local/8-about/">Contact Us</a></li>
-								<li><a href="http://wordpress.local/9-faq/">FAQ</a></li>
 							</ul>
-						</li>
+					   </li>
+					</ul>
+				</div>
+
+				<div class="topRight collapse navbar-collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="#"><b>LOGIN</b></a></li>
 					</ul>
 				</div>
 			</div>
-
 		</nav>
