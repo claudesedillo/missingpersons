@@ -28,10 +28,12 @@
             global $wpdb;
             $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
             for($i = 0; $i < 4; $i++){
+                $imgNum = $i + 1;
+                $src = "../wp-content/themes/missingPersons/images/{$imgNum}.png";
         ?> 
 		<div class="col-sm-3">
 			<img class=" img-responsive" 
-				 src="../wp-content/themes/missingPersons/images/icon.png">
+				 src="<?php echo $src ?>" width="100" height="153">
 			<p><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></p>
 			<p>Last seen: <?php echo $result[$i]->lastseen;?></p>
 		</div>
