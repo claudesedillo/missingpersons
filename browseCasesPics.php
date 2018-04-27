@@ -16,7 +16,7 @@
 	</ul>
 	<div id="caseFeed">
         <?php
-            global $wpdb;
+            global $wpdb, $i;
             $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
             global $currentIndex;
             for($currentIndex = 0; $currentIndex < 8; $currentIndex++){
@@ -36,6 +36,7 @@
 	</div>
 	<button id = 'loadMoreButton'>LOAD MORE</button>
 </div>
+
 <?php
 	get_footer();
 ?>

@@ -1,11 +1,16 @@
-
+	
 <?php
 	/* Template Name: 2 - Browse Cases (Full)
 	 */
 	get_header();
 ?>
 
-
+        <?php
+            global $wpdb; 
+            global $type;
+            $type = $_GET['type'];
+            $result = $wpdb->get_results ( "SELECT * FROM casedetails");
+            ?>   
         <div class="container-fluid"> 
             <div class="row maindivs" id="browsepics-div">
                 <h4>UNSOLVED CASES</h4>
