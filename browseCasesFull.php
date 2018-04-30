@@ -8,9 +8,10 @@
 <?php
 	global $wpdb; 
 	global $type;
-	$type = $_GET['type'];
+	$type = $_GET['type'] == null ? "unsolved" : $_GET['type'];
 	$result = $wpdb->get_results("SELECT * FROM casedetails WHERE ".
 								 "status = '$type' ORDER BY lastseen DESC");
+	if(strcmp($type, "unsolved") == 0){
 ?>
 		<div class="container-fluid"> 
 			<div class="row maindivs" id="browsepics-div">
@@ -28,6 +29,8 @@
 				<br><br>
 				<button class="btn btn-default" id="btn-viewallBP">VIEW ALL</button>
 			</div>
+<?php	}
+?>
 			<div class="row maindivs" id="unsolved-div"> 
 				<div class="row headers">
 					<h4><?php echo strtoupper($type) ?> CASES</h4>
