@@ -16,17 +16,18 @@
 	</ul>
 	<div id="caseFeed">
         <?php
-            global $wpdb;
+            global $wpdb, $i;
             $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
-            for($i = 0; $i < 8; $i++){
+            global $currentIndex;
+            for($currentIndex = 0; $currentIndex < 8; $currentIndex++){
         ?>
         <span class="casePreview"> 
             <a href="#Custom Case Page">
                 <img class="alignleft" src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg" alt="Poster" width="205" height="228">
             </a>
             <p class = "caseDescription">
-                <strong><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></strong><br><br>
-                Last seen: <?php echo $result[$i]->lastseen;?><br>
+                <strong><?php echo $result[$currentIndex]->fName;?> <?php echo $result[$currentIndex]->lName;?>, <?php echo $result[$currentIndex]->lastlocation;?></strong><br><br>
+                Last seen: <?php echo $result[$currentIndex]->lastseen;?><br>
 			</p>
         </span>
         <?php
@@ -35,6 +36,7 @@
 	</div>
 	<button id = 'loadMoreButton'>LOAD MORE</button>
 </div>
+
 <?php
 	get_footer();
 ?>

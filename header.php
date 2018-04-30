@@ -43,6 +43,8 @@
 							<ul class="dropdown-menu">
 								<li><a href="http://wordpress.local/2-browse-cases-full/">Unsolved Cases</a></li>
 								<li><a href="http://wordpress.local/2-browse-cases-full/">Solved Cases</a></li>   
+								<li><a href="http://wordpress.local/2-browse-cases-full?type={unsolved}">Unsolved Cases</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full?type={solved}">Solved Cases</a></li> 
 							</ul>
 						</li>
 						<li><a href="#">SUBMIT A REPORTS</a></li>

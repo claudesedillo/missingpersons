@@ -6,7 +6,6 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
 	get_header();
-    
 	if($_POST['reply']){
 		$caseid = 1; //get this value dynamically
         $posterID = 1; //get this value dynamically
@@ -36,10 +35,11 @@
         <?php
             global $wpdb; 
             global $caseid; //TODO: dynamically get caseID
+            $caseid = $_GET['caseNumber'];
             global $posterID;
             $posterid = 1;
-            $caseid = 1;
             $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE id='$caseid'");
+            $query = $wpdb->last_query;
             foreach ( $result as $caseprofile )   {
             ?>       
         <div class = "col-md-4">
@@ -75,7 +75,7 @@
 <div class = "container width-85 padding-20" id = "thread">
     <?php
         global $threadid;
-        $threadid = 1;//TODO: dynamically get caseID
+        $threadid = $caseid;
         $result = $wpdb->get_results ( "SELECT * FROM thread WHERE id='$threadid'");
         foreach ( $result as $threaddetails )   {
     ?>
@@ -83,8 +83,6 @@
     <?php }
     ?>
     <?php
-        global $wpdb;
-        $threadid = 1;
         $result = $wpdb->get_results ( "SELECT * FROM threadpost WHERE threadid='$threadid'");
         foreach ( $result as $threadpost )   {
     ?>

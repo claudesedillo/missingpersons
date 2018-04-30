@@ -35,6 +35,12 @@
 			<img class=" img-responsive" 
 				 src="<?php echo $src ?>" width="100" height="153">
 			<p><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></p>
+				 src="../wp-content/themes/missingPersons/images/icon.png">
+            <?php
+                $caseNumber = $i + 1;
+                $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+            ?>
+            <p><a href = "<?php echo $src ?>"><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></a></p>
 			<p>Last seen: <?php echo $result[$i]->lastseen;?></p>
 		</div>
         <?php
