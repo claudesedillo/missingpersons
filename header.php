@@ -59,7 +59,9 @@
 					<ul class="nav navbar-nav">
                         <li id="search-div">
                             <div class="form-group">
-                                <input type="text" id="search-bar">
+								<form action="http://wordpress.local/4-search-page" method="GET">
+									<input type="text" name="query" />
+								</form>
                             </div>
                         </li>
 						<li><a href="#"><b>LOGIN</b></a></li>
