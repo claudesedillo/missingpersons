@@ -3,118 +3,155 @@
         <title>1 - Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
-        
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         
-		<link rel="stylesheet" href="../css/navBar.css">
-        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/1home.css">
+        <link rel="stylesheet" href="../css/general.css"> <!-- nav and default css setting -->
         <script type="text/javascript" src="../script/General.js"></script>
-        
     </head>
-    
     <body>
-        <nav id = "navBar" class = "menuBar navbar"></nav>
+        <nav class="navbar" id="navBar"></nav>
         
-        <div class="container-fluid"> 
-            <div class="row" id="cot-div"> <!-- call to action button -->
-                <div class="col-sm-7" id="cot-submit">
-                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
-                   <a class="btn btn-default" id="btn-submit">SUBMIT</a>
+        <div class="container-fluid banner">
+            <div class="row">
+                <div class="col-md-4" id="cot-div">
+                    <h2>ABCDEFGHIJKLMN<br>OPQRSTUVWXYZ</h2><br><p>abcdefghijklmn<br>opqrstuvwxyz<br>0123456789</p><br>
+                    <button class="btn btn-default" id="cot-btn">submit a report</button>
                 </div>
-                <div class="col-sm-5"><!-- image goes here --></div>
             </div>
-            
-            <div class="row maindivs" id="browsepics-div">
-                <h4>Have you seen these people?</h4>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
-                </div>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
-                </div>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
-                </div>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
-                </div><br><br>
-                <button class="btn btn-default" id="btn-viewallBP">VIEW ALL</button>
-            </div>
-            <div class="row maindivs" id="unsolved-div"> <!-- unsolved cases -->
-                <div class="row headers">
-                    <div class="col-sm-8">
-                        <h4>UNSOLVED CASES</h4>
-                    </div>
-                    <div class="col-sm-4">
-                        <button class="btn btn-default" id="btn-viewallUN">VIEW ALL</button>
-                    </div>
-                    <hr>
-                </div>
-                <div class="row" id="report-div">
-                    <div class="col-sm-8">
-                        <p>[ACTIVE] LOREM IPSUM</p>
-                        <p>Date poster: March 23, 2018</p>
-                        <p>Replies: 10</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>Location <br> Taguig</p>
-                    </div>
-                </div><hr>
-                <div class="row" id="report-div">
-                    <div class="col-sm-8">
-                        <p>[ACTIVE] LOREM IPSUM</p>
-                        <p>Date poster: March 23, 2018</p>
-                        <p>Replies: 10</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>Location <br> Taguig</p>
-                    </div>
-                </div><hr>
-            </div> 
-            
-            <div class="row maindivs" id="solved-div"> <!-- solved cases -->
-                <div class="row headers">
-                    <div class="col-sm-8">
-                        <h4>SOLVED CASES</h4>
-                    </div>
-                    <div class="col-sm-4">
-                        <button class="btn btn-default" id="btn-viewallSOL">VIEW ALL</button>
-                    </div>
-                    <hr>
-                </div>
-                <div class="row" id="report-div">
-                    <div class="col-sm-8">
-                        <p>[ACTIVE] LOREM IPSUM</p>
-                        <p>Date poster: March 23, 2018</p>
-                        <p>Replies: 10</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>Location <br> Taguig</p>
-                    </div>
-                </div><hr>
-                <div class="row" id="report-div">
-                    <div class="col-sm-8">
-                        <p>[ACTIVE] LOREM IPSUM</p>
-                        <p>Date poster: March 23, 2018</p>
-                        <p>Replies: 10</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>Location <br> Taguig</p>
-                    </div>
-                </div><hr>
-            </div> 
         </div>
-    
+        
+        <div class="container-fluid feed" id="pic-feed">
+            <h4>HAVE YOU SEEN THESE PEOPLE?</h4><br>
+            <div class="row">
+                <div class="col-sm-3 offset-sm-1">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
+                </div>
+                
+                <div class="col-sm-3 offset-sm-1">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
+                </div>
+                
+                <div class="col-sm-3 offset-sm-1">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
+                </div>
+                
+                <div class="col-sm-3 offset-sm-1">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
+                </div>
+            </div><br>
+            <button class="btn btn-default btn-viewall">VIEW ALL</button>
+        </div>
+        <div class="container-fluid feed" id="unsol-div">
+            <h4>UNSOLVED CASES</h4><br>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[ACTIVE] Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[ACTIVE] Ut enim ad minim veniam</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[ACTIVE] Quis nostrud exercitation ullamco </a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet consectetur adipiscing elit</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div><br>
+            <button class="btn btn-default btn-viewall">VIEW ALL</button>
+        </div>
+        
+        <div class="container-fluid feed" id="sol-div">
+            <h4>SOLVED CASES</h4><br>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[CLOSED] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[CLOSED] Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[CLOSED] Ut enim ad minim veniam</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[CLOSED] Quis nostrud exercitation ullamco </a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div>
+            <div class="row">
+                <a id="title" class="maintext" href="#">[CLOSED] Lorem ipsum dolor sit amet consectetur adipiscing elit</a>
+                <p id="loc" class="maintext"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                <hr>
+            </div><br>
+            <button class="btn btn-default btn-viewall">VIEW ALL</button>
+        </div><br><br>
+        
+        <footer class="page-footer blue center-on-small-only"> 
+        <div class="container-fluid foot-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="maintext">CASES</h5><br>
+                    <a href="#" class="subtext">Unsolved Cases</a><br>
+                    <a href="#" class="subtext">Solved Cases</a><br>
+                    
+                    <a class="maintext">SUBMIT A REPORT</a><br>
+                    <h5 class="maintext">ABOUT</h5><br>
+                    <a href="#" class="subtext">FAQs</a><br>
+                    <a href="#" class="subtext">About Us</a>
+                </div>
+                   
+                <div class="col-md-6">
+                    <h5 class="maintext">ABOUT THE WEBSITE</h5>
+                    <p class="subtext">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>

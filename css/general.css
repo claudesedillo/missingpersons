@@ -1,164 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 
-.pageContent{
-	margin-left: 25%;
+body {
+    font-family: 'Montserrat';
 }
 
-.casePreview{
-/*   border-bottom-width: 1.5px;
-    border-bottom-style: ridge;*/
-	margin: 40px;
-	display: inline-block;
+.btn-default { /** black button yellow text **/
+    background-color: #191717;
+    color: #d9b32e;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 0px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: none;
 }
 
-.caseDescription{
+.btn-default:hover {
+    background-color: #191717;
+    text-decoration: underline;
+    color: #d9b32e;
 }
 
-.caseDescription > .nComments {
-	float: right;
+.btn-default2 { /** yellow button black text **/
+    background-color: #d9b32e;
+    color: #191717;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 0px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: none;
 }
 
-#loadMoreButton {
-	width: 100%;
-	margin-bottom: 50px;
+.btn-default2:hover {
+    text-decoration: underline;
+    color: #191717;
+} 
+
+p, h2, h4 {
+    margin: 0px;
+    color: #191717;
 }
 
-/********		#8.html		*********/
-.headerWithLines {
-	overflow: hidden;
-	text-align: center;
-}
-.headerWithLines:before,
-.headerWithLines:after {
-	background-color: #333;
-	content: "";
-	display: inline-block;
-	height: 1px;
-	position: relative;
-	vertical-align: middle;
-	width: 50%;
-}
-.headerWithLines:before {
-	right: 0.5em;
-	margin-left: -50%;
-}
-.headerWithLines:after {
-	left: 0.5em;
-	margin-right: -50%;
+.maintext { 
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
 }
 
-
-#contactDivForm{
-	width: 60%;
+.subtext {
+    font-size: 11px;
 }
 
-@media only screen
-and (max-width: 800px){
-	#contactDivForm{
-		width: 90%;
-	}
-}
-input, textArea{
-	border-style: inset; 
-	width: 100%;
-    padding: 8px;
-	margin: 12px;
-	resize: none;
+hr { /** horizontal dividers **/
+    margin-top: 12px;
+    margin-bottom: 5px;
 }
 
-::placeholder{
-	color: rgba(110, 125, 147, 1);
+/** end of default settings, nav css below **/
+.navbar {
+    background-color: #191717;
+    border-radius: 0px;
+    border-style: none;
+    margin: 0px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+.navbar .container {
+    width: 95%;
 }
 
-#submitContactMe_b{
-	margin-top: 5px;
-    border-radius: 5px;	
-	max-width: fit-content;
-	padding:15px;
-	border: .3px solid black;
-    font-weight: bold;
-    display: block;
-	margin-left: auto;
-    margin-right: auto;
+.navbar-brand {
+    background-color: #d9b32e;
+    font-weight: 700;
+    font-size: 24px;
+    color: snow;
+    margin-right: 10px;
 }
 
-#contactMessageInput{
-	min-height: 130px;
+.navbar-brand:hover {
+    color: #191717;
 }
 
-#contactMessageInput::placeholder{
-	vertical-align: text-top;
+.navbar-nav>li>a {
+    font-size: 10.5px;
+    color: snow;
 }
 
-
-/********		#9.html		*********/
-
-.breadcrumb > li + li:before {
-    color: black;
-    content: "> ";
-    padding: 0 5px;
-	background: none;
-}
-
-.breadcrumb{
-	background: none;
-	padding: 0px;
-}
-
-.breadcrumb > li > a {
-	color: black;
-}
-
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    color: black;
+.navbar-nav>li>a:hover {
+    background-color: #191717;
+    color: #d9b32e;
     cursor: pointer;
-    padding: 18px;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #d9b32e;
+    color: #191717;
+}
+
+.dropdown-menu {
+    background-color: #191717;
+    padding: 0px;
+    border-style: none;
+    border-radius: 0px;
+}
+
+.dropdown-menu li>a {
+    color: snow;
+    padding: 7px;
+    font-size: 11px;
+}
+
+.dropdown-menu li>a:hover {
+    background-color: #d9b32e;
+}
+
+#search-div {
+    height: 50px;
+    vertical-align: middle;
+}
+
+#search-bar {
+    margin: 12px;
+}
+
+
+#login-div {
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    width: 275px;
+}
+
+#login-div input {
+    height: 30px;
+    font-size: 11px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#login-div form {
+    margin: 0px;
+}
+
+#btn-login {
     width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-	font-weight: bold;
-	text-decoration: underline;
-	background: none;
-    border: none;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion:hover {
-    background-color: #ccc;
+.navbar-toggle {
+    border-style: solid;
+    border-color: snow;
+    border-width: 1px;
 }
 
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-	margin-left: 40px;	
+.navbar-toggle .icon-bar, .navbar-toggle .icon-bar+.icon-bar {
+    background-color: snow;
 }
 
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: black;
-    float: left;
-    margin-right: 20px;
-}
-
-.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-
-/********		#7c.html		*********/
-input[type=file] {
-    border: none;
-}
+/** end of nav **/
