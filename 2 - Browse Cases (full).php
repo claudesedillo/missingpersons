@@ -18,16 +18,18 @@
 				<h4><?php echo strtoupper($type)?> CASES</h4>
 <?php
 	for($i = 0; $i < 4; $i++){
-?>   
+        $caseNumber = $i + 1;
+        $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+?>      
 				<div class="col-sm-3">
-					<img class=" img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
+                    <a href = "<?php echo $src ?>"><img class=" img-responsive" src="../wp-content/themes/missingPersons/images/icon.png"></a>
 					<p>Last Location: <?php echo $result[$i]->lastlocation;?></p>
 					<p>Last seen: <?php echo $result[$i]->lastseen;?></p>
 				</div>
 <?php  }
 ?>
 				<br><br>
-				<button class="btn btn-default" id="btn-viewallBP">VIEW ALL</button>
+				<button class="btn btn-default" id="btn-viewallBP"><a href = "http://wordpress.local/5-specific-case?type={unsolved}">VIEW ALL</a></button>
 			</div>
 <?php	}
 ?>
@@ -37,11 +39,13 @@
 				</div>
 <?php
 	for($i = 0; $i < 5; $i++){
+        $caseNumber = $i + 1;
+        $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
 ?>   
 				<div class="row" id="report-div">
 					<div class="col-sm-8">
-						<p>[<?php echo strtoupper($result[$i]->status) ?>] 
-						<?php echo strtoupper($result[$i]->lName) ?>, <?php echo strtoupper($result[$i]->fName) ?></p>
+						<p><a href = "<?php echo $src ?>">[<?php echo strtoupper($result[$i]->status) ?>] 
+                            <?php echo strtoupper($result[$i]->lName) ?>, <?php echo strtoupper($result[$i]->fName) ?></a></p>
 						<p>Date poster: March 23, 2018</p>
 						<p>Replies: 10</p>
 					</div>

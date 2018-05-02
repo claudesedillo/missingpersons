@@ -65,7 +65,11 @@
         ?>
 		<div class="row" id="report-div">
 			<div class="col-sm-8">
-				<p><?php echo $result[$i]->title; ?></p>
+                <?php
+                    $caseNumber = $i + 1;
+                    $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+                ?>
+                <p><a href = "<?php echo $src ?>"><?php echo $result[$i]->title; ?></a></p>
 				<p>Date posted: <?php echo $result[$i]->dateposted; ?></p>
 				<p>Replies: 10</p>
 			</div>
@@ -97,8 +101,12 @@
             for($i = 0; $i < 2; $i++){
         ?>
 		<div class="row" id="report-div">
+            <?php
+                $caseNumber = $i + 1;
+                $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+            ?>
 			<div class="col-sm-8">
-				<p><?php echo $result[$i]->title; ?></p>
+                <p><a href = "<?php echo $src ?>"><?php echo $result[$i]->title; ?></a></p>
 				<p>Date posted: <?php echo $result[$i]->dateposted; ?></p>
 				<p>Replies: 10</p>
 			</div>
