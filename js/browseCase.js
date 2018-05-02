@@ -6,10 +6,12 @@ $("document").ready(function(){
 		$.ajax({
 			type: "GET",
 			url: "../wp-content/themes/missingPersons/methods.php",
-			data: { i: 2 }
-		}).done(function( msg ) {
-			alert( "Data Saved: " + msg );
-		});    
+			data: { i: 2 ,
+					action: "browseCasePicLoadMore"},
+			success: function( htmlSnippet ) {
+				$('#caseFeed').append(htmlSnippet);
+			}
+		});			
 
 	});
 });

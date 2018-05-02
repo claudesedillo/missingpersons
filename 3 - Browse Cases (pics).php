@@ -24,7 +24,7 @@
                 $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
         ?>
         <span class="casePreview"> 
-            <a href="#Custom Case Page">
+            <a href="<?php echo $src ?>">
                 <img class="alignleft" src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg" alt="Poster" width="205" height="228">
             </a>
             <p class = "caseDescription">
