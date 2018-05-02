@@ -57,6 +57,11 @@
 
 				<div class="topRight collapse navbar-collapse navbar-right">
 					<ul class="nav navbar-nav">
+                        <li id="search-div">
+                            <div class="form-group">
+                                <input type="text" id="search-bar">
+                            </div>
+                        </li>
 						<li><a href="#"><b>LOGIN</b></a></li>
 					</ul>
 				</div>
