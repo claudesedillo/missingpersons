@@ -49,7 +49,7 @@
             }
         ?>
         <br><br>
-		<button class="btn btn-default" id="btn-viewallBP"><a href = "http://wordpress.local/3-browse-cases-with-pictures/">VIEW ALL</a></button>
+		<button class="btn btn-default" id="btn-viewallBP"></button>
 
 	</div>
 	<div class="row maindivs" id="unsolved-div"> <!-- unsolved cases -->
@@ -58,7 +58,9 @@
 				<h4>UNSOLVED CASES</h4>
 			</div>
 			<div class="col-sm-4">
-				<button class="btn btn-default" id="btn-viewallUN">VIEW ALL</button>
+				<button class="btn btn-default" id="btn-viewallUN">
+					<a href ="http://wordpress.local/2-browse-cases-full?type={unsolved}">VIEW ALL
+					</a></button>
 			</div>
 			<hr>
 		</div>
@@ -100,7 +102,9 @@
 				<h4>SOLVED CASES</h4>
 			</div>
 			<div class="col-sm-4">
-				<button class="btn btn-default" id="btn-viewallSOL">VIEW ALL</button>
+				<button class="btn btn-default" id="btn-viewallSOL">
+					<a href ="http://wordpress.local/2-browse-cases-full?type={solved}">VIEW ALL
+					</a></button>
 			</div>
 			<hr>
 		</div>
