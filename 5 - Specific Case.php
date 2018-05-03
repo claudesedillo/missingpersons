@@ -46,6 +46,7 @@
             <p id = "missing-person-name"><?php echo $caseprofile->fName;?>  <?php echo $caseprofile->lName;?></p>
             <p id = "missing-person-age">Age: <?php echo $caseprofile->age;?></p>
             <p id = "missing-person-lastseen">Last Seen: <?php echo $caseprofile->lastseen;?></p>
+            <p id = "missing-person-lastseen">Location: <?php echo $caseprofile->lastlocation;?></p>
         </div>
         <div class = "col-md-4">
             <p id = "missing-person-weight">Weight: <?php echo $caseprofile->weight;?>KG</p>

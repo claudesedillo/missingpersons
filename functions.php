@@ -8,7 +8,6 @@
 			{
 				case '1-home':
 					wp_enqueue_script('home', get_template_directory_uri() . '/js/home.js', array('jquery'), '', false);
-					wp_enqueue_style( 'home.css', get_template_directory_uri() . '/css/home.css');
 					break;
                 case '3-browse-cases-with-pictures':
                     wp_enqueue_script('browseCase.js', get_template_directory_uri() . '/js/browseCase.js', array('jquery'), '', false);

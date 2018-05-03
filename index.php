@@ -26,18 +26,24 @@
 		<h4>Have you seen these people?</h4>
         <?php
             global $wpdb;
-            $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
-            for($i = 0; $i < 4; $i++){
+            $result = $wpdb->get_results ( "SELECT *, (SELECT COUNT(*) FROM 
+												threadpost WHERE postId = id) AS n 
+											FROM casedetails 
+											WHERE status = 'unsolved' 
+											ORDER BY n DESC, datePosted DESC 
+											LIMIT 4", ARRAY_A);
+            foreach($result as $row){	
         ?> 
 		<div class="col-sm-3">
 			<img class=" img-responsive" 
 				 src="../wp-content/themes/missingPersons/images/icon.png">
             <?php
-                $caseNumber = $i + 1;
-                $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+                $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
             ?>
-            <p><a href = "<?php echo $src ?>"><?php echo $result[$i]->fName;?> <?php echo $result[$i]->lName;?>, <?php echo $result[$i]->lastlocation;?></a></p>
-			<p>Last seen: <?php echo $result[$i]->lastseen;?></p>
+            <p><a href = "<?php echo $src ?>"><?php echo $row['fName'];?> 
+											  <?php echo $row['lName'];?>, 
+											  <?php echo $row['lastlocation'];?></a></p>
+			<p>Last seen: <?php echo $row['lastseen'];?></p>
 		</div>
         <?php
             }
@@ -58,23 +64,28 @@
 		</div>
         <?php
             global $wpdb;
-            $result = $wpdb->get_results ( "SELECT id, title, dateposted, lastlocation
-                                            FROM thread t NATURAL JOIN casedetails cd
-                                            WHERE cd.status = 'unsolved'");
-            for($i = 0; $i < 2; $i++){
-        ?>
+            $result = $wpdb->get_results("SELECT *, (SELECT COUNT(*) FROM 
+													 threadpost WHERE postId = id) AS n 
+										  FROM casedetails 
+										  WHERE status = 'unsolved' 
+										  ORDER BY datePosted DESC LIMIT 2", ARRAY_A);	
+		    foreach($result as $row){
+		?>
+		
 		<div class="row" id="report-div">
 			<div class="col-sm-8">
                 <?php
-                    $caseNumber = $i + 1;
-                    $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+                    $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
                 ?>
-                <p><a href = "<?php echo $src ?>"><?php echo $result[$i]->title; ?></a></p>
-				<p>Date posted: <?php echo $result[$i]->dateposted; ?></p>
-				<p>Replies: 10</p>
+                <p><a href = "<?php echo $src ?>">
+					[<?php echo strtoupper($row['status']) ?>] 
+					 <?php echo strtoupper($row['lName']) ?>, 
+					 <?php echo strtoupper($row['fName']) ?></a></p>
+				<p>Date posted: <?php echo $row['dateposted']; ?></p>
+				<p>Replies: <?php echo $row['n'];?></p>
 			</div>
 			<div class="col-sm-4">
-				<p>Location <br> <?php echo $result[$i]->lastlocation; ?></p>
+				<p>Location <br> <?php echo $row['lastlocation']; ?></p>
 			</div>
 		</div><hr>
         <?php
@@ -95,23 +106,27 @@
 		</div>
         <?php
             global $wpdb;
-            $result = $wpdb->get_results ( "SELECT id, title, dateposted, lastlocation
-                                            FROM thread t NATURAL JOIN casedetails cd
-                                            WHERE cd.status = 'solved'");
-            for($i = 0; $i < 2; $i++){
-        ?>
+            $result = $wpdb->get_results("SELECT *, (SELECT COUNT(*) FROM 
+													 threadpost WHERE postId = id) AS n 
+										  FROM casedetails 
+										  WHERE status = 'solved' 
+										  ORDER BY datePosted DESC LIMIT 2", ARRAY_A);
+            foreach($result as $row){
+		?>
 		<div class="row" id="report-div">
             <?php
-                $caseNumber = $i + 1;
-                $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+                $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
             ?>
 			<div class="col-sm-8">
-                <p><a href = "<?php echo $src ?>"><?php echo $result[$i]->title; ?></a></p>
-				<p>Date posted: <?php echo $result[$i]->dateposted; ?></p>
-				<p>Replies: 10</p>
+                <p><a href = "<?php echo $src ?>">
+					[<?php echo strtoupper($row['status']) ?>] 
+					 <?php echo strtoupper($row['lName']) ?>, 
+					 <?php echo strtoupper($row['fName']) ?></a></p>
+				<p>Date posted: <?php echo $row['dateposted']; ?></p>
+				<p>Replies: <?php echo $row['n'];?></p>
 			</div>
 			<div class="col-sm-4">
-				<p>Location <br> <?php echo $result[$i]->lastlocation; ?></p>
+				<p>Location <br> <?php echo $row['lastlocation']; ?></p>
 			</div>
 		</div><hr>
         <?php
