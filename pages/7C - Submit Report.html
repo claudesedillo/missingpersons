@@ -2,70 +2,181 @@
 	<head>
 		<title>7C - Submit Report</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
-        
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        
 		<link rel="stylesheet" href="../css/general.css">
-		<link rel="stylesheet" href="../css/navBar.css">
-        
-		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
+		<link rel="stylesheet" href="../css/7submitreport.css">
+
+		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
 				integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
 				crossorigin="anonymous"></script>
-        
+
         <script type="text/javascript" src="../script/General.js"></script>
 	</head>
-	
+
 	<body>
 
-	
+
 		<nav id = "navBar" class = "menuBar navbar"></nav>
 
-		<div class = 'container'>
-			
-			<h1><b>SUBMIT A REPORT</b></h1>
+		<div class = 'container margin-top-40'>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="well-block">
+						<div class="well-title">
+							<h1><b>SUBMIT A REPORT</b></h1>
+						</div>
+						<form>
+							<!-- Form start -->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="name">First Name</label>
+										<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="email">Last Name</label>
+										<input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="date">Age</label>
+										<input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="date">Height</label>
+										<input id="height" name="height" type="text" placeholder="Preferred Date" class="form-control input-md">
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="date">Weight</label>
+										<input id="weight" name="weight" type="text" placeholder="Preferred Date" class="form-control input-md">
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="control-label" for="date">Report Details</label>
+										<textArea rows="5" id="report_details" name="report_details" type="text" placeholder="Preferred Date" class="form-control input-md"></textArea>
+									</div>
+								</div>
+								<!--&lt;!&ndash; Select Basic &ndash;&gt;-->
+								<!--<div class="col-md-6">-->
+									<!--<div class="form-group">-->
+										<!--<label class="control-label" for="time">asdf</label>-->
+										<!--<select id="time" name="time" class="form-control">-->
+											<!--<option value="8:00 to 9:00">8:00 to 9:00</option>-->
+											<!--<option value="9:00 to 10:00">9:00 to 10:00</option>-->
+											<!--<option value="10:00 to 1:00">10:00 to 1:00</option>-->
+										<!--</select>-->
+									<!--</div>-->
+								<!--</div>-->
+								<!-- Button -->
+								<div class="col-md-12">
+									<b>Police Report:</b><br/>
+									<input type="file" name="img" multiple><br/>
+								</div>
 
-			<div class = 'container' id ='submitReportDivForm'>
-				<form>
-					<div class = 'row'>
-						<div class = 'col-lg-6'>
-							<b>First Name</b><br/>
-							<input type="text" placeholder="Input Value">
+								<div class="col-md-12">
+									<b>Others:</b><br/>
+									<input type="file" name="img" multiple><br/>
+								</div>
+
+
+
+								<div class="col-md-12">
+									<div class="form-group">
+										<button id="singlebutton" name="singlebutton" class="btn btn-default">Submit Report</button>
+									</div>
+								</div>
+
+
+							</div>
+						</form>
+						<!-- form end -->
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="well-block">
+						<div class="well-title">
+							<h1>QA</h1>
 						</div>
-						<div class = 'col-lg-6'>
-							<b>Last Name</b><br/>
-							<input type="text" placeholder="Input Value">
+						<div class="feature-block">
+							<div class="feature feature-blurb-text">
+								<h4 class="feature-title">Why do you need to submit the Documents?</h4>
+								<div class="feature-content">
+									<p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
+								</div>
+							</div>
+							<div class="feature feature-blurb-text">
+								<h4 class="feature-title">Why do you ___?</h4>
+								<div class="feature-content">
+									<p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
+								</div>
+							</div>
+							<div class="feature feature-blurb-text">
+								<h4 class="feature-title">Why do you ___?</h4>
+								<div class="feature-content">
+									<p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
+								</div>
+							</div>
 						</div>
 					</div>
-					
-					<div class = 'row'>
-						<div class = 'col-lg-4'>
-							<b>Age</b><br/>
-							<input type="number" placeholder="Input Value">
-						</div>
-						<div class = 'col-lg-4'>
-							<b>Height</b><br/>
-							<input type="number" placeholder="Input Value">
-						</div>
-						<div class = 'col-lg-4'>
-							<b>Weight</b><br/>
-							<input type="number" placeholder="Input Value">
-						</div>
-					</div>
-					<b>Report Details</b>
-					<textArea type="text" placeholder="Input Value" id = 'contactMessageInput'></textArea><br/>
-					
-					<b>Police Report:</b><br/>
-					<input type="file" name="img" multiple><br/>
-					<b>Others:</b><br/>
-					<input type="file" name="img" multiple><br/>
-					<input type="submit" text= "Send" id = "submitContactMe_b">	
-				</form>
+				</div>
 			</div>
+
+			<!--<div class = 'container' id ='submitReportDivForm'>-->
+				<!--<form>-->
+					<!--<div class = 'row'>-->
+						<!--<div class = 'col-lg-6'>-->
+							<!--<b>First Name</b><br/>-->
+							<!--<input type="text" placeholder="Input Value">-->
+						<!--</div>-->
+						<!--<div class = 'col-lg-6'>-->
+							<!--<b>Last Name</b><br/>-->
+							<!--<input type="text" placeholder="Input Value">-->
+						<!--</div>-->
+					<!--</div>-->
+
+					<!--<div class = 'row'>-->
+						<!--<div class = 'col-lg-4'>-->
+							<!--<b>Age</b><br/>-->
+							<!--<input type="number" placeholder="Input Value">-->
+						<!--</div>-->
+						<!--<div class = 'col-lg-4'>-->
+							<!--<b>Height</b><br/>-->
+							<!--<input type="number" placeholder="Input Value">-->
+						<!--</div>-->
+						<!--<div class = 'col-lg-4'>-->
+							<!--<b>Weight</b><br/>-->
+							<!--<input type="number" placeholder="Input Value">-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<b>Report Details</b>-->
+					<!--<textArea type="text" placeholder="Input Value" id = 'contactMessageInput'></textArea><br/>-->
+
+					<!--<b>Police Report:</b><br/>-->
+					<!--<input type="file" name="img" multiple><br/>-->
+					<!--<b>Others:</b><br/>-->
+					<!--<input type="file" name="img" multiple><br/>-->
+					<!--<input type="submit" text= "Send" id = "submitContactMe_b">-->
+				<!--</form>-->
+			<!--</div>-->
 		</div>
 
 	</body>
+	<script type="text/javascript" src="../script/7submitreport.js"></script>
 </html>

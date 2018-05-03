@@ -9,14 +9,18 @@
         <link rel="stylesheet" href="../css/general.css">
     </head>
     <body>
-        <nav id = "navBar" class = "menuBar navbar"></nav>
-        <div class = "container-fluid width-85 padding-20 border-black" id = "profile">
+        <nav id = "navBar" class = "navbar"></nav>
+
+        <div class = "container-fluid width-85 padding-20 border-black margin-top-40" id = "profile">
             <div id = "info" class = "row"> 
                 <div class = "col-md-4">
-                    <img id = "mugshot" src = "../images/default-avatar.jpg">
+                    <div class="overflow-hidden">
+                        <img id = "mugshot" class = "float-left margin-right-20" src = "../images/default-avatar.jpg">
+                        <p id = "missing-person-name" class="fontsize-30">Patrick Tobias</p>
+                    </div>
                 </div>          
                 <div class = "col-md-4">
-                    <p id = "missing-person-name">Patrick Tobias</p>
+                    <!--<p id = "missing-person-name">Patrick Tobias</p>-->
                     <p id = "missing-person-age">Age: 21</p>
                     <p id = "missing-person-lastseen">Last Seen: 01-10-18</p>
                 </div>
@@ -45,43 +49,44 @@
                 </div>
             </div>
         </div>
+
+
         <div class = "container width-85 padding-20" id = "thread">
             <h3 id = "thread-title">[ACTIVE SEARCH] Patrick Tobias, 21</h3>
-            <div class = "thread-post padding-10">
-                <div class = "thread-post-message border-black">
+
+            <div class = "row thread-post thread-post-message border-black margin-10">
                     <div class = "thread-post-user-info padding-10">
-                        <span class = "user-poster">Karl Crespo</span>
-                        <span class = "pull-right text-white">#1</span>
-                        <span class = "date-time pull-right text-white">01-10-18 10:00PM</span>
+                        <img class = "float-left margin-right-10 comment-user-pic" src = "../images/default-avatar.jpg">
+                        <span class="user-poster badge badge-pill badge-danger">Karl Crespo <i class="fab fa-angular"></i> </span>
+                        <small class="text-time"><em><span class = "pull-right">#2</span> <span class = " date-time pull-right">01-10-18 10:00PM</span></em></small>
                     </div>
                     <div class = "message-div">
                         <p class = "message padding-10">Help</p>
                     </div>
-                </div>
             </div>
-            <div class = "thread-post padding-10">
-                <div class = "thread-post-message border-black">
+
+            <div class = "row thread-post thread-post-message border-black margin-10">
+                    <!--<div class="float-left vote-container background-black">-->
+                    <!--</div>-->
                     <div class = "thread-post-user-info padding-10">
-                        <span class = "user-admin">Migo Dancel</span>
-                        <span class = "pull-right text-white">#2</span>
-                        <span class = " date-time pull-right text-white">01-10-18 10:00PM</span>
+                        <img class = "float-left margin-right-10 comment-user-pic" src = "../images/default-avatar.jpg">
+                        <span class="user-admin badge badge-pill badge-danger">Migo Dancel </span>
+                        <small class="text-time"><em><span class = "pull-right">#2</span> <span class = " date-time pull-right">01-10-18 10:00PM</span></em></small>
                     </div>
                     <div class = "message-div">
                         <p class = "message padding-10">OK</p>
+
                     </div>
-                </div>
             </div>
-            <div class = "thread-post padding-10">
-                <div class = "thread-post-message border-black">
+            <div class = "row thread-post thread-post-message border-black margin-10">
                     <div class = "thread-post-user-info padding-10">
-                        <span class = "user-normal">Kevin Chan</span>
-                        <span class = "pull-right text-white">#3</span>
-                        <span class = "date-time pull-right text-white">01-10-18 10:00PM</span>
+                        <img class = "float-left margin-right-10 comment-user-pic" src = "../images/default-avatar.jpg">
+                        <span class="user-admin badge badge-pill badge-danger">Kevin Chan </span>
+                        <small class="text-time"><em><span class = "pull-right">#2</span> <span class = " date-time pull-right">01-10-18 10:00PM</span></em></small>
                     </div>
                     <div class = "message-div">
                         <p class = "message padding-10">He's a good kid. I hope he'll be found</p>
                     </div>
-                </div>
             </div>
         </div>
         <div class = "container width-85 padding-20" id = "reply-div">
