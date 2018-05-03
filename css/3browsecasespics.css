@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+.feed {
+    margin-top: 30px;
+    width: 80%;
+    padding: 20px;
+}
+
+.feed h4 {
+    background-color: #d9b32e;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: 600;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    color: #191717;
+}
+
+#yr-filter {
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+#yr-filter a {
+    color: #d9b32e;
+}
+
+#yr-filter a:active {
+    color: #191717;
+    text-decoration: underline;
+}
+
+.feed .pic-div {
+    margin-bottom: 10px;
+}
+
+.img-responsive {
+    margin: 2px auto;
+    width: 85%;
+}
+
+#btn-next {
+    float: right;
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+      .feed {
+          width: 100%;
+          margin-top: 10px;
+      }
+      
+      #yr-filter {
+          margin-left: 0px;
+      }
+      
+      .feed .row {
+          margin: 0 auto;
+      }
+      
+      .pic-div {
+          width: 49.5%;
+          display: inline-block;
+          
+      }
+     
+}
+
+
+
+

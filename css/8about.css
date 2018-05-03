@@ -1,8 +1,26 @@
 .feed {
-    width: 80%;
-    padding: 30px;
-    padding-top: 25px;
-    padding-bottom: 0px;
+    width: 60%;
+    padding: 50px;
     margin: 0 auto;
     text-align: center;
 }
+
+.feed .row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.feed p {
+    width: 65%;
+    margin: auto;
+}
+
+.feed .col-md-6, .feed .col-md-5{
+    padding: 0px;
+}
+
+.feed input {
+    margin: 5px;
+}
+
+
