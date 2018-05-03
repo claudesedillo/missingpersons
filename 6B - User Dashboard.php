@@ -54,7 +54,6 @@
 				$result = ($wpdb->get_results ( "SELECT * FROM users WHERE userid='$userID'"));
 				$pinnedcases = array_filter(explode(';', $result[0]->pinnedCases));
 				foreach ( $pinnedcases as $pinnedcase )   {
-					echo $pinnedcase;
 			?>
 				<div class="col-lg-8 panel panel-default">
 					<?php 
@@ -65,7 +64,8 @@
 					<p><h3>[<?php echo strtoupper($casedetails[0]->status) ?>] 
 							<?php echo strtoupper($casedetails[0]->lName) ?>, 
 							<?php echo strtoupper($casedetails[0]->fName) ?><h3><p>
-					<p>Last seen: <?php echo $casedetails['lastseen']; ?><br><?php echo $casedetails['lastlocation']; ?></p>
+					<p>Last seen: <?php echo $casedetails[0]->lastseen; ?><br>
+								  <?php echo $casedetails[0]->lastlocation; ?></p>
 
 					<!--<?php
 						$threadposter = $wpdb->get_results ( "SELECT * FROM users WHERE userID=".
