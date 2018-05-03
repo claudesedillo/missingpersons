@@ -85,10 +85,17 @@
 			<h2>Inbox</h2>
 			<div class="row">
 			<?php
-				$result = $wpdb->get_results("SELECT * FROM inbox, casedetails 
-											  WHERE casedetails.id = inbox.postId AND 
-										     (senderId = $userID OR receiverId = $userID) 
-											  GROUP BY conversationId ORDER BY dateMessaged DESC", 
+				$result = $wpdb->get_results("SELECT * 
+											  FROM (
+												SELECT casedetails.*, inbox.senderId, 
+													   inbox.receiverId, inbox.dateMessaged, 
+													   inbox.message, inbox.postId, 
+                                                       inbox.conversationId 
+											    FROM inbox, casedetails 
+												WHERE casedetails.id = inbox.postId AND 
+													(senderId = $userID OR receiverId = $userID) 
+												ORDER BY dateMessaged DESC LIMIT 1234124213)
+											  AS sub GROUP BY conversationId", 
 											  ARRAY_A);
 				
 				foreach ( $result as $message )   {
