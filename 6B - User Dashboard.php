@@ -5,6 +5,13 @@
 	get_header();
 ?>
 
+<?php
+	global $wpdb;
+	global $userID; //get from cookie
+	global $username;
+	
+	$userID = 1;
+?>
 <div class="container">
 	<div class="col-sm-2 ">
 		<nav class="nav-sidebar fill-height">
@@ -19,83 +26,84 @@
 	<div class="tab-content">
 		<div class="tab-pane active text-style" id="tab1">
 			<h2>My Case/s</h2>
-                <?php
-                    global $wpdb;
-                    global $userid; //get from cookie
-                    global $username;
-                    $username = $wpdb->get_results ( "SELECT * FROM users WHERE userID=1");
-            echo $wpdb->last_query;
-                    $result = $wpdb->get_results ( "SELECT * FROM mp_casedetails WHERE userid=1");
-                    
-                    foreach ( $result as $mycase )   {
-                ?>
+			<?php
+				$username = $wpdb->get_results("SELECT * FROM users WHERE userID=$userID");
+				$result = $wpdb->get_results("SELECT * FROM casedetails WHERE userID=$userID", 
+											  ARRAY_A);
+				
+				foreach ( $result as $mycase )   {
+			?>
 				<div class="row">
 					<div class="col-lg-8 panel panel-default">   
-						<p><h3><?php echo $mycase->threadtitle; ?></h3><p>
-						<a href="" class="underlined"><?php echo $username->username; ?></a>
+						<p><h3>[<?php echo strtoupper($mycase['status']) ?>] 
+								<?php echo strtoupper($mycase['lName']) ?>, 
+								<?php echo strtoupper($mycase['fName']) ?></h3><p>
+						<p>Last seen: <?php echo $mycase['lastseen']; ?><br><?php echo $mycase['lastlocation']; ?></p>
 
 					</div>
 				</div>
-                <?php
-                } 
-                ?>
+			<?php
+				} 
+			?>
 			<hr>
 		</div>
 		<div class="tab-pane text-style" id="tab2">
 			<h2>Pinned Cases</h2>
+			<div class="row">
             <?php
-                    global $wpdb;
-                    global $userid; //get from cookie
-                    $result = $wpdb->get_results ( "SELECT * FROM mp_pinnedcases WHERE userid=1");
-                    foreach ( $result as $pinnedcase )   {
-                ?>
-				<div class="row">
-					<div class="col-lg-8 panel panel-default">
-                        <?php 
-                            $caseid = $pinnedcase->caseid;
-                            $casedetails = $wpdb->get_results ( "SELECT * FROM mp_casedetails WHERE id='$caseid'");
-                            foreach ( $casedetails as $casedetails )   {
-                        ?>    
-						<p><h3><?php echo $casedetails->threadtitle; ?></h3><p>
-                        <?php
-                                $userid = $casedetails->userID;
-                            }
-                            $threadposter = $wpdb->get_results ( "SELECT * FROM users WHERE userID=$userid");
-                            foreach ( $threadposter as $threadposter )   {
-                        ?>
-						<a href="" class="underlined"><?php echo $threadposter->username; ?></a>
-                        <?php
-                        } 
-                    ?>
-					</div>
-                    <?php
-                            }
-                        ?>
+				$result = ($wpdb->get_results ( "SELECT * FROM users WHERE userid='$userID'"));
+				$pinnedcases = array_filter(explode(';', $result[0]->pinnedCases));
+				foreach ( $pinnedcases as $pinnedcase )   {
+					echo $pinnedcase;
+			?>
+				<div class="col-lg-8 panel panel-default">
+					<?php 
+						$casedetails = $wpdb->get_results ( "SELECT * FROM casedetails 
+															 WHERE id=".$pinnedcase."");
+					?>    
+					
+					<p><h3>[<?php echo strtoupper($casedetails[0]->status) ?>] 
+							<?php echo strtoupper($casedetails[0]->lName) ?>, 
+							<?php echo strtoupper($casedetails[0]->fName) ?><h3><p>
+					<p>Last seen: <?php echo $casedetails['lastseen']; ?><br><?php echo $casedetails['lastlocation']; ?></p>
+
+					<!--<?php
+						$threadposter = $wpdb->get_results ( "SELECT * FROM users WHERE userID=".
+															$casedetails[0]->userID."");
+					?>
+					
+					<a href="" class="underlined"><?php echo $threadposter[0]->username; ?></a>
+					-->
 				</div>
+			<?php
+				}
+			?>
+			</div>
 			<hr>
 		</div>
 		<div class="tab-pane text-style" id="tab3">
 			<h2>Inbox</h2>
 			<div class="row">
-                <?php
-            
-                ?>
+			<?php
+				$result = $wpdb->get_results("SELECT * FROM inbox, casedetails 
+											  WHERE casedetails.id = inbox.postId AND 
+										     (senderId = $userID OR receiverId = $userID) 
+											  GROUP BY conversationId ORDER BY dateMessaged DESC", 
+											  ARRAY_A);
+				
+				foreach ( $result as $message )   {
+			?>
 				<div class="col-lg-8 panel panel-default ">
-					<p><h3>Subject: Lorem Ipusum</h3><p>
-					<a href="" class="underlined">Lorem lorem</a>
+					<p><h3>Subject: [<?php echo strtoupper($message['status']) ?>] 
+							<?php echo strtoupper($message['lName']) ?>, 
+							<?php echo strtoupper($message['fName']) ?></h3><p>
+							<br>
+					<?php echo $message['dateMessaged']?>
+					<p><?php echo $message['message']?></a>
 				</div>
-				<div class="col-lg-8 panel panel-default ">
-					<h3>Subject: Lorem Ipusum</h3>
-					<a href="" class="underlined">Lorem lorem</a>
-				</div>
-				<div class="col-lg-8 panel panel-default read-background">
-					<p><h3>Subject: Lorem Ipusum</h3><p>
-					<a href="" class="underlined">Lorem lorem</a>
-				</div>
-				<div class="col-lg-8 panel panel-default read-background">
-					<h3>Subject: Lorem Ipusum</h3>
-					<a href="" class="underlined">Lorem lorem</a>
-				</div>
+			<?php 
+				}
+			?>
 			</div>
 			<hr>
 		</div>
