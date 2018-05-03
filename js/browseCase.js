@@ -9,10 +9,10 @@ $("document").ready(function(){
 			data: { i: 2 ,
 					action: "browseCasePicLoadMore",
 					currentIndex: parseInt($('#loadMoreButton').attr('currentIndex'))},
-			success: function( htmlSnippet ) {
-				$('#caseFeed').append(htmlSnippet);
-				$('#loadMoreButton').attr('currentIndex', 
-										  parseInt($('#loadMoreButton').attr('currentIndex')) + 8);
+			success: function( e ) {
+				var splittedData = e.split(';');
+				$('#caseFeed').append(splittedData[0]);
+				$('#loadMoreButton').attr('currentIndex', splittedData[1]);
 			}
 		});			
 

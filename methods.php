@@ -20,11 +20,11 @@
 												   "WHERE status = 'unsolved' ORDER BY id ".
 												   "LIMIT ".$_GET['currentIndex'].", 8", ARRAY_A);
 					$htmlSnippet = "";
-					$currentIndex;
+					$currentIndex = $_GET['currentIndex'];
 					
 					foreach($result as $row){
 						$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
-						
+						$currentIndex += 1;
 						$htmlSnippet .= '<span class="casePreview">
 											<a href="'.$src.'">
 												<img class="alignleft" 
@@ -42,7 +42,7 @@
 											</p>
 										</span>';
 					}
-					echo $htmlSnippet;
+					echo $htmlSnippet.";".$currentIndex;
 					 
 					 break;
 					 
