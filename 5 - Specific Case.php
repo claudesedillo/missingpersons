@@ -6,8 +6,9 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
 	get_header();
+
 	if($_POST['reply']){
-		$caseid = 1; //get this value dynamically
+		$caseid = $_GET['caseNumber'];
         $posterID = 1; //get this value dynamically
         
 		$threadid  	 = $caseid;
@@ -34,7 +35,7 @@
         </div>
         <?php
             global $wpdb; 
-            global $caseid; //TODO: dynamically get caseID
+            global $caseid; 
             $caseid = $_GET['caseNumber'];
             global $posterID;
             $posterid = 1;

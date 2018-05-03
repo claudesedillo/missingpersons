@@ -64,7 +64,7 @@
 								</form>
                             </div>
                         </li>
-						<li><a href="#"><b>LOGIN</b></a></li>
+						<li><a href="http://wordpress.local/login"><b>LOGIN</b></a></li>
 					</ul>
 				</div>
 			</div>
