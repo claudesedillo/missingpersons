@@ -16,16 +16,16 @@
 	} else if (isset($_GET['action'])) {
 		switch ($_GET['action']) {
 			case 'browseCasePicLoadMore': 
-					
-					$result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
+					$result = $wpdb->get_results ( "SELECT * FROM casedetails ".
+												   "WHERE status = 'unsolved' ORDER BY id ".
+												   "LIMIT ".$_GET['currentIndex'].", 8", ARRAY_A);
 					$htmlSnippet = "";
 					$currentIndex;
 					
-					for($currentIndex = 0; $currentIndex < 8; $currentIndex++){
-						$caseNumber = $currentIndex + 1;
-						$src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
-				
-						$htmlSnippet .= '<span class="casePreview"> 
+					foreach($result as $row){
+						$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
+						
+						$htmlSnippet .= '<span class="casePreview">
 											<a href="'.$src.'">
 												<img class="alignleft" 
 													 src="https://365psd.com/images/'. 
@@ -35,10 +35,10 @@
 											</a>
 											<p class = "caseDescription">
 												<strong><a href = '.
-													$src.'>'.$result[$currentIndex]->fName.' '.
-													$result[$currentIndex]->lName.'</a>, '. 
-													$result[$currentIndex]->lastlocation.'</strong><br><br>
-												Last seen: '.$result[$currentIndex]->lastseen.'<br>
+													$src.'>'.$row["fName"].' '.
+													$row["lName"].'</a>, '. 
+													$row["lastlocation"].'</strong><br><br>
+												Last seen: '.$row["lastseen"].'<br>
 											</p>
 										</span>';
 					}

@@ -25,10 +25,15 @@
         ?>
         <span class="casePreview"> 
             <a href="<?php echo $src ?>">
-                <img class="alignleft" src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg" alt="Poster" width="205" height="228">
+                <img class="alignleft" 
+					 src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg"
+					 alt="Poster" width="205" height="228">
             </a>
             <p class = "caseDescription">
-                <strong><a href = "<?php echo $src ?>"><?php echo $result[$currentIndex]->fName;?> <?php echo $result[$currentIndex]->lName;?></a>, <?php echo $result[$currentIndex]->lastlocation;?></strong><br><br>
+                <strong><a href = "<?php echo $src ?>">
+						<?php echo $result[$currentIndex]->fName;?> 
+						<?php echo $result[$currentIndex]->lName;?></a>, 
+						<?php echo $result[$currentIndex]->lastlocation;?></strong><br><br>
                 Last seen: <?php echo $result[$currentIndex]->lastseen;?><br>
 			</p>
         </span>
@@ -36,7 +41,7 @@
             }
         ?>
 	</div>
-	<button id = 'loadMoreButton'>LOAD MORE</button>
+	<button id = 'loadMoreButton' currentIndex = '<?php echo $currentIndex ?>'>LOAD MORE</button>
 </div>
 
 <?php
