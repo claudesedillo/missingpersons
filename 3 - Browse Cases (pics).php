@@ -17,11 +17,13 @@
 	<div id="caseFeed">
         <?php
             global $wpdb, $i;
-            $result = $wpdb->get_results ( "SELECT * FROM casedetails WHERE status = 'unsolved'");
-            global $currentIndex;
-            for($currentIndex = 0; $currentIndex < 8; $currentIndex++){
-                $caseNumber = $currentIndex + 1;
-                $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
+            $result = $wpdb->get_results("SELECT * FROM casedetails WHERE status = 'unsolved' LIMIT 8", 
+										 ARRAY_A);
+            $currentIndex = 0;
+			
+			foreach($result as $row){
+                $currentIndex += 1;
+                $src = "http://wordpress.local/5-specific-case?caseNumber={$currentIndex}";
         ?>
         <span class="casePreview"> 
             <a href="<?php echo $src ?>">
@@ -31,10 +33,10 @@
             </a>
             <p class = "caseDescription">
                 <strong><a href = "<?php echo $src ?>">
-						<?php echo $result[$currentIndex]->fName;?> 
-						<?php echo $result[$currentIndex]->lName;?></a>, 
-						<?php echo $result[$currentIndex]->lastlocation;?></strong><br><br>
-                Last seen: <?php echo $result[$currentIndex]->lastseen;?><br>
+						<?php echo $row["fName"];?> 
+						<?php echo $row["lName"];?></a>, 
+						<?php echo $row["lastlocation"];?></strong><br><br>
+                Last seen: <?php echo $row["lastseen"];?><br>
 			</p>
         </span>
         <?php
