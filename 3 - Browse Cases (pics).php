@@ -9,12 +9,11 @@
 <div class = 'container'>
 	<h3>CURRENTLY MISSING</h3><br>
 	
-	<ul class="breadcrumb">
-		<li><a href="#">2017</a></li>
-		<li><a href="#">2018</a></li>
-		<li><a href="#">2019</a></li>
-	</ul>
-	<div id="caseFeed">
+    <div class="container-fluid feed">
+            <h4 class="h4-color">CURRENTLY MISSING PEOPLE</h4><br>
+            <p id="yr-filter"><a href="#">2016</a>  /  <a href="#">2017</a>  /  <a href="#">2018</a></p><br>
+        
+        <div class="row">
         <?php
             global $wpdb, $i;
             $result = $wpdb->get_results("SELECT * FROM casedetails WHERE status = 'unsolved' LIMIT 8", 
@@ -25,24 +24,18 @@
                 $currentIndex += 1;
                 $src = "http://wordpress.local/5-specific-case?caseNumber={$currentIndex}";
         ?>
-        <span class="casePreview"> 
-            <a href="<?php echo $src ?>">
-                <img class="alignleft" 
-					 src="https://365psd.com/images/istock/previews/1012/101282869-white-blank-poster-mockup.jpg"
-					 alt="Poster" width="205" height="228">
-            </a>
-            <p class = "caseDescription">
-                <strong><a href = "<?php echo $src ?>">
+        <div class="col-sm-3 offset-sm-1 pic-div">
+                    <img class="img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
+                    <p class="maintext"><a href = "<?php echo $src ?>">
 						<?php echo $row["fName"];?> 
 						<?php echo $row["lName"];?></a>, 
-						<?php echo $row["lastlocation"];?></strong><br><br>
-                Last seen: <?php echo $row["lastseen"];?><br>
-			</p>
-        </span>
+						<?php echo $row["lastlocation"];?></p>
+                    <p class="subtext">Last seen: <?php echo $row["lastseen"];?></p>
+        </div>
         <?php
             }
         ?>
-	</div>
+        </div>
 	<button id = 'loadMoreButton' currentIndex = '<?php echo $currentIndex ?>'>LOAD MORE</button>
 </div>
 
