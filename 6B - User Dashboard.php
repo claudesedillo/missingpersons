@@ -16,9 +16,9 @@
 	<div class="col-sm-2 ">
 		<nav class="nav-sidebar fill-height">
 			<ul class="nav tabs">
-				<li class=""><a href="#tab1" data-toggle="tab">My Case/s</a></li>
+				<li class="active"><a href="#tab1" data-toggle="tab">My Case/s</a></li>
 				<li class=""><a href="#tab2" data-toggle="tab">Pinned Cases</a></li>
-				<li class="active"><a href="#tab3" data-toggle="tab">Inbox</a></li>
+				<li class=""><a href="#tab3" data-toggle="tab">Inbox</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -38,9 +38,9 @@
 						<p><h3>[<?php echo strtoupper($mycase['status']) ?>] 
 								<?php echo strtoupper($mycase['lName']) ?>, 
 								<?php echo strtoupper($mycase['fName']) ?></h3><p>
-						<p>Last seen: <?php echo $mycase['lastseen']; ?><br><?php echo $mycase['lastlocation']; ?></p>
-
-					</div>
+						<p>Last seen: <?php echo date("F j Y", strtotime($mycase['lastseen']));?>
+								  <br><?php echo $mycase['lastlocation']; ?></p>
+					  </div>
 				</div>
 			<?php
 				} 
@@ -63,8 +63,8 @@
 					
 					<p><h3>[<?php echo strtoupper($casedetails[0]->status) ?>] 
 							<?php echo strtoupper($casedetails[0]->lName) ?>, 
-							<?php echo strtoupper($casedetails[0]->fName) ?><h3><p>
-					<p>Last seen: <?php echo $casedetails[0]->lastseen; ?><br>
+							<?php echo strtoupper($casedetails[0]->fName) ?></h3><p>
+					<p>Last seen: <?php echo date("F j Y", strtotime($casedetails[0]->lastseen)); ?><br>
 								  <?php echo $casedetails[0]->lastlocation; ?></p>
 
 					<!--<?php
@@ -90,9 +90,14 @@
 												SELECT casedetails.*, inbox.senderId, 
 													   inbox.receiverId, inbox.dateMessaged, 
 													   inbox.message, inbox.postId, 
-                                                       inbox.conversationId 
-											    FROM inbox, casedetails 
-												WHERE casedetails.id = inbox.postId AND 
+                                                       inbox.conversationId, 
+													   sender.username AS senderName,
+													   receiver.username AS receiverName 
+											    FROM inbox, casedetails, users AS sender, 
+													 users AS receiver  
+												WHERE  sender.userID = senderId AND 
+													   receiver.userID = receiverId AND 
+													   casedetails.id = inbox.postId AND 
 													(senderId = $userID OR receiverId = $userID) 
 												ORDER BY dateMessaged DESC LIMIT 1234124213)
 											  AS sub GROUP BY conversationId", 
@@ -104,9 +109,10 @@
 					<p><h3>Subject: [<?php echo strtoupper($message['status']) ?>] 
 							<?php echo strtoupper($message['lName']) ?>, 
 							<?php echo strtoupper($message['fName']) ?></h3><p>
-							<br>
-					<?php echo $message['dateMessaged']?>
-					<p><?php echo $message['message']?></a>
+					<p>c/o <?php echo $message['senderId'] == $userID ? 
+										$message['receiverName'] : $message['senderName']?></i></p>
+					<?php echo date("F j Y; h:i:s A", strtotime($message['dateMessaged']))?>
+					<p><i><?php echo $message['message']?></i></p>
 				</div>
 			<?php 
 				}
