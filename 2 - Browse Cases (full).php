@@ -16,31 +16,29 @@
 								  LIMIT 4", ARRAY_A);
 	if(strcmp($type, "unsolved") == 0){
 ?>
-		<div class="container-fluid"> 
+		<div class="container-fluid feed"> 
 			<div class="row maindivs" id="browsepics-div">
-				<h4><?php echo strtoupper($type)?> CASES</h4>
+				<h4 class="h4-color"><?php echo strtoupper($type)?> CASES</h4><br>
 <?php
 	foreach($result as $row){
         $src = "http://wordpress.local/5-specific-case?caseNumber={$caseNumber}";
 ?>      
-				<div class="col-sm-3">
+				<div class="col-sm-3 offset-sm-1 pic-div">
                     <a href = "<?php echo $src ?>">
 						<img class=" img-responsive" 
-							 src="../wp-content/themes/missingPersons/images/icon.png"></a>
-					<p>Last Location: <?php echo $row['lastlocation'];?></p>
-					<p>Last seen: <?php echo $row['lastseen'];?></p>
-				</div>
+							 src="../wp-content/themes/missingPersons/images/icon.png">
+					<p id="nameloc" class="maintext"><?php echo $row['fName'];?>  <?php echo $row['lName'];?>, 
+						<?php echo $row['lastlocation'];?></p>
+					<p id="date" class="subtext">Last seen: <?php echo $row['lastseen'];?></p>
+			</div>
 <?php  }
 ?>
-				<br><br>
 				<button class="btn btn-default" id="btn-viewallBP"><a href = "http://wordpress.local/5-specific-case?type={unsolved}">VIEW ALL</a></button>
 			</div>
 <?php }
 ?>
 			<div class="row maindivs" id="unsolved-div"> 
-				<div class="row headers">
-					<h4><?php echo strtoupper($type) ?> CASES</h4>
-				</div>
+				<h4 class="h4-color"><?php echo strtoupper($type) ?> CASES</h4>
 <?php
 
 	$result = $wpdb->get_results("SELECT *, (SELECT COUNT(*) FROM 
@@ -51,23 +49,19 @@
 	foreach($result as $row){
         $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
 ?>   
-				<div class="row" id="report-div">
-					<div class="col-sm-8">
-						<p><a href = "<?php echo $src ?>">
-						   [<?php echo strtoupper($row['status']) ?>] 
-                            <?php echo strtoupper($row['lName']) ?>, 
-							<?php echo strtoupper($row['fName']) ?></a></p>
-						<p>Date poster: <?php echo $row['datePosted'] ?></p>
-						<p>Replies: <?php echo $row['n'] ?></p>
-					</div>
-					<div class="col-sm-4">
-						<p>Location <br> <?php echo $row['lastlocation'] ?></p>
-					</div>
-				</div><hr>
+			<div class="row forumcase-div">
+                    <a id="title" class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($row['status']) ?>] 
+					 <?php echo strtoupper($row['lName']) ?>, 
+					 <?php echo strtoupper($row['fName']) ?></a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $row['lastlocation']; ?></p>  
+                    <p id="datepost" class="subtext">Date posted: <?php echo $row['dateposted']; ?></p>
+                    <p id="replies"  class="subtext"><b>Replies: <?php echo $row['n'];?></b></p>
+                    <hr>
+            </div>
 <?php  }
 ?>
-				<ul class="pagination">
-				  <li><a href="#">1</a></li>
+				<ul class="pagination pagination-sm">
+				  <li class = "active"><a href="#">1</a></li>
 				  <li><a href="#">2</a></li>
 				  <li><a href="#">3</a></li>
 				  <li><a href="#">4</a></li>
