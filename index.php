@@ -6,24 +6,18 @@
 ?>
 
 
-<div class="container-fluid"> 
-	<div class="row" id="cot-div"> <!-- call to action button -->
-		<div class="col-sm-7" id="cot-submit">
-			<br>Lorem ipsum dolor sit amet, consectetur 
-				adipiscing elit, sed do eiusmod tempor 
-				incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation 
-				ullamco laboris nisi ut aliquip ex ea 
-				commodo consequat. Duis aute irure dolor in 
-				reprehenderit in voluptate velit esse cillum 
-				dolore eu fugiat nulla pariatur. <br>
-		   <a class="btn btn-default" id="btn-submit">SUBMIT</a>
-		</div>
-		<div class="col-sm-5"><!-- image goes here --></div>
-	</div>
+    <div class="container-fluid banner">
+        <div class="row">
+            <div class="col-md-4" id="cot-div">
+                <h2>ABCDEFGHIJKLMN<br>OPQRSTUVWXYZ</h2><br><p>abcdefghijklmn<br>opqrstuvwxyz<br>0123456789</p><br>
+                <button class="btn btn-default" id="cot-btn">submit a report</button>
+            </div>
+        </div>
+    </div>
 	
-	<div class="row maindivs" id="browsepics-div">
-		<h4>Have you seen these people?</h4>
+	<div class="container-fluid feed" id="pic-feed">
+        <h4>HAVE YOU SEEN THESE PEOPLE?</h4><br>
+        <div class="row">
         <?php
             global $wpdb;
             $result = $wpdb->get_results ( "SELECT *, (SELECT COUNT(*) FROM 
@@ -34,36 +28,31 @@
 											LIMIT 4", ARRAY_A);
             foreach($result as $row){	
         ?> 
-		<div class="col-sm-3">
+		<div class="col-sm-3 offset-sm-1">
 			<img class=" img-responsive" 
 				 src="../wp-content/themes/missingPersons/images/icon.png">
             <?php
                 $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
             ?>
-            <p><a href = "<?php echo $src ?>"><?php echo $row['fName'];?> 
+            <p class="maintext"><a href = "<?php echo $src ?>"><?php echo $row['fName'];?> 
 											  <?php echo $row['lName'];?>, 
 											  <?php echo $row['lastlocation'];?></a></p>
-			<p>Last seen: <?php echo $row['lastseen'];?></p>
+			<p class="subtext">Last seen: <?php echo $row['lastseen'];?></p>
 		</div>
         <?php
             }
         ?>
+        </div>
         <br><br>
-		<button class="btn btn-default" id="btn-viewallBP"></button>
-
+        <button class="btn btn-default btn-viewall"><a href ="http://wordpress.local/3-browse-cases-with-pictures">VIEW ALL</a></button>
 	</div>
-	<div class="row maindivs" id="unsolved-div"> <!-- unsolved cases -->
-		<div class="row headers">
-			<div class="col-sm-8">
-				<h4>UNSOLVED CASES</h4>
-			</div>
-			<div class="col-sm-4">
-				<button class="btn btn-default" id="btn-viewallUN">
-					<a href ="http://wordpress.local/2-browse-cases-full?type={unsolved}">VIEW ALL
-					</a></button>
-			</div>
-			<hr>
-		</div>
+
+    <div class="container-fluid feed" id="unsol-div">
+        <h4>UNSOLVED CASES</h4>
+        <button class="btn btn-default" id="btn-viewallUN">
+		<a href ="http://wordpress.local/2-browse-cases-full?type={unsolved}">VIEW ALL
+		</a>
+        </button>
         <?php
             global $wpdb;
             $result = $wpdb->get_results("SELECT *, (SELECT COUNT(*) FROM 
@@ -72,43 +61,31 @@
 										  WHERE status = 'unsolved' 
 										  ORDER BY datePosted DESC LIMIT 2", ARRAY_A);	
 		    foreach($result as $row){
+            $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
 		?>
-		
-		<div class="row" id="report-div">
-			<div class="col-sm-8">
-                <?php
-                    $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
-                ?>
-                <p><a href = "<?php echo $src ?>">
-					[<?php echo strtoupper($row['status']) ?>] 
+            <div class="row">
+                    <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($row['status']) ?>] 
 					 <?php echo strtoupper($row['lName']) ?>, 
-					 <?php echo strtoupper($row['fName']) ?></a></p>
-				<p>Date posted: <?php echo $row['dateposted']; ?></p>
-				<p>Replies: <?php echo $row['n'];?></p>
-			</div>
-			<div class="col-sm-4">
-				<p>Location <br> <?php echo $row['lastlocation']; ?></p>
-			</div>
-		</div><hr>
+					 <?php echo strtoupper($row['fName']) ?></a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span> Location <br> <?php echo $row['lastlocation']; ?></p>  
+                    <p class="subtext">Date posted: <?php echo $row['dateposted']; ?></p>
+                    <p  class="subtext"><b>Replies: <?php echo $row['n'];?></b></p>
+                    <hr>
+            </div>
         <?php
             }
         ?>
-        <hr>
+        <br>
 	</div> 
 	
-	<div class="row maindivs" id="solved-div"> <!-- solved cases -->
-		<div class="row headers">
-			<div class="col-sm-8">
-				<h4>SOLVED CASES</h4>
-			</div>
-			<div class="col-sm-4">
-				<button class="btn btn-default" id="btn-viewallSOL">
-					<a href ="http://wordpress.local/2-browse-cases-full?type={solved}">VIEW ALL
-					</a></button>
-			</div>
-			<hr>
-		</div>
-        <?php
+        <div class="container-fluid feed" id="sol-div">
+            <h4>SOLVED CASES</h4>
+            <button class="btn btn-default" id="btn-viewallSOL">
+			 <a href ="http://wordpress.local/2-browse-cases-full?type={solved}">VIEW ALL
+			 </a>
+            </button>
+            <br>
+            <?php
             global $wpdb;
             $result = $wpdb->get_results("SELECT *, (SELECT COUNT(*) FROM 
 													 threadpost WHERE postId = id) AS n 
@@ -116,29 +93,21 @@
 										  WHERE status = 'solved' 
 										  ORDER BY datePosted DESC LIMIT 2", ARRAY_A);
             foreach($result as $row){
-		?>
-		<div class="row" id="report-div">
-            <?php
-                $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
-            ?>
-			<div class="col-sm-8">
-                <p><a href = "<?php echo $src ?>">
-					[<?php echo strtoupper($row['status']) ?>] 
+            $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
+		  ?>
+            <div class="row">
+                    <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($row['status']) ?>] 
 					 <?php echo strtoupper($row['lName']) ?>, 
-					 <?php echo strtoupper($row['fName']) ?></a></p>
-				<p>Date posted: <?php echo $row['dateposted']; ?></p>
-				<p>Replies: <?php echo $row['n'];?></p>
-			</div>
-			<div class="col-sm-4">
-				<p>Location <br> <?php echo $row['lastlocation']; ?></p>
-			</div>
-		</div><hr>
-        <?php
+					 <?php echo strtoupper($row['fName']) ?></a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span> Location <br> <?php echo $row['lastlocation']; ?></p>  
+                    <p class="subtext">Date posted: <?php echo $row['dateposted']; ?></p>
+                    <p  class="subtext"><b>Replies: <?php echo $row['n'];?></b></p>
+                    <hr>
+            </div>
+            <?php
             }
-        ?>
-        <hr>
-	</div> 
-</div>
+            ?>
+		</div> <br><br>
 
 <?php
 	get_footer();

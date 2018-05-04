@@ -1,405 +1,161 @@
-/* 5 - Specific Case.php*/
-/*
-.padding-20{
-    padding: 20px;
-}
-.padding-10{
-    padding: 10px;
-}
-.width-85{
-    width: 85%;
-}
-#reply-field{
-    resize: none;
-}
-.thread-post-user-info{
-    background: black;
-}
-.message-div{
-    background: white;
-}
-.user-admin{
-    color: #0fa00f;
-}
-.user-normal{
-    color: white;
-}
-.user-poster{
-    color: #15e4ff;
-}
-.text-white{
-    color: white;
-}
-.border-black{
-    border: 1px solid black;
-}
-.float-right{
-    float: right;
-    margin: 2px;
-}
-.background-black{
-    background: black;
-}
-#description{
-    text-align: justify;
-}
-*/
-/***5 - Specific Case.php/***/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 
-.pageContent{
-	margin-left: 25%;
+body {
+    font-family: 'Montserrat';
 }
 
-.casePreview{
-/*   border-bottom-width: 1.5px;
-    border-bottom-style: ridge;*/
-	margin: 40px;
-	display: inline-block;
+.btn-default { /** black button yellow text **/
+    background-color: #191717;
+    color: #d9b32e;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 0px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: none;
 }
 
-.caseDescription{
-}
-
-.caseDescription > .nComments {
-	float: right;
-}
-
-#loadMoreButton {
-	width: 100%;
-	margin-bottom: 50px;
-}
-
-/********		#8.html		*********/
-.headerWithLines {
-	overflow: hidden;
-	text-align: center;
-}
-.headerWithLines:before,
-.headerWithLines:after {
-	background-color: #333;
-	content: "";
-	display: inline-block;
-	height: 1px;
-	position: relative;
-	vertical-align: middle;
-	width: 50%;
-}
-.headerWithLines:before {
-	right: 0.5em;
-	margin-left: -50%;
-}
-.headerWithLines:after {
-	left: 0.5em;
-	margin-right: -50%;
-}
-
-
-#contactDivForm{
-	width: 60%;
-}
-
-@media only screen
-and (max-width: 800px){
-	#contactDivForm{
-		width: 90%;
-	}
-}
-input, textArea{
-	border-style: inset; 
-	width: 100%;
-    padding: 8px;
-	margin: 12px;
-	resize: none;
-}
-
-::placeholder{
-	color: rgba(110, 125, 147, 1);
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
-#submitContactMe_b{
-	margin-top: 5px;
-    border-radius: 5px;	
-	max-width: fit-content;
-	padding:15px;
-	border: .3px solid black;
-    font-weight: bold;
-    display: block;
-	margin-left: auto;
-    margin-right: auto;
-}
-
-#contactMessageInput{
-	min-height: 130px;
-}
-
-#contactMessageInput::placeholder{
-	vertical-align: text-top;
-}
-
-
-/********		#9.html		*********/
-
-.breadcrumb > li + li:before {
-    color: black;
-    content: "> ";
-    padding: 0 5px;
-	background: none;
-}
-
-.breadcrumb{
-	background: none;
-	padding: 0px;
-}
-
-.breadcrumb > li > a {
-	color: black;
-}
-
-
-/* Style the buttons that are used to open and close the accordionPannel */
-.accordion {
-    color: black;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-	font-weight: bold;
-	text-decoration: underline;
-	background: none;
-    border: none;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion:hover {
-    background-color: #ccc;
-}
-
-/* Style the accordionPannel. Note: hidden by default */
-.accordionPannel {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-	margin-left: 40px;	
-}
-
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: black;
-    float: left;
-    margin-right: 20px;
-}
-
-.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-
-/********		#7c.html		*********/
-input[type=file] {
-    border: none;
-}
-
-
-
-/********		#4.html		*********/
-.panel_padding{
-    padding: 10px;
-}
-
-.center{
-    margin: auto;
-}
-
-.color-darkgrey{
-    background-color: #CCCCCC;
-}
-
-.glyphicon.glyphicon-arrow-up {
-    font-size: 20px;
-}
-
-.glyphicon.glyphicon-arrow-down {
-    font-size: 20px;
-}
-
-/********		#6.html		*********/
-
-.blogShort{ border-bottom:1px solid #ddd;}
-.add{background: #333; padding: 10%; height: 300px;}
-
-.read-background{
-    background-color: #CCCCCC;
-}
-
-.margin-container {
-    display: flex;
-    align-items: center;
-}
-
-.fill-height{
-    height: -webkit-fill-available;
-}
-
-.nav-sidebar {
-    width: 100%;
-    padding: 30px 0;
-    border-right: 1px solid #ddd;
-}
-.nav-sidebar a {
-    color: #333;
-    -webkit-transition: all 0.08s linear;
-    -moz-transition: all 0.08s linear;
-    -o-transition: all 0.08s linear;
-    transition: all 0.08s linear;
-}
-.nav-sidebar .active a {
-    cursor: default;
-    background-color: #0b56a8;
-    color: #fff;
-}
-.nav-sidebar .active a:hover {
-    /*background-color: #E50000;*/
-    background-color:#0b56a8;
-}
-.nav-sidebar .text-overflow a,
-.nav-sidebar .text-overflow .media-body {
-    white-space: nowrap;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-}
-
-.btn-blog {
-    color: #ffffff;
-    /*background-color: #E50000;*/
-    /*border-color: #E50000;*/
-    background-color:#0b56a8;
-    border-color: #0b56a8;
-    border-radius:0;
-    margin-bottom:10px
-}
-.btn-blog:hover,
-.btn-blog:focus,
-.btn-blog:active,
-.btn-blog.active,
-.open .dropdown-toggle.btn-blog {
-    color: white;
-    background-color:#0b56a8;
-    border-color: #0b56a8;
-}
-article h2{color:#333333;}
-h2{
-    /*color:#0b56a8;*/
-}
-.margin10{margin-bottom:10px; margin-right:10px;}
-
-.container .text-style
-{
-    text-align: justify;
-    line-height: 23px;
-    margin: 0 13px 0 0;
-    font-size: 19px;
-}
-
-.underlined{
+.btn-default:hover {
+    background-color: #191717;
     text-decoration: underline;
+    color: #d9b32e;
 }
 
-/*html, body, .container-fluid, .row {
-    height: 100%;
-}*/
-
-.sidebar {
-    background-color: #CCCCCC;
+.btn-default2 { /** yellow button black text **/
+    background-color: #d9b32e;
+    color: #191717;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 0px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: none;
 }
 
-@media (min-width: 992px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1000;
-        display: block;
-        background-color: #CCCCCC;
-    }
-}
+.btn-default2:hover {
+    text-decoration: underline;
+    color: #191717;
+} 
 
-
-/********		#1.html		*********/
-
-#cot-div {
-    width: 70%;
-    height: 230px;
-    margin: 20px auto;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    padding: 20px;
-}
-
-#btn-submit {
-    margin: 10px;
-}
-
-.maindivs {
-    width: 75%;
-    margin: 20px auto;
-}
-
-.img-responsive {
-    width: 80%;
-    margin: 5px;
-}
-
-.maindivs p {
+p, h2, h4 {
     margin: 0px;
-    font-size: 12px;
+    color: #191717;
 }
 
-hr {
-    margin: 10px;
+.maintext { 
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
 }
 
-#report-div {
-    margin: 10px;
-}
-
-#btn-viewallBP {
-    float: right;
-    margin: 10px;
-    background-color: black;
-    color: snow;
-    
-}
-
-#btn-viewallUN, #btn-viewallSOL {
-    margin: 10px;
-    float: right;
-    height: 20px;
-    line-height: 90%;
+.subtext {
     font-size: 11px;
 }
 
-/********		#2.html		*********/
-.headers {
-    padding-left: 5px;
-    padding-right: 5px;
+hr { /** horizontal dividers **/
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+/** end of default settings, nav css below **/
+.navbar {
+    background-color: #191717;
+    border-radius: 0px;
+    border-style: none;
+    margin: 0px;
+}
+
+.navbar .container {
+    width: 95%;
+}
+
+.navbar-brand {
+    background-color: #d9b32e;
+    font-weight: 700;
+    font-size: 24px;
     color: snow;
-    background-color: black;
+    margin-right: 10px;
+}
+
+.navbar-brand:hover {
+    color: #191717;
+}
+
+.navbar-nav>li>a {
+    font-size: 10.5px;
+    color: snow;
+}
+
+.navbar-nav>li>a:hover {
+    background-color: #191717;
+    color: #d9b32e;
+    cursor: pointer;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #d9b32e;
+    color: #191717;
+}
+
+.dropdown-menu {
+    background-color: #191717;
+    padding: 0px;
+    border-style: none;
+    border-radius: 0px;
+}
+
+.dropdown-menu li>a {
+    color: snow;
+    padding: 7px;
+    font-size: 11px;
+}
+
+.dropdown-menu li>a:hover {
+    background-color: #d9b32e;
+}
+
+#search-div {
+    height: 50px;
+    vertical-align: middle;
+}
+
+#search-bar {
+    margin: 12px;
 }
 
 
+#login-div {
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    width: 275px;
+}
 
+#login-div input {
+    height: 30px;
+    font-size: 11px;
+    padding: 5px;
+    border-radius: 2px;
+}
 
+#login-div form {
+    margin: 0px;
+}
+
+#btn-login {
+    width: 100%;
+}
+
+.navbar-toggle {
+    border-style: solid;
+    border-color: snow;
+    border-width: 1px;
+}
+
+.navbar-toggle .icon-bar, .navbar-toggle .icon-bar+.icon-bar {
+    background-color: snow;
+}
+
+/** end of nav **/
