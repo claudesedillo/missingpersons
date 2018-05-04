@@ -1,71 +1,45 @@
 <html>
-	<head>
-		<title>8 - About</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>8 - About</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
-        
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         
-		<link rel="stylesheet" href="../css/general.css">
-		<link rel="stylesheet" href="../css/navBar.css">
-        
-		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
-				integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-				crossorigin="anonymous"></script>
-        
+        <link rel="stylesheet" href="../css/general.css"> <!-- nav and default css setting -->
         <script type="text/javascript" src="../script/General.js"></script>
-	</head>
-	
-	<body>
+        
+        <link rel="stylesheet" href="../css/8about.css">
+     </head>
+     <body>
+        <nav class="navbar" id="navBar"></nav>
+        
+        <div class="container-fluid feed">
+            <div class="row" id="about-div">
+                <h2 class="h4-color"><b>LOREM IPSUM</b></h2>
+                <h4>dolor sit amet</h4><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            
+            <div class="row" id="contact-div">
+                <h3 class="h4-color">CONTACT US</h3><br><br>
+                <form>
+                    <input type="text" placeholder="Name" class="form-control" id="name">
 
-	
-		<nav id = "navBar" class = "menuBar navbar"></nav>
-
-		
-		<div class="whiteBlock container-fluid text-center" id = 'aboutSection'>
-			<h1><b>LOREM IPSUM</b></h1>
-			<h4><b>dolor sit amet</b></h4>
-			<br><br>
-
-			<div id = 'aboutFeed' class ='container'>
-				<div class = 'row'>
-					<div class = 'col-lg-8 col-lg-offset-2'>	
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-						laboris nisi ut aliquip ex ea commodo consequat.</p>			
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="whiteBlock container-fluid" id = 'contactSection'>
-		  
-			<div class = 'container'> 
-				<h1 class = 'headerWithLines'><b>CONTACT US</b></h1>
-
-			
-			
-				<div class = 'container' id ='contactDivForm'>
-					<form>
-						<input type="text" placeholder="Name">
-						<br/>
-						<input type="email" placeholder="Email Address">
-						<br/>
-						<input type="number" placeholder="Phone Number">
-						<br/>
-						<textArea type="text" placeholder="Message" id = 'contactMessageInput'></textArea>
-						<br/>
-						<input type="submit" text= "Send" id = "submitContactMe_b">	
-					</form>
-				</div>
-			</div>
-		</div>
-		
-		
-		
-	</body>
+                    <div class="col-md-6">
+                        <input type="email" placeholder="Email Address" class="form-control" id="email">     
+                    </div>
+                    <div class="col-md-6 right">
+                        <input type="number" placeholder="Phone Number" class="form-control" id="number">
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" cols="40" id="message" name="message" placeholder="Your message..." rows="10"></textarea>
+                    </div>
+                </form>
+                <button class="btn btn-default2" id="btn-submit">SUBMIT</button>
+                
+            </div>
+        </div>
+    </body>
 </html>
