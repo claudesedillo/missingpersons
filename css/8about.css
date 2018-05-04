@@ -1,0 +1,47 @@
+.feed {
+    width: 65%;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about-div {
+    border-style: none;
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+#contact-div {
+    width: 80%;
+    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+#about-div p {
+    font-size: 12px;
+    width: 90%;
+    margin: 10 auto;
+}
+
+.col-md-6 {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.right {
+    padding-right: 0px;
+}
+
+input {
+    margin-bottom: 15px;
+    font-size: 11.5px;
+}
+
+
+
+
+

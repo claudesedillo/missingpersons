@@ -1,0 +1,134 @@
+.banner {
+    background-image: url(banner.jpg);
+    height: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#cot-div {
+    background-color: #d9b32e;
+    padding: 25px;
+    margin-top: 8%;
+    margin-left: 10%;
+}
+
+#cot-div p {
+    color: snow;
+}
+
+#cot-btn {
+    color: snow;
+    font-weight: 400;
+}
+
+.feed { /** different from .feed of #2 & #3 **/
+    width: 85%;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
+.pic-div {
+    margin: auto;
+}
+
+.feed .img-responsive {
+    margin: 2px;
+    width: 80%;
+}
+
+.forumcase-div {
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+}
+
+.forumcase-div a {
+    color: #191717;
+}
+
+.forumcase-div a:hover {
+    color: d9b32e;
+    text-decoration: underline;
+}
+
+.forumcase-div .loc {
+    display: inline-block;
+    float: right;
+}
+
+.forumcase-div span {
+    color: #d9b32e;
+    font-size: 18px;
+}
+
+.btn-viewall { 
+    float: right;
+    margin-right: 25px;
+}
+
+.foot-section {
+    background-color: #d9b32e;
+}
+
+.foot-section .row{
+    padding: 40px;
+    width: 90%;
+    margin: auto;
+}
+
+.foot-section a, .foot-section h5 {
+    color: #191717;
+    margin-left: 1px;
+    margin: 0px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+      .navbar .container {
+          width: 100%;
+      }
+      
+      #login-div {
+          width: 90%;
+          margin: auto;
+      }
+      
+      #cot-div {
+          margin-top: 50%;
+          margin-left: 0px;
+      }
+      
+      .banner {
+          height: 60%;
+      }
+      
+      .feed {
+          width: 95%;
+          margin-top: 5px;
+      }
+      
+      .h4-color {
+          text-align: left;
+      }
+      
+      .pic-div {
+          width: 49.5%;
+          display: inline-block; 
+      }
+ 
+      .img-responsive {
+          margin: auto;
+      }
+      
+      .btn-viewall {
+          margin-right: 0px;
+      }
+}
+
+
