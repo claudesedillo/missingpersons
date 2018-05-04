@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 
-.feed {
+.feed { /** same as #2 **/
     margin-top: 30px;
     width: 80%;
     padding: 20px;
 }
 
-.feed h4 {
+.h4-color { /** to make default **/
     background-color: #d9b32e;
     margin-bottom: 5px;
     display: inline-block;
@@ -14,7 +14,6 @@
     padding: 3px;
     padding-left: 15px;
     padding-right: 15px;
-    text-align: center;
     color: #191717;
 }
 

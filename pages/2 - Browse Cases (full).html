@@ -3,72 +3,89 @@
         <title>2 - Browse Cases</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
-        
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         
-		<link rel="stylesheet" href="../css/navBar.css">
-        <link rel="stylesheet" href="../css/browsecasesfull.css">
+		<link rel="stylesheet" href="../css/general.css"> <!-- nav and default css setting -->
         <script type="text/javascript" src="../script/General.js"></script>
+        
+        <link rel="stylesheet" href="../css/2browsecasesfull.css">
         
     </head>
     
     <body>
-        <nav id = "navBar" class = "menuBar navbar"></nav>
+        <nav id = "navBar" class = "navbar"></nav>
         
-        <div class="container-fluid"> 
+        <div class="container-fluid feed"> 
             <div class="row maindivs" id="browsepics-div">
-                <h4>UNSOLVED CASES</h4>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
+                <h4 class="h4-color">UNSOLVED CASES</h4><br>
+                <div class="col-sm-3 offset-sm-1 pic-div">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
                 </div>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
+                <div class="col-sm-3 offset-sm-1 pic-div">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
                 </div>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
+                <div class="col-sm-3 offset-sm-1 pic-div">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
                 </div>
-                <div class="col-sm-3">
-                    <img class=" img-responsive" src="icon.png">
-                    <p>First Last, Taguig</p>
-                    <p>Last seen: March 23, 2018</p>
-                </div><br><br>
+                <div class="col-sm-3 offset-sm-1 pic-div">
+                    <img class="img-responsive" src="icon.png">
+                    <p id="nameloc" class="maintext">First Last, City</p>
+                    <p id="date" class="subtext">Last seen: April 27, 2018</p>
+                </div>
                 <button class="btn btn-default" id="btn-viewallBP">VIEW ALL</button>
             </div>
+            
             <div class="row maindivs" id="unsolved-div"> <!-- unsolved cases -->
-                <div class="row headers">
-                    <h4>UNSOLVED CASES</h4>
+                <h4 class="h4-color">UNSOLVED CASES</h4>
+                <div class="row forumcase-div">
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                    <hr>
                 </div>
-                <div class="row" id="report-div">
-                    <div class="col-sm-8">
-                        <p>[ACTIVE] LOREM IPSUM</p>
-                        <p>Date poster: March 23, 2018</p>
-                        <p>Replies: 10</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>Location <br> Taguig</p>
-                    </div>
-                </div><hr>
-                <div class="row" id="report-div">
-                    <div class="col-sm-8">
-                        <p>[ACTIVE] LOREM IPSUM</p>
-                        <p>Date poster: March 23, 2018</p>
-                        <p>Replies: 10</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>Location <br> Taguig</p>
-                    </div>
-                </div><hr>
-                <ul class="pagination">
-                  <li><a href="#">1</a></li>
+                
+                <div class="row forumcase-div">
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                    <hr>
+                </div>
+                
+                <div class="row forumcase-div">
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                    <hr>
+                </div>
+                
+                <div class="row forumcase-div">
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                    <hr>
+                </div>
+                
+                <div class="row forumcase-div">
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>  
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <p id="replied" class="subtext"><b>Replies: 10</b></p>
+                    <hr>
+                </div>
+                <ul class="pagination pagination-sm">
+                  <li class="active"><a href="#">1</a></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                   <li><a href="#">4</a></li>
