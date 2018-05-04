@@ -14,15 +14,12 @@
 						integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
 						crossorigin="anonymous"></script>
 
-		<!-- General -->
-		<link REL="stylesheet" href="../wp-content/themes/missingPersons/css/general.css" type="text/css">
-		<link REL="stylesheet" href="../wp-content/themes/missingPersons/css/navBar.css" type="text/css"> 
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<!--[if lt IE 9]>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 		<![endif]-->
-		<?php wp_head(); ?>
+		<?php wp_head(); ?>		
 	</head>
 
 	<body>

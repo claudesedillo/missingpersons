@@ -26,6 +26,7 @@
 	<div class="tab-content">
 		<div class="tab-pane active text-style" id="tab1">
 			<h2>My Case/s</h2>
+				<div class="row">
 			<?php
 				$username = $wpdb->get_results("SELECT * FROM users WHERE userID=$userID");
 				$result = $wpdb->get_results("SELECT * FROM casedetails WHERE userID=$userID", 
@@ -33,18 +34,17 @@
 				
 				foreach ( $result as $mycase )   {
 			?>
-				<div class="row">
-					<div class="col-lg-8 panel panel-default">   
-						<p><h3>[<?php echo strtoupper($mycase['status']) ?>] 
-								<?php echo strtoupper($mycase['lName']) ?>, 
-								<?php echo strtoupper($mycase['fName']) ?></h3><p>
-						<p>Last seen: <?php echo date("F j Y", strtotime($mycase['lastseen']));?>
-								  <br><?php echo $mycase['lastlocation']; ?></p>
-					  </div>
-				</div>
+				<div class="col-lg-8 panel panel-default">   
+					<p><h3>[<?php echo strtoupper($mycase['status']) ?>] 
+							<?php echo strtoupper($mycase['lName']) ?>, 
+							<?php echo strtoupper($mycase['fName']) ?></h3><p>
+					<p>Last seen: <?php echo date("F j Y", strtotime($mycase['lastseen']));?>
+							  <br><?php echo $mycase['lastlocation']; ?></p>
+			    </div>
 			<?php
 				} 
 			?>
+				</div>
 			<hr>
 		</div>
 		<div class="tab-pane text-style" id="tab2">
@@ -110,9 +110,9 @@
 							<?php echo strtoupper($message['lName']) ?>, 
 							<?php echo strtoupper($message['fName']) ?></h3><p>
 					<p>c/o <?php echo $message['senderId'] == $userID ? 
-										$message['receiverName'] : $message['senderName']?></i></p>
-					<?php echo date("F j Y; h:i:s A", strtotime($message['dateMessaged']))?>
-					<p><i><?php echo $message['message']?></i></p>
+										$message['receiverName'] : $message['senderName']?>
+					(<?php echo date("F j Y; h:i:s A", strtotime($message['dateMessaged']))?>)</p>
+					<p><i>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $message['message']?></i></p>
 				</div>
 			<?php 
 				}
