@@ -54,7 +54,6 @@
 				$result = ($wpdb->get_results ( "SELECT * FROM users WHERE userid='$userID'"));
 				$pinnedcases = array_filter(explode(';', $result[0]->pinnedCases));
 				foreach ( $pinnedcases as $pinnedcase )   {
-					echo $pinnedcase;
 			?>
 				<div class="col-lg-8 panel panel-default">
 					<?php 
@@ -65,7 +64,8 @@
 					<p><h3>[<?php echo strtoupper($casedetails[0]->status) ?>] 
 							<?php echo strtoupper($casedetails[0]->lName) ?>, 
 							<?php echo strtoupper($casedetails[0]->fName) ?><h3><p>
-					<p>Last seen: <?php echo $casedetails['lastseen']; ?><br><?php echo $casedetails['lastlocation']; ?></p>
+					<p>Last seen: <?php echo $casedetails[0]->lastseen; ?><br>
+								  <?php echo $casedetails[0]->lastlocation; ?></p>
 
 					<!--<?php
 						$threadposter = $wpdb->get_results ( "SELECT * FROM users WHERE userID=".
@@ -85,10 +85,17 @@
 			<h2>Inbox</h2>
 			<div class="row">
 			<?php
-				$result = $wpdb->get_results("SELECT * FROM inbox, casedetails 
-											  WHERE casedetails.id = inbox.postId AND 
-										     (senderId = $userID OR receiverId = $userID) 
-											  GROUP BY conversationId ORDER BY dateMessaged DESC", 
+				$result = $wpdb->get_results("SELECT * 
+											  FROM (
+												SELECT casedetails.*, inbox.senderId, 
+													   inbox.receiverId, inbox.dateMessaged, 
+													   inbox.message, inbox.postId, 
+                                                       inbox.conversationId 
+											    FROM inbox, casedetails 
+												WHERE casedetails.id = inbox.postId AND 
+													(senderId = $userID OR receiverId = $userID) 
+												ORDER BY dateMessaged DESC LIMIT 1234124213)
+											  AS sub GROUP BY conversationId", 
 											  ARRAY_A);
 				
 				foreach ( $result as $message )   {
