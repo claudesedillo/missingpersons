@@ -27,14 +27,12 @@
 											ORDER BY n DESC, datePosted DESC 
 											LIMIT 4", ARRAY_A);
             foreach($result as $row){	
+				$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
         ?> 
 		<div class="col-sm-3 offset-sm-1">
 			<a href = "<?php echo $src ?>">
 				<img class=" img-responsive" 
 					 src="../wp-content/themes/missingPersons/images/icon.png">
-				<?php
-					$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
-				?>
 				<p id="nameloc" class="maintext"><?php echo $row['fName'];?>  <?php echo $row['lName'];?>, 
 					<?php echo $row['lastlocation'];?></p>
 				<p id="date" class="subtext">Last seen: <?php echo $row['lastseen'];?></p>

@@ -13,7 +13,7 @@
             <h4 class="h4-color">CURRENTLY MISSING PEOPLE</h4><br>
             <p id="yr-filter"><a href="#">2016</a>  /  <a href="#">2017</a>  /  <a href="#">2018</a></p><br>
         
-        <div class="row">
+        <div class="row" id = "caseFeed">
         <?php
             global $wpdb, $i;
             $result = $wpdb->get_results("SELECT * FROM casedetails WHERE status = 'unsolved' LIMIT 8", 
@@ -25,18 +25,18 @@
                 $src = "http://wordpress.local/5-specific-case?caseNumber={$currentIndex}";
         ?>
         <div class="col-sm-3 offset-sm-1 pic-div">
-                    <img class="img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
-                    <p class="maintext"><a href = "<?php echo $src ?>">
-						<?php echo $row["fName"];?> 
-						<?php echo $row["lName"];?></a>, 
-						<?php echo $row["lastlocation"];?></p>
-                    <p class="subtext">Last seen: <?php echo $row["lastseen"];?></p>
-        </div>
+			<a href = "<?php echo $src ?>">
+				<img class="img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
+				<p id="nameloc" class="maintext"><?php echo $row['fName'];?>  <?php echo $row['lName'];?>, 
+				<?php echo $row['lastlocation'];?></p>
+				<p id="date" class="subtext">Last seen: <?php echo $row['lastseen'];?></p>
+			</a>
+		</div>
         <?php
             }
         ?>
         </div>
-	<button id = 'loadMoreButton' currentIndex = '<?php echo $currentIndex ?>'>LOAD MORE</button>
+	<button class="btn btn-default" id = 'loadMoreButton' currentIndex = '<?php echo $currentIndex ?>'>LOAD MORE</button>
 </div>
 
 <?php

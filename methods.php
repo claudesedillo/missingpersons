@@ -25,22 +25,15 @@
 					foreach($result as $row){
 						$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
 						$currentIndex += 1;
-						$htmlSnippet .= '<span class="casePreview">
-											<a href="'.$src.'">
-												<img class="alignleft" 
-													 src="https://365psd.com/images/'. 
-														 'istock/previews/1012/101282869'.
-														 '-white-blank-poster-mockup.jpg" 
-													 alt="Poster" width="205" height="228">
+						$htmlSnippet .= 
+										'<div class="col-sm-3 offset-sm-1 pic-div">
+											<a href = "'.$src.'">
+												<img class="img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
+												<p id="nameloc" class="maintext">'.$row['fName'].' '.$row['lName'].', '.
+												$row['lastlocation'].'</p>
+												<p id="date" class="subtext">Last seen: '.$row['lastseen'].'</p>
 											</a>
-											<p class = "caseDescription">
-												<strong><a href = '.
-													$src.'>'.$row["fName"].' '.
-													$row["lName"].'</a>, '. 
-													$row["lastlocation"].'</strong><br><br>
-												Last seen: '.$row["lastseen"].'<br>
-											</p>
-										</span>';
+										</div>';
 					}
 					echo $htmlSnippet.";".$currentIndex;
 					 
