@@ -22,10 +22,9 @@
 		   'age'  => $age,  'height'   => $height,
 		   'weight' => $weight, 'details' => $details)) == false)
 			wp_die('Database Insertion Failed');
-		else echo 'Database insertion successful<p/>';
+		else echo 'Database insertion successful';
 	}
 ?>
-
 <div class = 'container margin-top-40'>
 	<div class="row">
 		<div class="col-md-6">
@@ -98,39 +97,38 @@
 						
 							</div>
 						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<label class="control-label" 
-								   for="report_details">Report Details</label>
-							<textArea rows="5" 
-									  id = "report_details" 
-									  name = "details" type="text" 
-									  placeholder="Input Value"
-									  class="form-control input-md" ></textArea>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label" 
+									   for="report_details">Report Details</label>
+								<textArea rows="5" 
+										  id = "report_details" 
+										  name = "details" type="text" 
+										  placeholder="Input Value"
+										  class="form-control input-md" ></textArea>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-12">
-						<b>Police Report:</b><br/>
-						<input type="file" name="img" multiple><br/>
-					</div>
-					
-					<div class="col-md-12">
-						<b>Others:</b><br/>
-						<input type="file" name="img" multiple><br/>
-					</div>
+						<div class="col-md-12">
+							<b>Police Report:</b><br/>
+							<input type="file" name="img" multiple><br/>
+						</div>
 						
-					<div class="col-md-12">
-						<div class="form-group">
-							<input type="submit" text= "Submit Report" 
-								   name = "Submit" id = "singlebutton"
-								   class="btn btn-default">	
+						<div class="col-md-12">
+							<b>Others:</b><br/>
+							<input type="file" name="img" multiple><br/>
+						</div>
+							
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="submit" text= "Submit Report" 
+									   name = "Submit" id = "singlebutton"
+									   class="btn btn-default">	
+							</div>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		
 		<div class="col-md-6">
 			<div class="well-block">
 				<div class="well-title">

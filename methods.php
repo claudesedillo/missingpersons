@@ -2,12 +2,25 @@
 	require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-config.php' );
 	require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-includes/wp-db.php' );
 	global $wpdb;
-	
+	$message = "a";
 	if (isset($_POST['action'])) {
 		switch ($_POST['action']) {
-			case 'insert':
-				insert();
+			case 'contactUsForm':
+				$email   = $_POST['email'];
+				$phone   = $_POST['phone'];
+				$message = $_POST['message'];
+				
+				if($wpdb -> insert('contactus', array(
+				   'name'  => $name,  'email'   => $email,
+				   'phone' => $phone, 'message' => $message)) == false){
+					$message ='Database Insertion Failed';
+					wp_die();
+			    }
+				else $message = 'Database insertion successful';
+				
+				echo $message;
 				break;
+				
 			case 'select':
 				select();
 				break;

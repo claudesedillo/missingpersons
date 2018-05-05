@@ -30,9 +30,11 @@
                     break;					
                 case '7-submit-report':
 					wp_enqueue_script('submitReport.js', get_template_directory_uri() . '/js/submitReport.js', array('jquery'), '', false);
-					break;   
+					wp_enqueue_style( '7submitreport.css', get_template_directory_uri() . '/css/7submitreport.css' );
+                    break;   
                 case '8-about':
-                    wp_enqueue_style( '8about', get_template_directory_uri() . '/css/8about.css' );
+                    wp_enqueue_script('contactUs.js', get_template_directory_uri() . '/js/contactUs.js', array('jquery'), '', false);
+					wp_enqueue_style( '8about', get_template_directory_uri() . '/css/8about.css' );
                     break;                
 				
 				case 'some-post':
