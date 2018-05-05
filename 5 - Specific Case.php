@@ -134,7 +134,7 @@
 							  id = "reply-field" rows = "5"
 							  placeholder = "Message" name = "message"></textarea>
                 </div>
-                <input  type="submit" class="btn btn-primary float-right background-black" id = "btn-reply" name = "reply" text = "Reply">
+                <input  type="submit" class="btn btn-primary float-right background-black" id = "btn-reply" name = "reply" text = "Submit">
                 <button type="button" class="btn btn-primary float-right background-black" id = "btn-preview">Preview</button>
                 <button type="button" class="btn btn-primary float-right background-black" id = "btn-cancel">Cancel</button>
             </form>
