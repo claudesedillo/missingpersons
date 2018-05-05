@@ -6,6 +6,7 @@
 	if (isset($_POST['action'])) {
 		switch ($_POST['action']) {
 			case 'contactUsForm':
+				$name  	 = $_POST['name'];
 				$email   = $_POST['email'];
 				$phone   = $_POST['phone'];
 				$message = $_POST['message'];
