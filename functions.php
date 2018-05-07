@@ -36,7 +36,9 @@
                     wp_enqueue_script('contactUs.js', get_template_directory_uri() . '/js/contactUs.js', array('jquery'), '', false);
 					wp_enqueue_style( '8about', get_template_directory_uri() . '/css/8about.css' );
                     break;                
-				
+				case '10-login':
+                    wp_enqueue_script('login.js', get_template_directory_uri() . '/js/login.js', array('jquery'), '', false);
+                    break;
 				case 'some-post':
 					wp_enqueue_script('somepost', get_template_directory_uri() . '/js/somepost.js', array('jquery'), '1.6', true);
 					break;
