@@ -6,6 +6,10 @@
     padding: 20px;
 }
 
+#caseFeed{
+	display: table-row-group;
+}
+
 #yr-filter {
     margin-left: 15px;
     font-weight: 600;
