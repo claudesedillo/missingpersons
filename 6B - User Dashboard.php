@@ -33,13 +33,16 @@
 											  ARRAY_A);
 				
 				foreach ( $result as $mycase )   {
+					$src = "http://wordpress.local/5-specific-case?caseNumber={$mycase['id']}";
 			?>
 				<div class="col-lg-8 panel panel-default">   
-					<p><h3>[<?php echo strtoupper($mycase['status']) ?>] 
-							<?php echo strtoupper($mycase['lName']) ?>, 
-							<?php echo strtoupper($mycase['fName']) ?></h3><p>
-					<p>Last seen: <?php echo date("F j Y", strtotime($mycase['lastseen']));?>
-							  <br><?php echo $mycase['lastlocation']; ?></p>
+					<a href = "<?php echo $src ?>">
+						<p><h3>[<?php echo strtoupper($mycase['status']) ?>] 
+								<?php echo strtoupper($mycase['lName']) ?>, 
+								<?php echo strtoupper($mycase['fName']) ?></h3><p>
+						<p>Last seen: <?php echo date("F j Y", strtotime($mycase['lastseen']));?>
+								  <br><?php echo $mycase['lastlocation']; ?></p>
+					</a>
 			    </div>
 			<?php
 				} 
@@ -56,24 +59,27 @@
 				foreach ( $pinnedcases as $pinnedcase )   {
 			?>
 				<div class="col-lg-8 panel panel-default">
-					<?php 
-						$casedetails = $wpdb->get_results ( "SELECT * FROM casedetails 
-															 WHERE id=".$pinnedcase."");
-					?>    
-					
-					<p><h3>[<?php echo strtoupper($casedetails[0]->status) ?>] 
-							<?php echo strtoupper($casedetails[0]->lName) ?>, 
-							<?php echo strtoupper($casedetails[0]->fName) ?></h3><p>
-					<p>Last seen: <?php echo date("F j Y", strtotime($casedetails[0]->lastseen)); ?><br>
-								  <?php echo $casedetails[0]->lastlocation; ?></p>
+						<?php 
+							$casedetails = $wpdb->get_results ( "SELECT * FROM casedetails 
+																 WHERE id=".$pinnedcase."");
+							$src = "http://wordpress.local/5-specific-case?caseNumber={$casedetails[0]->id}";
+						?>    
+						
+					<a href = "<?php echo $src ?>">
+						<p><h3>[<?php echo strtoupper($casedetails[0]->status) ?>] 
+								<?php echo strtoupper($casedetails[0]->lName) ?>, 
+								<?php echo strtoupper($casedetails[0]->fName) ?></h3><p>
+						<p>Last seen: <?php echo date("F j Y", strtotime($casedetails[0]->lastseen)); ?><br>
+									  <?php echo $casedetails[0]->lastlocation; ?></p>
 
-					<!--<?php
-						$threadposter = $wpdb->get_results ( "SELECT * FROM users WHERE userID=".
-															$casedetails[0]->userID."");
-					?>
-					
-					<a href="" class="underlined"><?php echo $threadposter[0]->username; ?></a>
-					-->
+						<!--<?php
+							$threadposter = $wpdb->get_results ( "SELECT * FROM users WHERE userID=".
+																$casedetails[0]->userID."");
+						?>
+						
+						<a href="" class="underlined"><?php echo $threadposter[0]->username; ?></a>
+						-->
+					</a>
 				</div>
 			<?php
 				}
