@@ -169,25 +169,6 @@ hr { /** horizontal dividers **/
     background-color: snow;
 }
 
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-      
-      .navbar .container {
-          width: 100%;
-      } 
-      
-      .foot-section .row {
-          width: 100%;
-          padding: 30 20px;
-      }
-      
-      .foot-section li {
-          margin-left: -40px;
-      }     
-}
 /** end of nav **/
 
 
@@ -203,7 +184,7 @@ hr { /** horizontal dividers **/
 
 .foot-section li {
     list-style: none;
-    margin-left: -32px;
+    margin-left: -40px;
 }
 
 .foot-section a {
@@ -213,4 +194,24 @@ hr { /** horizontal dividers **/
 
 .foot-section h5 {
     color: #191717;
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+      .navbar .container {
+          width: 100%;
+      } 
+      
+      .foot-section .row {
+          width: 90%;
+          padding: 40px 15px;
+      }
+      
+      .foot-section li {
+          margin-left: -40px;
+      }     
 }
