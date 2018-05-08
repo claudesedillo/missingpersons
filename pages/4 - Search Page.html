@@ -9,8 +9,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         
-		<link rel="stylesheet" href="../css/search-page.css">
+		<link rel="stylesheet" href="../css/4searchpage.css">
         <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/4searchpage.css">
+
         
 		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
 				integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
@@ -23,69 +25,89 @@
 
         <nav id = "navBar" class = "menuBar navbar"></nav>
 
-
-        <div class="container-fluid feed">
-            <!--<h1 class="center">Search</h1>-->
-                <div class = "container width-85 padding-20 border-black margin-top-40">
-                    <div class="row panel panel-default panel_padding width-85 padding-20 border-black margin-top-40">
-                        <div class="col-lg-1">
-                            <div class="row">
-                                <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-                            </div>
-                            <div class="row">
-                                &nbsp;&nbsp;3
-                            </div>
-                            <div class="row">
-                                <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-11">
-                                <h6>Posted by: ZombieRapist 4 hours ago</h6>
-                                <h1>Jordan Gana</h1>
-                                <h4>Okay so I've figured out how to use SASS to make custom style sheets and change the variables like the color themes and such.
-                                    I'm confused about how I'm supposed to use that to set page styles though.
-                                    Lets say I want every card to have certain attributes for the text of its card-body, card-title and card-footer classes... how do I modify those?
-                                    Am I really supposed to go to each card and do
-                                    Or is there someway I can achieve this with custom scss with just using the properties of card-footer and <p> tags instead of changing every one?
-                                </h4>
-                                <h4>
-                                    Edit: Also is there a way to set a maximum amount a column will resize down to before it stacks instead? I'm trying to use 4 cards but if they resize too small the title lines wrap and then suddenly the alignment of the titles and pictures in the cards is different in each card and it looks awful.
-                                </h4>
-                                <h4>
-                                    Thanks!
-                                </h4>
-                        </div>
-                    </div>
-                    <div class="row panel panel-default panel_padding">
-                        <div class="col-lg-1">
-                            <div class="row">
-                                <span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-                            </div>
-                            <div class="row">
-                                &nbsp;&nbsp;3
-                            </div>
-                            <div class="row">
-                                <span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-11">
-                            <h6>Posted by: ZombieRapist 4 hours ago</h6>
-                            <h1>Harvey Lallave</h1>
-                            <h4>Okay so I've figured out how to use SASS to make custom style sheets and change the variables like the color themes and such.
-                                I'm confused about how I'm supposed to use that to set page styles though.
-                                Lets say I want every card to have certain attributes for the text of its card-body, card-title and card-footer classes... how do I modify those?
-                                Am I really supposed to go to each card and do
-                                Or is there someway I can achieve this with custom scss with just using the properties of card-footer and <p> tags instead of changing every one?
-                            </h4>
-                            <h4>
-                                Edit: Also is there a way to set a maximum amount a column will resize down to before it stacks instead? I'm trying to use 4 cards but if they resize too small the title lines wrap and then suddenly the alignment of the titles and pictures in the cards is different in each card and it looks awful.
-                            </h4>
-                            <h4>
-                                Thanks!
-                            </h4>
-                        </div>
-                    </div>
+        <div class="search-results-header">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2">
+                    <span>
+                        <strong>Search results for: </strong>
+                        <b>"nani"</b>
+                    </span>
                 </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid feed" id="unsolved-div">
+            <div class="container">
+                <div class="row forumcase-div">
+                    <div class="pull-left" id="voting">
+                        <div class="vote-button"><i class="fas fa-caret-up dark-grey"></i></div>
+                        <span id="vote-count-post" itemprop="upvoteCount" class="vote-count-post">54</span>
+                        <div class="vote-button"><i class="fas fa-caret-down dark-grey"></i></div>
+                    </div>
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <span class="comment-share"><i class="fas fa-comment-alt"></i> 333 Comments</span>
+                    <span class="comment-share"><i class="fas fa-share"></i> Share </span>
+                    <hr>
+                </div>
+                <div class="row forumcase-div">
+                    <div class="pull-left" id="voting">
+                        <div class="vote-button"><i class="fas fa-caret-up dark-grey"></i></div>
+                        <span id="vote-count-post" itemprop="upvoteCount" class="vote-count-post">54</span>
+                        <div class="vote-button"><i class="fas fa-caret-down dark-grey"></i></div>
+                    </div>
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <span class="comment-share"><i class="fas fa-comment-alt"></i> 333 Comments</span>
+                    <span class="comment-share"><i class="fas fa-share"></i> Share </span>
+                    <hr>
+                </div>
+                <div class="row forumcase-div">
+                    <div class="pull-left" id="voting">
+                        <div class="vote-button"><i class="fas fa-caret-up dark-grey"></i></div>
+                        <span id="vote-count-post" itemprop="upvoteCount" class="vote-count-post">54</span>
+                        <div class="vote-button"><i class="fas fa-caret-down dark-grey"></i></div>
+                    </div>
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <span class="comment-share"><i class="fas fa-comment-alt"></i> 333 Comments</span>
+                    <span class="comment-share"><i class="fas fa-share"></i> Share </span>
+                    <hr>
+                </div>
+                <div class="row forumcase-div">
+                    <div class="pull-left" id="voting">
+                        <div class="vote-button"><i class="fas fa-caret-up dark-grey"></i></div>
+                        <span id="vote-count-post" itemprop="upvoteCount" class="vote-count-post">54</span>
+                        <div class="vote-button"><i class="fas fa-caret-down dark-grey"></i></div>
+                    </div>
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <span class="comment-share"><i class="fas fa-comment-alt"></i> 333 Comments</span>
+                    <span class="comment-share"><i class="fas fa-share"></i> Share </span>
+                    <hr>
+                </div>
+                <div class="row forumcase-div">
+                    <div class="pull-left" id="voting">
+                        <div class="vote-button"><i class="fas fa-caret-up dark-grey"></i></div>
+                        <span id="vote-count-post" itemprop="upvoteCount" class="vote-count-post">54</span>
+                        <div class="vote-button"><i class="fas fa-caret-down dark-grey"></i></div>
+                    </div>
+                    <a id="title" class="maintext" href="#">[ACTIVE] Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>  Taguig</p>
+                    <p id="datepost" class="subtext">Date posted: April 27, 2017</p>
+                    <span class="comment-share"><i class="fas fa-comment-alt"></i> 333 Comments</span>
+                    <span class="comment-share"><i class="fas fa-share"></i> Share </span>
+                    <hr>
+                </div>
+            </div>
         </div>
 
     </body>
