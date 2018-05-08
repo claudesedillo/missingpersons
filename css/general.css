@@ -178,5 +178,39 @@ hr { /** horizontal dividers **/
       .navbar .container {
           width: 100%;
       } 
+      
+      .foot-section .row {
+          width: 100%;
+          padding: 30 20px;
+      }
+      
+      .foot-section li {
+          margin-left: -40px;
+      }     
 }
 /** end of nav **/
+
+
+.foot-section {
+    background-color: #d9b32e;
+}
+
+.foot-section .row{
+    padding: 40px;
+    width: 90%;
+    margin: auto;
+}
+
+.foot-section li {
+    list-style: none;
+    margin-left: -32px;
+}
+
+.foot-section a {
+    color: #191717;
+    font-size: 11.5px;
+}
+
+.foot-section h5 {
+    color: #191717;
+}

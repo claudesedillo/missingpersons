@@ -69,30 +69,11 @@
     margin-right: 25px;
 }
 
-.foot-section {
-    background-color: #d9b32e;
-}
-
-.foot-section .row{
-    padding: 40px;
-    width: 90%;
-    margin: auto;
-}
-
-.foot-section a, .foot-section h5 {
-    color: #191717;
-    margin-left: 1px;
-    margin: 0px;
-}
 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-      
-      .navbar .container {
-          width: 100%;
-      }
       
       #login-div {
           width: 90%;
@@ -129,6 +110,7 @@
       .btn-viewall {
           margin-right: 0px;
       }
+      
 }
 
 

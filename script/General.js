@@ -5,6 +5,7 @@ $("document").ready(function(){
 	var i;
     
     $("#navBar").load("nav.html");
+    $("#footer-div").load("footer.html");
 
 	for (i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function() {
