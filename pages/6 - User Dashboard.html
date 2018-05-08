@@ -19,9 +19,9 @@
         <div class="container-fluid feed">
             <div class="col-sm-2" id="sidenav">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a data-toggle="tab" href="#usercases">My Case/s</a></li>
-                    <li><a data-toggle="tab" href="#pinnedcases">Pinned Cases</a></li>
-                    <li><a data-toggle="tab" href="#">Inbox</a></li>
+                    <li  class="active"><a data-toggle="tab" href="#usercases"><span class="glyphicon glyphicon-file gi-right"></span> My Case/s</a></li>
+                    <li><a data-toggle="tab" href="#pinnedcases"><span class="glyphicon glyphicon-pushpin gi-right"></span> Pinned Cases</a></li>
+                    <li><a data-toggle="tab" href="#inbox"><span class="glyphicon glyphicon-envelope gi-right"></span>  Inbox</a></li>
                 </ul>
             </div>
             
@@ -69,7 +69,44 @@
                
                </div> <!-- end of pinnedcases -->
                
+               <div class="tab-pane" id="inbox">
+                   <a class="btn btn-default2" data-toggle="tab" id="btn-newmsg" href="#newmsg-div"><span class="glyphicon glyphicon-edit gi-right"></span> COMPOSE</a><br><br><br>
+                   
+                   <div class="row msg-div">
+                       <div class="col-sm-1"><span class="glyphicon glyphicon-record read"></span></div>
+                       <div class="col-sm-3"><p class="subtext">Tony Stark</p></div>
+                       <div class="col-sm-6"><a id="title" class="maintext" href="#">RE: Spider-Man</a></div>
+                       <div class="col-sm-2"><p class="subtext">8:30 pm</p></div>
+                       <hr>
+                   </div>
+                   
+                   <div class="row msg-div">
+                       <div class="col-sm-1"><span class="glyphicon glyphicon-record read"></span></div>
+                       <div class="col-sm-3"><p class="subtext">Steve Rogers</p></div>
+                       <div class="col-sm-6"><a id="title" class="maintext" href="#">Mission Report. December 16, 1991</a></div>
+                       <div class="col-sm-2"><p class="subtext">8:30 pm</p></div>
+                       <hr>
+                   </div>
+                   
+                   <div class="row msg-div">
+                       <div class="col-sm-1"></div>
+                       <div class="col-sm-3"><p class="subtext">thanos@purple.com</p></div>
+                       <div class="col-sm-6"><a id="title" class="maintext" href="#">LF: Soul Stone</a></div>
+                       <div class="col-sm-2"><p class="subtext">8:30 pm</p></div>
+                       <hr>
+                   </div>
+               </div> <!-- end of inbox -->
                
+               <div class="tab-pane" id="newmsg-div">
+                   <h5 class="h4-color">NEW MESSAGE</h5>
+                   <form>
+                       <input type="text" class="form-control" placeholder="Recepient">
+                       <input type="text" class="form-control" placeholder="Subject">
+                       <textarea class="form-control" cols="40" id="message" name="message" placeholder="Your message..." rows="10"></textarea>
+                   </form>
+                   <button class="btn btn-default2" id="btn-send">SEND</button>
+                   <button class="btn btn-default2" data-toggle="tab" id="btn-back" href="#inbox">BACK</button>
+               </div>
             </div>
         </div>
     </body>
