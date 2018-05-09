@@ -33,7 +33,7 @@
 								<input id="lName" 
 									   type="text" 
 									   name = "lName" 
-									   placeholder="E-Mail" 
+									   placeholder="Last Name" 
 									   class="form-control input-md" 
 									   pattern = "^[a-zA-Z]+$">
 							</div>
