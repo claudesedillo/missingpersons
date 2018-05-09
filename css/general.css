@@ -169,9 +169,40 @@ hr { /** horizontal dividers **/
     background-color: snow;
 }
 
-/** end of nav **/
+/** forumcase-div **/
+.forumcase-div {
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+}
 
+.forumcase-div a {
+    color: #191717;
+}
 
+.forumcase-div a:hover {
+    color: d9b32e;
+    text-decoration: underline;
+}
+
+.forumcase-div .loc {
+    display: inline-block;
+    float: right;
+}
+
+.forumcase-div span {
+    color: #d9b32e;
+    font-size: 18px;
+}
+
+.fa-comment-alt {
+    font-size: 14px;
+    color: #d9b32e;
+    margin-bottom: -1.5px;
+    margin-right: 3px;
+}
+
+/** footer **/
 .foot-section {
     background-color: #d9b32e;
 }

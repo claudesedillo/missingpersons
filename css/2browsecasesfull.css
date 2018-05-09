@@ -29,31 +29,6 @@
     margin: 20px auto;
 }
 
-.forumcase-div {
-    width: 95%;
-    margin: auto;
-    padding: 5px;
-}
-
-.forumcase-div a {
-    color: #191717;
-}
-
-.forumcase-div a:hover {
-    color: d9b32e;
-    text-decoration: underline;
-}
-
-.forumcase-div .loc {
-    display: inline-block;
-    float: right;
-}
-
-.forumcase-div span {
-    color: #d9b32e;
-    font-size: 18px;
-}
-
 .pagination {
     float: right;
 }

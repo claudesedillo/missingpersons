@@ -55,6 +55,13 @@
     font-size: 18px;
 }
 
+.fa-comment-alt {
+    font-size: 14px;
+    color: #d9b32e;
+    margin-bottom: -1.5px;
+    margin-right: 3px;
+}
+
 .gi-right {
     padding-right: 6.5px;
 }
