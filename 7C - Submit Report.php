@@ -4,27 +4,6 @@
 	get_header();
 ?>
 
-<?php
-
-	If($_POST['Submit']){
-		// Run validation if you are not doing it in js
-		global $wpdb;
-		
-		$fName  	 = $_POST['fName'];
-		$lName  	 = $_POST['lName'];
-		$age  	 	 = $_POST['age'];
-		$height  	 = $_POST['height'];
-		$weight   	 = $_POST['weight'];
-		$details 	 = $_POST['details'];
-		
-		if($wpdb -> insert('casedetails', array(
-		   'fName'  => $fName,  'lName'   => $lName,
-		   'age'  => $age,  'height'   => $height,
-		   'weight' => $weight, 'details' => $details)) == false)
-			wp_die('Database Insertion Failed');
-		else echo 'Database insertion successful';
-	}
-?>
 <div class = 'container margin-top-40'>
 	<div class="row">
 		<div class="col-md-6">
@@ -32,14 +11,14 @@
 				<div class="well-title">
 					<h1><b>SUBMIT A REPORT</b></h1>
 				</div>
-				<form method = "post" action = "">
+				<form method = "post" action = "" id = "submitReportForm">
 				<!-- Form start -->
 					<div class = 'row'>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" 
-									   for="name">First Name</label>
-								<input id = "id"
+									   for="fName">First Name</label>
+								<input id = "fName"
 									   type="text" 
 									   name = "fName" 
 									   placeholder="Name"
@@ -50,8 +29,8 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" 
-									   for="email">Last Name</label>
-								<input id="email" 
+									   for="lName">Last Name</label>
+								<input id="lName" 
 									   type="text" 
 									   name = "lName" 
 									   placeholder="E-Mail" 
@@ -62,11 +41,11 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" 
-									   for="date">Age</label>
-								<input id = "date"
+									   for="age">Age</label>
+								<input id = "age"
 									   name = "age" 
 									   type="number" 
-									   placeholder="Age of disappearance" 
+									   placeholder="Age of Disappearance" 
 									   class="form-control input-md" 
 									   pattern = "^\d+$">
 							</div>
@@ -103,7 +82,7 @@
 									   for="report_details">Report Details</label>
 								<textArea rows="5" 
 										  id = "report_details" 
-										  name = "details" type="text" 
+										  name = "report_details" type="text" 
 										  placeholder="Input Value"
 										  class="form-control input-md" ></textArea>
 							</div>

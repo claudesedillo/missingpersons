@@ -4,15 +4,6 @@
 	get_header();
 ?>
 
-<?php
-
-	If($_POST['Submit']){
-		// Run validation if you are not doing it in js
-		global $wpdb;
-		
-		
-	}
-?>
 <div class="container-fluid feed" id = 'aboutSection'>
 	<div class="row" id="about-div">
 		<h2 class="h4-color"><b>LOREM IPSUM</b></h2>

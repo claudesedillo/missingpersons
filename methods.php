@@ -22,8 +22,22 @@
 				echo $message;
 				break;
 				
-			case 'select':
-				select();
+			case 'submitReportForm':	
+				$fName  	 = $_POST['fName'];
+				$lName  	 = $_POST['lName'];
+				$age  	 	 = $_POST['age'];
+				$height  	 = $_POST['height'];
+				$weight   	 = $_POST['weight'];
+				$details 	 = $_POST['report_details'];
+				
+				if($wpdb -> insert('casedetails', array(
+				   'fName'  => $fName,  'lName'   => $lName,
+				   'age'  => $age,  'height'   => $height,
+				   'weight' => $weight, 'details' => $details)) == false){
+				    $message ='Database Insertion Failed';
+					wp_die();
+			    }
+				else $message = 'Database insertion successful';
 				break;
 		}
 		
