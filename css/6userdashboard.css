@@ -30,7 +30,7 @@
     color: #191717;
 }
 
-.forumcase-div, .msg-div {
+.forumcase-div, .msg-div, .thread-div {
     width: 95%;
     margin: auto;
     padding: 5px;
@@ -86,10 +86,49 @@
     border-radius: 1px;
 }
 
-#btn-send, #btn-back {
+#btn-send, .btn-back {
     float: right;
-    margin: 20px 5px;;
+    margin: 10px 5px;
 }
 
+.thread-div {
+    background-color: #efefef;
+    margin-bottom: 4px;
+}
+
+.title {
+    margin: 20px 0px;
+    color: #191717;
+    
+}
+.username {
+    font-size: 12.5px;
+    padding: 2px 10px;
+}
+
+.date {
+    font-size: 10.5px;
+    padding: 2px 10px;
+    float: right;
+}
+
+.reply-text {
+    font-size: 11px;
+    padding: 5px 15px;
+}
+
+#reply-div #message {
+    width: 92%;
+    font-size: 12px;
+    margin: 10 auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: lightgray;
+}
+
+#btn-send {
+    margin-right: 45%;
+}
 
 

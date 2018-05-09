@@ -77,7 +77,7 @@
                    <div class="row msg-div">
                        <div class="col-sm-1"><span class="glyphicon glyphicon-record read"></span></div>
                        <div class="col-sm-3"><p class="subtext">Tony Stark</p></div>
-                       <div class="col-sm-6"><a id="title" class="maintext" href="#">RE: Spider-Man</a></div>
+                       <div class="col-sm-6"><a id="title" class="maintext" data-toggle="tab" href="#viewmsg-div">RE: Spider-Man</a></div>
                        <div class="col-sm-2"><p class="subtext">8:30 pm</p></div>
                        <hr>
                    </div>
@@ -107,8 +107,29 @@
                        <textarea class="form-control" cols="40" id="message" name="message" placeholder="Your message..." rows="10"></textarea>
                    </form>
                    <button class="btn btn-default2" id="btn-send">SEND</button>
-                   <button class="btn btn-default2" data-toggle="tab" id="btn-back" href="#inbox">BACK</button>
+                   <button class="btn btn-default2 btn-back" data-toggle="tab" href="#inbox">BACK</button>
                </div>
+               
+               <div class="tab-pane" id="viewmsg-div">
+                   <h3 class="maintext title">Subject: LF: Soul Stone</h3>
+                   <button class="btn btn-default2 btn-back" data-toggle="tab" href="#inbox">BACK</button>
+                   <div class="row thread-div">
+                        <span class="maintext username">@thanos</span>
+                        <span class="maintext date">05-05-2018 9:30 pm</span>
+                        <p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                   </div>
+                   <div class="row thread-div">
+                        <span class="maintext username">@ironman (you)</span>
+                        <span class="maintext date">05-05-2018 9:30 pm</span>
+                        <p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                   </div>
+                   <div class="row" id="reply-div">
+                       <form>
+                           <textarea class="form-control" cols="40" id="message" name="message" placeholder="Reply..." rows="10"></textarea>
+                       </form>
+                       <button class="btn btn-default2" id="btn-send">SEND</button>
+                   </div>
+               </div> <!-- end of viewmsg-div -->
             </div>
         </div>
     </body>
