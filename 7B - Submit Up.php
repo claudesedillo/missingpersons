@@ -14,7 +14,7 @@
                     <!--<h1><b>SUBMIT A REPORT</b></h1>-->
                     <h2 class="h4-color"><b>Create an Account</b></h2>
                 </div>
-                <form id = "signUpForm" type = "post">
+                <form id = "signUpForm" method = "post">
                     <!-- Form start -->
                     <div class="row">
                         <div class="col-md-6">

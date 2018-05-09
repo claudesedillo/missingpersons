@@ -27,6 +27,7 @@
                     break; 
                 case '6-user-dashboard':
                     wp_enqueue_style( 'user-dashboard', get_template_directory_uri() . '/css/6userdashboard.css' );
+					wp_enqueue_script('messageUD.js', get_template_directory_uri() . '/js/message.js', array('jquery'), '', false);
                     break;					
                 case '7-submit-report':
 					wp_enqueue_script('submitReport.js', get_template_directory_uri() . '/js/submitReport.js', array('jquery'), '', false);

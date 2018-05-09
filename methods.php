@@ -3,6 +3,7 @@
 	require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-includes/wp-db.php' );
 	global $wpdb;
 	$message = "a";
+	echo $message;
 	if (isset($_POST['action'])) {
 		switch ($_POST['action']) {
 			case 'contactUsForm':
@@ -18,8 +19,6 @@
 					wp_die();
 			    }
 				else $message = 'Database insertion successful';
-				
-				echo $message;
 				break;
 				
 			case 'submitReportForm':	
@@ -56,8 +55,34 @@
 			    }
 				else $message = 'Database insertion successful';
 				break;
+				
+			case 'messageForm':	
+				$recepient   = $_POST['recepient'];
+				$subject  	 = $_POST['subject'];
+				$message  	 = $_POST['message'];
+				$userId  	 = $_POST['userid'];
+				$postId  	 = $_POST['postId'];
+				$conversationId = $_POST['conversationId'];
+				
+				$result = $wpdb->get_results("SELECT * FROM users WHERE username = '$recepient'");
+				$result2 = $wpdb->get_results("SELECT * FROM inbox WHERE senderId = '$recepient' AND receiverId = '".$result[0]->userID."' AND postId = '$postId'");
+				
+				if($result2.length != 0)
+					$conversationId = 7;
+				else $conversationId = 6;
+
+				if($wpdb -> insert('inbox', array(
+				   'receiverId'  => $result[0]->userID,  'lName'   => $lName,
+				   'subject'  => $subject,  'message'   => $message,
+				   'senderId' => $userid, 'conversationId' => $conversationId,
+				   'postId' => $postId)) == false){
+				    $message ='DatSbase Insertion Failed $conversationId';
+					wp_die();
+			    }
+				else $message = 'Database insertion successful';
+				break;
 		}
-		
+		echo $message;
 	} else if (isset($_GET['action'])) {
 		switch ($_GET['action']) {
             case 'login-form':
