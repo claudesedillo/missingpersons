@@ -29,7 +29,7 @@
             foreach($result as $row){	
 				$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
         ?> 
-		<div class="col-sm-3 offset-sm-1">
+		<div class="col-sm-3 offset-sm-1 pic-div">
 			<a href = "<?php echo $src ?>">
 				<img class=" img-responsive" 
 					 src="../wp-content/themes/missingPersons/images/icon.png">
