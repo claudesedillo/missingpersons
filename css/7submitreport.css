@@ -11,3 +11,28 @@
 .well-title {
     margin-bottom: 40px;
 }
+
+.guideline_block{
+    margin-top: 30px;
+}
+
+.guideline_text{
+    margin-bottom: 10px;
+}
+
+input[type=checkbox]
+{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    padding: 10px;
+}
+
+.feed { /** different from .feed of #2 & #3 **/
+    width: 50%;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
