@@ -41,7 +41,7 @@
 								<?php echo strtoupper($mycase['fName']) ?></a>
                     <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span><?php echo $mycase['lastlocation']; ?></p>
                     <p class="subtext">Date posted: <?php echo $mycase['datePosted']; ?></p>
-                    <p class="subtext"><i class="fas fa-comment-alt"></i> ?php echo $replies[0]->n; ?> Comments</p>
+                    <p class="subtext"><i class="fas fa-comment-alt"></i> <?php echo $replies[0]->n; ?> Comments</p>
                     <hr>
                 </div>
 			     <hr>
