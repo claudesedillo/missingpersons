@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php setcookie("logged", "claude"); language_attributes(); ?> class="no-js">
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -61,19 +61,30 @@
 								</form>
 							</div>
 						</li>
-						<li class="dropdown"><a class="dropdown-toggler" data-toggle="dropdown">LOGIN</a>
-							<ul class="dropdown-menu" id="login-div">
-								<form>
-									<div class="form-group">
-										<input type="email" class="form-control" placeholder="email address">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="password">
-									</div>
-									<button class="btn btn-default2" id="btn-login">LOGIN</button>
-								</form>
-							</ul>
-						</li>
+                        <?php if(!isset($_COOKIE["logged"])) { ?>
+                            <li class="dropdown"><a class="dropdown-toggler" data-toggle="dropdown">LOGIN</a>
+                                <ul class="dropdown-menu" id="login-div">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="email address">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="password">
+                                        </div>
+                                        <button class="btn btn-default2" id="btn-login">LOGIN</button>
+                                    </form>
+                                </ul>
+                            </li>
+                        <?php 
+                            }
+                            else{
+                        ?>
+                            <li id = "account-div">
+                                <a href = "http://wordpress.local/6-user-dashboard/"> Your Account</a>
+                            </li>
+                        <?php 
+                            }
+                        ?>
 					</ul>
 				</div>
 			</div>
