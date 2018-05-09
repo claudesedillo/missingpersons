@@ -1,11 +1,26 @@
-.well-block {
-    background-color: #fff;
-    border: 1px solid #e9e6e8;
-    padding: 40px;
+.feed { /** to make default **/
+    margin-top: 20px;
+    width: 65%;
+    padding: 10px;
 }
 
-.margin-top-40{
-    margin-top: 40px;
+.feed .row {
+    width: 97%;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 12px;
+}
+
+.feed input {
+    border-radius: 0px;
+    font-size: 11.5px;
+}
+
+#btn-submit {
+    float: right;
+    margin: 10px 15px;
 }
 
 .well-title {
@@ -30,9 +45,4 @@ input[type=checkbox]
     padding: 10px;
 }
 
-.feed { /** different from .feed of #2 & #3 **/
-    width: 50%;
-    padding: 20px;
-    padding-top: 25px;
-    padding-bottom: 0px;
-}
+
