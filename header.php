@@ -25,18 +25,20 @@
 	<body>
 		<nav id = "navBar" class = "navbar">
 			<div class="container">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-opts" id="btn-nav">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span> 
-        </button>
-        <a class="navbar-brand" href="http://wordpress.local/">LOGO</a>
-    </div>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" 
+							data-toggle="collapse" data-target="#nav-opts" id="btn-nav">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a class="navbar-brand" href="http://wordpress.local/">LOGO</a>
+				</div>
 
 				<div class="collapse navbar-collapse" id="nav-opts">
 					<ul class="nav navbar-nav">
-						<li class="dropdown"><a class="dropdown-toggler" data-toggle="dropdown">CASES <span class="caret"></span></a>
+						<li class="dropdown"><a class="dropdown-toggler" 
+							data-toggle="dropdown">CASES <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="http://wordpress.local/2-browse-cases-full?type={unsolved}">Unsolved Cases</a></li>
 								<li><a href="http://wordpress.local/2-browse-cases-full?type={solved}">Solved Cases</a></li>
@@ -72,7 +74,6 @@
 								</form>
 							</ul>
 						</li>
-						<li><a href="#">SIGN UP</a></li>
 					</ul>
 				</div>
 			</div>

@@ -24,19 +24,20 @@
                 $currentIndex += 1;
                 $src = "http://wordpress.local/5-specific-case?caseNumber={$currentIndex}";
         ?>
-        <div class="col-sm-3 offset-sm-1 pic-div">
-			<a href = "<?php echo $src ?>">
-				<img class="img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
-				<p id="nameloc" class="maintext"><?php echo $row['fName'];?>  <?php echo $row['lName'];?>, 
-				<?php echo $row['lastlocation'];?></p>
-				<p id="date" class="subtext">Last seen: <?php echo $row['lastseen'];?></p>
-			</a>
-		</div>
+			<div class="col-sm-3 offset-sm-1 pic-div">
+				<a href = "<?php echo $src ?>">
+					<img class="img-responsive" src="../wp-content/themes/missingPersons/images/icon.png">
+					<p id="nameloc" class="maintext"><?php echo $row['fName'];?>  <?php echo $row['lName'];?>, 
+					<?php echo $row['lastlocation'];?></p>
+					<p id="date" class="subtext">Last seen: <?php echo $row['lastseen'];?></p>
+				</a>
+			</div>
         <?php
             }
         ?>
-        </div>
-	<button class="btn btn-default" id = 'loadMoreButton' currentIndex = '<?php echo $currentIndex ?>'>LOAD MORE</button>
+		</div>
+		<button class="btn btn-default" id = 'loadMoreButton' currentIndex = '<?php echo $currentIndex ?>'>LOAD MORE</button>
+	</div>
 </div>
 
 <?php
