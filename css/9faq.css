@@ -1,3 +1,10 @@
+.feed { 
+    width: 85%;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
 #accordion .panel-heading { padding: 0;}
 #accordion .panel-title > a {
     display: block;

@@ -30,27 +30,27 @@
     color: #191717;
 }
 
-.case-div, .msg-div {
+.forumcase-div, .msg-div {
     width: 95%;
     margin: auto;
     padding: 5px;
 }
 
-.case-div a {
+.forumcase-div a {
     color: #191717;
 }
 
-.case-div a:hover {
+.forumcase-div a:hover {
     color: d9b32e;
     text-decoration: underline;
 }
 
-.case-div .loc {
+.forumcase-div .loc {
     display: inline-block;
     float: right;
 }
 
-.case-div span {
+.forumcase-div span {
     color: #d9b32e;
     font-size: 18px;
 }
