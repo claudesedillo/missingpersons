@@ -13,14 +13,13 @@
 	$userID = 1;
 ?>
 <div class="container-fluid feed">
-    <div class="container-fluid feed">
-        <div class="col-sm-2" id="sidenav">
-            <ul class="nav nav-pills nav-stacked">
-                <li  class="active"><a data-toggle="tab" href="#usercases"><span class="glyphicon glyphicon-file gi-right"></span> My Case/s</a></li>
-                 <li><a data-toggle="tab" href="#pinnedcases"><span class="glyphicon glyphicon-pushpin gi-right"></span> Pinned Cases</a></li>
-                 <li><a data-toggle="tab" href="#inbox"><span class="glyphicon glyphicon-envelope gi-right"></span>  Inbox</a></li>
-            </ul>
-        </div>
+    <div class="col-sm-2" id="sidenav">
+        <ul class="nav nav-pills nav-stacked">
+            <li  class="active"><a data-toggle="tab" href="#usercases"><span class="glyphicon glyphicon-file gi-right"></span> My Case/s</a></li>
+            <li><a data-toggle="tab" href="#pinnedcases"><span class="glyphicon glyphicon-pushpin gi-right"></span> Pinned Cases</a></li>
+            <li><a data-toggle="tab" href="#inbox"><span class="glyphicon glyphicon-envelope gi-right"></span>  Inbox</a></li>
+        </ul>
+    </div>
     
 	<!-- tab content -->
     <div class="col-sm-10 tab-content">
@@ -36,13 +35,13 @@
                     		
                     $replies = $wpdb->get_results("SELECT COUNT(*) AS n FROM threadpost WHERE postId = $caseID");
 			?>
-                <div class="row case-div">
-                        <a class="maintext" href="<?php echo $src ?>">[[<?php echo strtoupper($mycase['status']) ?>] 
+                <div class="row forumcase-div">
+                    <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($mycase['status']) ?>] 
 								<?php echo strtoupper($mycase['lName']) ?>, 
 								<?php echo strtoupper($mycase['fName']) ?></a>
-                        <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span><?php echo $mycase['lastlocation']; ?></p>  
-                        <p class="subtext">Date posted: <?php echo $mycase['datePosted']; ?></p>
-                        <p class="subtext"><b>Replies: <?php echo $replies[0]->n; ?></b></p>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span><?php echo $mycase['lastlocation']; ?></p>
+                    <p class="subtext">Date posted: <?php echo $mycase['datePosted']; ?></p>
+                    <p class="subtext"><i class="fas fa-comment-alt"></i> ?php echo $replies[0]->n; ?> Comments</p>
                     <hr>
                 </div>
 			     <hr>
@@ -57,7 +56,7 @@
 				$pinnedcases = array_filter(explode(';', $result[0]->pinnedCases));
 				foreach ( $pinnedcases as $pinnedcase )   {
 			?>
-				<div class="row case-div">
+				<div class="row forumcase-div">
 						<?php 
 							$casedetails = $wpdb->get_results ( "SELECT * FROM casedetails 
 																 WHERE id=".$pinnedcase."");
@@ -67,13 +66,14 @@
                             $replies = $wpdb->get_results("SELECT COUNT(*) AS n FROM threadpost WHERE postId = $caseID");
                     
 							$src = "http://wordpress.local/5-specific-case?caseNumber={$caseID}";
-						?>    
-                    <a id="title" class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($casedetails[0]->status) ?>] 
+						?>
+                    <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($casedetails[0]->status) ?>] 
 								<?php echo strtoupper($casedetails[0]->lName) ?>, 
 								<?php echo strtoupper($casedetails[0]->fName) ?></a>
-                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span><?php echo $casedetails[0]->lastlocation; ?></p>  
-                    <p class="subtext"><?php echo $mycase['datePosted']; ?></p>
-                    <p class="subtext"><b>Replies: <?php echo $replies[0]->n;?></b></p>				<hr>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>><?php echo $casedetails[0]->lastlocation; ?></p>
+                    <p class="subtext">Date posted: <?php echo $mycase['datePosted']; ?></p>
+                    <p class="subtext"><i class="fas fa-comment-alt"></i> <?php echo $replies[0]->n;?></p>
+                    <hr>
 				</div>
                 <hr>
 			<?php
