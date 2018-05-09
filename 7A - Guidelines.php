@@ -1,4 +1,5 @@
 <?php
+    setcookie("logged", "claude");
 	/* Template Name: 7A - Guidelines
 	 */
 	get_header();
@@ -36,7 +37,7 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox"> I agree to terms and condition.
+                    <input type="checkbox" id = "terms"> I agree to terms and condition.
                 </label>
             </div>
         </div>
@@ -44,7 +45,14 @@
     </div>
 
     <div class="text-center">
-        <button id="singlebutton" name="singlebutton" class="btn btn-default2">Proceed</button>
+        <?php
+        if(!isset($_COOKIE["logged"])) { ?>
+            <button name="singlebutton" id = "btn-proceed-signup" class="btn btn-default2">Proceed</button>
+        <?php }
+        else{ ?>
+        
+            <button name="singlebutton" id = "btn-proceed-submit" class="btn btn-default2">Proceed</button>
+        <?php } ?>
     </div>
 </div>
 

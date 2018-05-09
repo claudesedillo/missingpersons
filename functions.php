@@ -31,6 +31,9 @@
                 case '7-submit-report':
 					wp_enqueue_script('submitReport.js', get_template_directory_uri() . '/js/submitReport.js', array('jquery'), '', false);
 					wp_enqueue_style( '7submitreport.css', get_template_directory_uri() . '/css/7submitreport.css' );
+                    break;
+                case '7a-guidelines':
+					wp_enqueue_script('guidelines', get_template_directory_uri() . '/js/guidelines.js', array('jquery'), '', false);
                     break;  				
                 case '7-sign-up':
 					wp_enqueue_script('signup.js', get_template_directory_uri() . '/js/signup.js', array('jquery'), '', false);
