@@ -39,6 +39,23 @@
 			    }
 				else $message = 'Database insertion successful';
 				break;
+					
+			case 'signUpForm':	
+				$fName  	 = $_POST['first_name'];
+				$lName  	 = $_POST['last_Name'];
+				$email  	 = $_POST['email'];
+				$username  	 = $_POST['username'];
+				$password    = $_POST['password'];
+				
+				if($wpdb -> insert('users', array(
+				   'firstName'  => $fName,  'lastName'   => $lName,
+				   'email'  => $email,  'username'   => $username,
+				   'password' => $password)) == false){
+				    $message ='Database Insertion Failed';
+					wp_die();
+			    }
+				else $message = 'Database insertion successful';
+				break;
 		}
 		
 	} else if (isset($_GET['action'])) {
