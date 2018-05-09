@@ -16,7 +16,7 @@
 	$userID = 1;
 ?>
 <div class="container-fluid feed">
-    <div class="col-sm-2" id="sidenav">
+    <div class="col-sm-2" id="sidenav" user = "<?php $userID ?>">
         <ul class="nav nav-pills nav-stacked">
             <li  class="active"><a data-toggle="tab" href="#usercases"><span class="glyphicon glyphicon-file gi-right"></span> My Case/s</a></li>
             <li><a data-toggle="tab" href="#pinnedcases"><span class="glyphicon glyphicon-pushpin gi-right"></span> Pinned Cases</a></li>
@@ -130,6 +130,39 @@
 				}
 			?>
         </div>
+		
+		<div class="tab-pane" id="newmsg-div">
+		   <h5 class="h4-color">NEW MESSAGE</h5>
+		   <form id = "messageForm" method = "post">
+			   <input type="text" class="form-control" id = "recepient" name = "recepient" placeholder="Recepient">
+			   <input type="text" class="form-control" id = "subject" name = "subject" placeholder="Subject">
+			   <textarea class="form-control" cols="40" id="message" name="message" placeholder="Your message..." rows="10"></textarea>
+			   <button class="btn btn-default2" id="btn-send"
+				   type="submit" name = "Submit">Send</button>
+		   </form>
+		   <button class="btn btn-default2 btn-back" data-toggle="tab" href="#inbox">BACK</button>
+		</div>
+
+		<div class="tab-pane" id="viewmsg-div">
+		   <h3 class="maintext title">Subject: LF: Soul Stone</h3>
+		   <button class="btn btn-default2 btn-back" data-toggle="tab" href="#inbox">BACK</button>
+		   <div class="row thread-div">
+				<span class="maintext username">@thanos</span>
+				<span class="maintext date">05-05-2018 9:30 pm</span>
+				<p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		   </div>
+		   <div class="row thread-div">
+				<span class="maintext username">@ironman (you)</span>
+				<span class="maintext date">05-05-2018 9:30 pm</span>
+				<p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		   </div>
+		   <div class="row" id="reply-div">
+			   <form>
+				   <textarea class="form-control" cols="40" id="reply" name="message" placeholder="Reply..." rows="10"></textarea>
+			   </form>
+			   <button class="btn btn-default2" id="btn-send">SEND</button>
+		   </div>
+		</div> <!-- end of viewmsg-div -->
     </div>		
 </div>
 
