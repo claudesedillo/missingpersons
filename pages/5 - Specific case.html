@@ -18,98 +18,55 @@
         <nav id = "navBar" class = "navbar"></nav>
 
         <div class="container-fluid feed">
-            <div class = "container width-85 padding-20 border-black margin-top-40" id = "profile">
-                <div id = "info" class = "row">
-                    <div class = "col-md-4">
-                        <div class="overflow-hidden">
-                            <img id = "mugshot" class = "float-left margin-right-20" src = "../images/default-avatar.jpg">
-                            <p id = "missing-person-name" class="fontsize-30">Patrick Tobias</p>
+            <div class="row profile-div">
+                <div class="col-sm-3"><img class="img-responsive" src="icon.png"></div>
+                <div class="col-sm-9 details-div">
+                    <h3>Patrick Tobias</h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="maintext">Age: </p><span class="info">21</span><br>
+                            <p class="maintext">Last seen: </p><span class="info">May 9, 2018</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="maintext">Height: </p><span class="info">N/A</span><br>
+                            <p class="maintext">Weight: </p><span class="info">N/A</span>
                         </div>
                     </div>
-                    <div class = "col-md-4">
-                        <!--<p id = "missing-person-name">Patrick Tobias</p>-->
-                        <p id = "missing-person-age">Age: 21</p>
-                        <p id = "missing-person-lastseen">Last Seen: 01-10-18</p>
-                    </div>
-                    <div class = "col-md-4">
-                        <p id = "missing-person-weight">Weight: 10KG</p>
-                        <p id = "missing-person-height">Height: 5'10"</p>
-                    </div>
-                    <div class = "col-md-8">
-                        <p id = "description">
-                            Lorem ipsum dolor sit amet, vim inermis probatus an. Ea audiam viderer qui. Fugit summo civibus mel cu, ne ius soluta accusata repudiare, usu erat fugit quaerendum et. Sint dolor partem id vim, nec ad modo consequat. Cu nibh dicant mel, quas porro consetetur eum an. Cu his moderatius incorrupte.
-                        </p>
-                    </div>
-                    <div class = "col-md-8">
-                        <span>Share this post</span>
-                        <ul class = "list-inline color-white" id = "icons">
-                            <li class = "list-inline-item">
-                                <a href = "#"><i class="fab fa-facebook-f iconLink"></i></a>
-                            </li>
-                            <li class = "list-inline-item">
-                                <a href = "#"><i class="fab fa-google-plus iconLink"></i></a>
-                            </li>
-                            <li class = "list-inline-item">
-                                <a href = "#"><i class="fab fa-twitter iconLink"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <p class="description">Lorem ipsum dolor sit amet, vim inermis probatus an. Ea audiam viderer qui. Fugit summo civibus mel cu, ne ius soluta accusata repudiare, usu erat fugit quaerendum et. Sint dolor partem id vim, nec ad modo consequat. Cu nibh dicant mel, quas porro consetetur eum an. Cu his moderatius incorrupte.</p>
+                    
+                    <button class="icons"><i class="fab fa-facebook"></i></button>
+                    <button class="icons"><i class="fab fa-twitter"></i></button>
+                    <button class="icons"><i class="far fa-envelope"></i></button>
+                </div>
+            </div><br> <!-- end profile-div -->
+            
+            <div class="row thread-div">
+                <p class="maintext">[ACTIVE SEARCH] Patrick Tobias, 21</>
+                <div class="row reply-div">
+                    <span class="maintext username">@kevinchan</span>
+                    <span class="maintext date">05-05-2018 9:30 pm</span>
+                    <p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div class="row reply-div">
+                    <span class="maintext username">@claudesedillo</span>
+                    <span class="maintext date">05-05-2018 9:30 pm</span>
+                    <p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div class="row reply-div">
+                    <span class="maintext username">@thanos</span>
+                    <span class="maintext date">05-05-2018 9:30 pm</span>
+                    <p class="reply-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
-
-
-            <div class = "container width-85 padding-20" id = "thread">
-                <h3 id = "thread-title">[ACTIVE SEARCH] Patrick Tobias, 21</h3>
-
-                <div class = "row thread-post thread-post-message border-black margin-10">
-                    <div class = "thread-post-user-info padding-10">
-                        <img class = "float-left margin-right-10 comment-user-pic" src = "../images/default-avatar.jpg">
-                        <span class="user-poster badge badge-pill badge-danger">Karl Crespo <i class="fab fa-angular"></i> </span>
-                        <small class="text-time"><em><span class = "pull-right">#2</span> <span class = " date-time pull-right">01-10-18 10:00PM</span></em></small>
-                    </div>
-                    <div class = "message-div">
-                        <p class = "message padding-10">Help</p>
-                    </div>
-                </div>
-
-                <div class = "row thread-post thread-post-message border-black margin-10">
-                    <!--<div class="float-left vote-container background-black">-->
-                    <!--</div>-->
-                    <div class = "thread-post-user-info padding-10">
-                        <img class = "float-left margin-right-10 comment-user-pic" src = "../images/default-avatar.jpg">
-                        <span class="user-admin badge badge-pill badge-danger">Migo Dancel </span>
-                        <small class="text-time"><em><span class = "pull-right">#2</span> <span class = " date-time pull-right">01-10-18 10:00PM</span></em></small>
-                    </div>
-                    <div class = "message-div">
-                        <p class = "message padding-10">OK</p>
-
-                    </div>
-                </div>
-                <div class = "row thread-post thread-post-message border-black margin-10">
-                    <div class = "thread-post-user-info padding-10">
-                        <img class = "float-left margin-right-10 comment-user-pic" src = "../images/default-avatar.jpg">
-                        <span class="user-admin badge badge-pill badge-danger">Kevin Chan </span>
-                        <small class="text-time"><em><span class = "pull-right">#2</span> <span class = " date-time pull-right">01-10-18 10:00PM</span></em></small>
-                    </div>
-                    <div class = "message-div">
-                        <p class = "message padding-10">He's a good kid. I hope he'll be found</p>
-                    </div>
-                </div>
-            </div>
-            <div class = "container width-85 padding-20" id = "reply-div">
-                <div id = "reply-header" class = "padding-10">
-                    <p class = "text-white">Leave a reply</p>
-                </div>
+            <div class="row newreply-div">
                 <form>
-                    <div class = "form-group">
-                        <textarea type = "text" class = "form-control padding-10 border-black" id = "reply-field" rows = "5" placeholder = "Message"></textarea>
-                    </div>
-                    <button type="button" class="btn btn-primary float-right background-black">Reply</button>
-                    <button type="button" class="btn btn-primary float-right background-black">Preview</button>
-                    <button type="button" class="btn btn-primary float-right background-black">Cancel</button>
+                    <textarea class="form-control" cols="40" id="message" name="message" placeholder="Reply..." rows="10"></textarea>
                 </form>
+                <button class="btn btn-default2" id="btn-preview">PREVIEW</button>
+                <button class="btn btn-default2" id="btn-cancel">CANCEL</button>
+                <button class="btn btn-default2" id="btn-reply">REPLY</button>
+            
             </div>
         </div>
-        <script type="text/javascript" src="../script/General.js"></script>
     </body>
 </html>
