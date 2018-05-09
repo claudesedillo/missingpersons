@@ -22,7 +22,7 @@
 					wp_enqueue_style( 'search-page', get_template_directory_uri() . '/css/4searchpage.css' );
                     break;
 				case '5-specific-case':
-                    wp_enqueue_script('specific-case', get_template_directory_uri() . '/js/sc.js', array('jquery'), '', false);
+                    wp_enqueue_script('5-specific-case', get_template_directory_uri() . '/js/sc.js', array('jquery'), '', false);
                     wp_enqueue_style( '5specificcase.css', get_template_directory_uri() . '/css/5specificcase.css' );
                     break; 
                 case '6-user-dashboard':
