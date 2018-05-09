@@ -4,17 +4,6 @@
     padding: 20px;
 }
 
-.h4-color { /** to make default **/
-    background-color: #d9b32e;
-    margin-bottom: 5px;
-    display: inline-block;
-    font-weight: 600;
-    padding: 3px;
-    padding-left: 15px;
-    padding-right: 15px;
-    color: #191717;
-}
-
 .pic-div {
     margin: auto;
 }
@@ -46,7 +35,6 @@
     font-weight: 700;
     border-style: none;
 }
-
 
 @media only screen 
   and (min-device-width: 320px) 
