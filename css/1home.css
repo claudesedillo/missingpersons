@@ -39,60 +39,16 @@
     width: 80%;
 }
 
-.forumcase-div {
-    width: 95%;
-    margin: auto;
-    padding: 5px;
-}
-
-.forumcase-div a {
-    color: #191717;
-}
-
-.forumcase-div a:hover {
-    color: d9b32e;
-    text-decoration: underline;
-}
-
-.forumcase-div .loc {
-    display: inline-block;
-    float: right;
-}
-
-.forumcase-div span {
-    color: #d9b32e;
-    font-size: 18px;
-}
-
 .btn-viewall { 
     float: right;
     margin-right: 25px;
 }
 
-.foot-section {
-    background-color: #d9b32e;
-}
-
-.foot-section .row{
-    padding: 40px;
-    width: 90%;
-    margin: auto;
-}
-
-.foot-section a, .foot-section h5 {
-    color: #191717;
-    margin-left: 1px;
-    margin: 0px;
-}
 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-      
-      .navbar .container {
-          width: 100%;
-      }
       
       #login-div {
           width: 90%;
@@ -129,6 +85,7 @@
       .btn-viewall {
           margin-right: 0px;
       }
+      
 }
 
 
