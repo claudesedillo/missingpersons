@@ -9,7 +9,7 @@
 		<div class="col-md-6">
 			<div class="well-block">
 				<div class="well-title">
-					<h1><b>SUBMIT A REPORT</b></h1>
+					<h1 class="h4-color"><b>SUBMIT A REPORT</b></h1>
 				</div>
 				<form method = "post" action = "" id = "submitReportForm">
 				<!-- Form start -->
@@ -66,6 +66,18 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" 
+									   for="lastSeen">Last Seen</label>
+								<input id = "lastSeen"
+									   name = "lastSeen" 
+									   type="text" 
+									   placeholder="yyyy-mm-dd" 
+									   class="form-control input-md" 
+									   pattern="\d{4}-\b(0[1-9]|1[0-2])\b-(0[1-9]|1[\d]|2[\d]|3[01])">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label" 
 									   for="weight">Weight</label>
 								<input id = "weight"
 									   name = "weight" 
@@ -74,6 +86,18 @@
 									   class="form-control input-md"  
 									   pattern = "^\d*\.?\d*$">
 						
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label" 
+									   for="lastLocation">Last Location</label>
+								<input id = "lastLocation"
+									   name = "lastLocation" 
+									   type="text" 
+									   placeholder="Location" 
+									   class="form-control input-md">
 							</div>
 						</div>
 						<div class="col-md-12">
@@ -111,23 +135,23 @@
 		<div class="col-md-6">
 			<div class="well-block">
 				<div class="well-title">
-					<h1>QA</h1>
+					<h1 class="h4-color">QA</h1>
 				</div>
 				<div class="feature-block">
 					<div class="feature feature-blurb-text">
-						<h4 class="feature-title">Why do you need to submit the Documents?</h4>
+						<h4 class="feature-title"><b>Why do you need to submit the Documents?</b></h4>
 						<div class="feature-content">
 							<p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
 						</div>
 					</div>
 					<div class="feature feature-blurb-text">
-						<h4 class="feature-title">Why do you ___?</h4>
+						<h4 class="feature-title"><b>Why do you ___?</b></h4>
 						<div class="feature-content">
 							<p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
 						</div>
 					</div>
 					<div class="feature feature-blurb-text">
-						<h4 class="feature-title">Why do you ___?</h4>
+						<h4 class="feature-title"><b>Why do you ___?</b></h4>
 						<div class="feature-content">
 							<p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
 						</div>

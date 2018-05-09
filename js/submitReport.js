@@ -1,13 +1,15 @@
 
 $("document").ready(function(){
-	
+	//alert(/^(\d{4}-\b(0[1-9]|1[0-2])\b-(0[1-9]|1[\d]|2[\d]|3[01]))$/.test('1222-13-21'));
+
 	$('#submitReportForm').on('submit', function (e) {
 		e.preventDefault();
 		
 		if($('#fName').val() != null    && $('#fName').val()  != "" &&
 		   $('#lName').val() != null  && $('#lName').val()  != ""&&
-//		  ($('#email').val() != null   && $('#email').val()   != "" ||
-//		   $('#number').val() != null  && $('#number').val()  != "")&&
+		   $('#lastSeen').val() != null  && $('#lastSeen').val()  != ""&&
+		   /^(\d{4}-\b(0[1-9]|1[0-2])\b-(0[1-9]|1[\d]|2[\d]|3[01]))$/.test($('#lastSeen').val()) &&
+		   $('#lastLocation').val() != null  && $('#lastLocation').val()  != ""&&
 		   $('#report_details').val() != null && $('#report_details').val() != ""){
 			$.ajax({
 				type: 'post',
