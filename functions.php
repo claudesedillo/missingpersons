@@ -19,14 +19,14 @@
                     wp_enqueue_script('browseCase.js', get_template_directory_uri() . '/js/browseCase.js', array('jquery'), '', false);
                     break;
 				case '4-search-page':
-					wp_enqueue_style( 'search-page', get_template_directory_uri() . '/css/search-page.css' );
+					wp_enqueue_style( 'search-page', get_template_directory_uri() . '/css/4searchpage.css' );
                     break;
 				case '5-specific-case':
                     wp_enqueue_script('specific-case', get_template_directory_uri() . '/js/sc.js', array('jquery'), '', false);
                     wp_enqueue_style( '5specificcase.css', get_template_directory_uri() . '/css/5specificcase.css' );
                     break; 
                 case '6-user-dashboard':
-                    wp_enqueue_style( 'dashboard', get_template_directory_uri() . '/css/6userdashboard.css' );
+                    wp_enqueue_style( 'user-dashboard', get_template_directory_uri() . '/css/6userdashboard.css' );
                     break;					
                 case '7-submit-report':
 					wp_enqueue_script('submitReport.js', get_template_directory_uri() . '/js/submitReport.js', array('jquery'), '', false);

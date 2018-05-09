@@ -70,7 +70,7 @@
                     <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($casedetails[0]->status) ?>] 
 								<?php echo strtoupper($casedetails[0]->lName) ?>, 
 								<?php echo strtoupper($casedetails[0]->fName) ?></a>
-                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span>><?php echo $casedetails[0]->lastlocation; ?></p>
+                    <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span><?php echo $casedetails[0]->lastlocation; ?></p>
                     <p class="subtext">Date posted: <?php echo $mycase['datePosted']; ?></p>
                     <p class="subtext"><i class="fas fa-comment-alt"></i> <?php echo $replies[0]->n;?></p>
                     <hr>
