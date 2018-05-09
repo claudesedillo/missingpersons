@@ -29,3 +29,10 @@ input[type=checkbox]
     -o-transform: scale(1.5); /* Opera */
     padding: 10px;
 }
+
+.feed { /** different from .feed of #2 & #3 **/
+    width: 50%;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
