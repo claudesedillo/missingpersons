@@ -112,7 +112,8 @@
                        <div class="col-sm-3"><p class="subtext">Subject: [<?php echo strtoupper($message['status']) ?>] 
 							<?php echo strtoupper($message['lName']) ?>, 
 							<?php echo strtoupper($message['fName']) ?></p></div>
-                       <div class="col-sm-6"><a id="title" class="maintext" href="#">RE: Spider-Man</a></div>
+                       <div class="col-sm-6"><a id="title" class="maintext" href="#">RE: <?php echo $message['senderId'] == $userID ? 
+																					$message['receiverName'] : $message['senderName'] ?></a></div>
                        <div class="col-sm-2"><p class="subtext"><?php echo date("F j Y; h:i:s A", strtotime($message['dateMessaged']))?></p></div>
                        <hr>
                 </div>
