@@ -1,6 +1,9 @@
 <?php
 	/* Template Name: 7 - Submit Report
 	 */
+	if(!isset($_COOKIE["logged"])) {
+        wp_redirect( get_site_url().'/404-page/'); exit;
+    }
 	get_header();
 ?>
 

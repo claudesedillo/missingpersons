@@ -1,7 +1,10 @@
 <?php
-    setcookie("logged", "claude");
+    //setcookie("logged", "claude");
 	/* Template Name: 6 - User Dashboard
 	 */
+	if(!isset($_COOKIE["logged"])) {
+        wp_redirect( get_site_url().'/404-page/'); exit;
+    }
 	get_header();
 ?>
 

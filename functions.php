@@ -46,6 +46,9 @@
 				case '10-login':
                     wp_enqueue_script('login.js', get_template_directory_uri() . '/js/login.js', array('jquery'), '', false);
                     break;
+                case '404-page':
+                    wp_enqueue_style( '404 css', get_template_directory_uri() . '/css/404.css' );
+                    break;
 				case 'some-post':
 					wp_enqueue_script('somepost', get_template_directory_uri() . '/js/somepost.js', array('jquery'), '1.6', true);
 					break;

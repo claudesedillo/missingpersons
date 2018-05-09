@@ -2,11 +2,14 @@
     //setcookie("logged", "claude");
 	/* Template Name: 5 - Specific Case
 	 */
-	 
+    $caseid = $_GET['caseNumber'];
+    if($caseid <=0) {
+         wp_redirect( get_site_url().'/404-page/'); exit;
+    }
 	get_header();
 
 	global $wpdb; 
-	$caseid = $_GET['caseNumber'];
+	
 	$userID = 1; //get this value dynamically
           
 	if($_POST['reply']){
