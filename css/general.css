@@ -169,6 +169,64 @@ hr { /** horizontal dividers **/
     background-color: snow;
 }
 
+/** forumcase-div **/
+.forumcase-div {
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+}
+
+.forumcase-div a {
+    color: #191717;
+}
+
+.forumcase-div a:hover {
+    color: d9b32e;
+    text-decoration: underline;
+}
+
+.forumcase-div .loc {
+    display: inline-block;
+    float: right;
+}
+
+.glyphicon-map-marker {
+    color: #d9b32e;
+    font-size: 18px;
+}
+
+.fa-comment-alt {
+    font-size: 14px;
+    color: #d9b32e;
+    margin-bottom: -1.5px;
+    margin-right: 3px;
+}
+
+/** footer **/
+.foot-section {
+    background-color: #d9b32e;
+}
+
+.foot-section .row{
+    padding: 40px;
+    width: 90%;
+    margin: auto;
+}
+
+.foot-section li {
+    list-style: none;
+    margin-left: -40px;
+}
+
+.foot-section a {
+    color: #191717;
+    font-size: 11.5px;
+}
+
+.foot-section h5 {
+    color: #191717;
+}
+
 
 @media only screen 
   and (min-device-width: 320px) 
@@ -178,5 +236,13 @@ hr { /** horizontal dividers **/
       .navbar .container {
           width: 100%;
       } 
+      
+      .foot-section .row {
+          width: 90%;
+          padding: 40px 15px;
+      }
+      
+      .foot-section li {
+          margin-left: -40px;
+      }     
 }
-/** end of nav **/

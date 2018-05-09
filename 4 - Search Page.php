@@ -15,8 +15,9 @@
 								 
 ?>
 
-<div class="container">
 
+<div class="container-fluid feed" id="unsolved-div">
+    <h4 class="h4-color">Search results for <?php echo $query?></h4><br><br>
 <?php
 	foreach($result as $row){
 		$id = $row['userID'];
@@ -24,36 +25,22 @@
 		$postId = $row['id'];
 		$result2 = $wpdb->get_results("SELECT username FROM users WHERE userID = '$id'");
 		$result3 = $wpdb->get_results("SELECT COUNT(*) AS n FROM threadpost WHERE postId = $postId");
-?> 
-	<div class="row panel panel-default panel_padding">
-		<a href = "<?php echo $src ?>">
-			<div class="col-lg-1">
-				<div class="row">
-					<span class="glyphicon glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-				</div>
-				<div class="row">
-					&nbsp;&nbsp;<?php echo $result3[0]->n;?> 
-				</div>
-				<div class="row">
-					<span class="glyphicon glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-				</div>
-			</div>
-			<div class="col-lg-11">
-					<h6>Posted by: <?php echo $result2[0]->username;?> 
-						<i><?php echo $row['datePosted'];?></i></h6>
-					<h1>[<?php echo strtoupper($row['status']) ?>] 
-						 <?php echo strtoupper($row['lName']) ?>, 
-						 <?php echo strtoupper($row['fName']) ?></h1>
-					<h4><?php echo $row['details'];?></h4>
-					<!--<h4>
-						Edit: Also is there a way to set a maximum amount a column will resize down to before it stacks instead? I'm trying to use 4 cards but if they resize too small the title lines wrap and then suddenly the alignment of the titles and pictures in the cards is different in each card and it looks awful.
-					</h4>
-					<h4>
-						Thanks!
-					</h4>-->
-			</div>
-		</a>
-	</div>
+?>
+      <div class="row forumcase-div">
+        <div class="pull-left col-sm-1 voting">
+            <button class="vote-btn"><i class="fas fa-caret-up"></i></button>
+            <span itemprop="upvoteCount" class="vote-count-post"><?php echo $result3[0]->n;?></span>
+            <button class="vote-btn"><i class="fas fa-caret-down"></i></button>
+        </div>
+        <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($row['status']) ?>] 
+		 <?php echo strtoupper($row['lName']) ?>, 
+		 <?php echo strtoupper($row['fName']) ?></a>
+        <p class="maintext loc"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $row['lastlocation']; ?></p>
+        <p class="subtext">Date posted: <?php echo $row['datePosted']?></p>
+        <p class="subtext"><i class="fas fa-comment-alt"></i><?php echo $result3[0]->n;?> Comments</p>
+        <hr>
+      </div>
+
 <?php
 	}
 ?> 

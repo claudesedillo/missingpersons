@@ -1,0 +1,27 @@
+.feed { /** to make default **/
+    margin-top: 30px;
+    width: 80%;
+    padding: 20px;
+}
+
+.voting{
+    width:30px;
+    height:40px;
+    padding: 0px;
+}
+
+.vote-count-post {
+    font-size: 13.5px;
+    margin: 1px 3.5px;
+    color: darkgrey;
+    font-weight: 700;
+}
+
+.vote-btn{
+    font-size: 18px;
+    padding: 0px 5px;
+    margin: -1px 1px;
+    cursor: pointer;
+    border-style: none;
+    color: darkgray;
+}
