@@ -44,7 +44,7 @@
 								<li><a href="http://wordpress.local/2-browse-cases-full?type={solved}">Solved Cases</a></li>
 							</ul>
 						</li>
-						<li><a href="http://wordpress.local/7-Submit-Report/">SUBMIT A REPORT</a></li>
+						<li><a href="http://wordpress.local/7a-guidelines/">SUBMIT A REPORT</a></li>
 						<li class="dropdown"><a class="dropdown-toggler" data-toggle="dropdown">ABOUT <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="http://wordpress.local/9-faq/">FAQs</a></li>
