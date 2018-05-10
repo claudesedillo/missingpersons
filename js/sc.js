@@ -13,28 +13,30 @@ $("document").ready(function(){
     $("#btn-preview").click(function(){
        console.log("preview clicked!");
         
-       var postPreview = $("#thread-post-preview");
-        
-       if ( !($.trim( $("#reply-field").val() ) == '' )){
-           console.log("passed the test!");
+       if (!($.trim( $("#reply-field").val() ) == '' ) && !$('#thread-post-preview').length){
+           
+          var d = new Date();
+
+          var month = d.getMonth()+1;
+          var day = d.getDate();
+           
+          var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+           
+          var date =
+                (month<10 ? '0' : '') + month + '-' +
+                (day<10 ? '0' : '') + day + '-' +
+                (d.getFullYear() % 2000);;
            
            var message = $('textarea#reply-field').val();
            console.log("reply field value is " + message);
-           var thread = $("#thread");
-           var previewText = "<span id = \"preview\">Preview:</span><br><div class = \"thread-post padding-10\" id = \"thread-post-preview\">" +
-                                "<div class = \"thread-post-message border-black\">" +
-                                    "<div class = \"thread-post-user-info padding-10\"> " +
-                                        "<span class = \"user-poster\"> your-name-here  </span>" +
-                                        "<span class = \"pull-right text-white\">your-post-number-here</span>" +
-                                        "<span class = \"date-time pull-right text-white\">your-date-here</span>" + 
-                                    "</div>" +
-                                    "<div class = \"message-div\">" +
-                                        "<p class = \"message padding-10\">" + message + "</p>" +
-                                    "</div>" +
-                                "</div>" +
+           var thread = $("#thread-div");
+           var previewText = "<div class=\"row reply-div\" id = \"thread-post-preview\">" +
+                                "<span class=\"maintext username\"> Claude </span>" +
+                                "<span class=\"maintext date\">" + date + ' ' + time + "</span>" +
+                                "<p class=\"reply-text\">" + message + "</p>" + 
                             "</div>";
            console.log("previewText is " + previewText);
-           $("#thread").append(previewText);
+           $(thread).append(previewText);
        }
     });
 });

@@ -17,9 +17,10 @@
 		$threadid  	 = $caseid;
 		$message 	 = $_POST['message'];
 		
+        
 		if($wpdb -> insert('threadpost', array(
 		   'threadId'  	  => $caseid,
-		   'postId'		  => $caseid,
+		   'postId'		  => 100,
            'userId'   	  => $userID,
 		   'message' 	  => $message
         )) == false)
@@ -56,7 +57,7 @@
         </div>
         
         
-        <div class="row thread-div">
+        <div class="row" id = "thread-div">
         <p class="maintext">[<?php echo strtoupper($caseprofile['status']) ?>] 
 				    <?php echo strtoupper($caseprofile['fName']) ?> 
 				    <?php echo strtoupper($caseprofile['lName']) ?>, 
@@ -93,21 +94,14 @@
     ?>
     <div class="row newreply-div">
         <form method = "POST" action = "">
-            <div class = "form-group">
-                <textarea type = "text" 
-				  class = "form-control padding-10 border-black" 
-				  id = "reply-field" rows = "5"
-				  placeholder = "Message" name = "message"></textarea>
-            </div>
-            <input  type="submit" class="btn btn-primary float-right background-black" id = "btn-reply" name = "reply" text = "Submit">
-            <button type="button" class="btn btn-primary float-right background-black" id = "btn-preview">Preview</button>
-            <button type="button" class="btn btn-primary float-right background-black" id = "btn-cancel">Cancel</button>
+            <textarea class="form-control" cols="40" id="message" name="message" placeholder="Reply..." rows="10" type = "text" ></textarea>
+            <button class="btn btn-default2" id="btn-preview">PREVIEW</button>
+            <button class="btn btn-default2" id="btn-cancel">CANCEL</button>
+            <input name = "reply" type = "submit" value = "REPLY">
         </form>
     </div>
 <?php
     }
 ?>
-
-<?php
-	get_footer();
-?>
+    </body>
+</html>

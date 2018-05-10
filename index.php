@@ -1,5 +1,6 @@
 
 <?php
+    setcookie("logged", "claude");
 	/* Template Name: 1 - Home
 	 */
 	get_header();
