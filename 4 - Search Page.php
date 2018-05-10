@@ -1,6 +1,10 @@
 <?php
 	/* Template Name: 4 - Search Page
 	 */
+$query = $_GET['query'] == null ? "" : $_GET['query'];
+    if($query == null){
+         wp_redirect( get_site_url().'/404-page/'); exit;
+    }
 	get_header();
 ?>
 
@@ -8,6 +12,7 @@
 	global $wpdb; 
 	global $type;
 	$query = $_GET['query'] == null ? "" : $_GET['query'];
+
 	$result = $wpdb->get_results("SELECT * FROM casedetails WHERE ".
 								 "status LIKE '%$query%' OR fName LIKE '%$query%' OR ".
 								 "lName LIKE '%$query%' ORDER BY status DESC, datePosted DESC",

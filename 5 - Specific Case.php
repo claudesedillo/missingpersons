@@ -99,7 +99,7 @@
     <div class="row newreply-div">
         <form method = "POST" action = "">
             <textarea class="form-control" cols="40" id="message" name="message" placeholder="Reply..." rows="10" type = "text" ></textarea>
-            <input name = "reply" type = "submit" value = "REPLY">
+            <input class="btn btn-default2" name = "reply" type = "submit" value = "REPLY">
         </form>
         <button class="btn btn-default2" id="btn-preview">PREVIEW</button>
         <button class="btn btn-default2" id="btn-cancel">CANCEL</button>
