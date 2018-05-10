@@ -1,5 +1,5 @@
 <?php
-    setcookie("logged", "claude");
+    //setcookie("logged", "claude");
 	/* Template Name: 7A - Guidelines
 	 */
 	get_header();

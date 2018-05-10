@@ -5,7 +5,7 @@ $("document").ready(function(){
            alert('you must agree to the terms and conditions');
         }
         else{
-           window.location = "wordpress.local/7b-sign-up";
+           window.location = "wordpress.local/7-sign-up";
         }
         
     });
@@ -15,7 +15,7 @@ $("document").ready(function(){
            alert('you must agree to the terms and conditions');
         }
         else{
-           window.location = "wordpress.local/7b-sign-up";
+           window.location = "wordpress.local/7-submit-report";
         }
     });
 });
