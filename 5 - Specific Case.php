@@ -16,15 +16,19 @@
 		
 		$threadid  	 = $caseid;
 		$message 	 = $_POST['message'];
-		
-        
+		$query = "SELECT MAX(postID) AS latest from threadpost WHERE threadID ='$threadid'";
+        $result = $wpdb->get_results($query);
+        $max = $result[0]->latest;
 		if($wpdb -> insert('threadpost', array(
 		   'threadId'  	  => $caseid,
-		   'postId'		  => 100,
+		   'postId'		  => $max + 1,
            'userId'   	  => $userID,
 		   'message' 	  => $message
-        )) == false)
+        )) == false){
+            echo $wpdb->last_query;
+            echo $wpdb->last_error;
 			wp_die('Database Insertion Failed');
+        }
 		else echo 'Database insertion successful<p/>';
 	}
 ?>
@@ -95,10 +99,10 @@
     <div class="row newreply-div">
         <form method = "POST" action = "">
             <textarea class="form-control" cols="40" id="message" name="message" placeholder="Reply..." rows="10" type = "text" ></textarea>
-            <button class="btn btn-default2" id="btn-preview">PREVIEW</button>
-            <button class="btn btn-default2" id="btn-cancel">CANCEL</button>
             <input name = "reply" type = "submit" value = "REPLY">
         </form>
+        <button class="btn btn-default2" id="btn-preview">PREVIEW</button>
+        <button class="btn btn-default2" id="btn-cancel">CANCEL</button>
     </div>
 <?php
     }

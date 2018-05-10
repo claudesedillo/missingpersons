@@ -12,8 +12,19 @@ $("document").ready(function(){
     
     $("#btn-preview").click(function(){
        console.log("preview clicked!");
-        
-       if (!($.trim( $("#reply-field").val() ) == '' ) && !$('#thread-post-preview').length){
+       if(!$('#thread-post-preview').length){
+           console.log('preview doesnt exist');
+       }
+       else{
+           console.log('preview exists');
+       }
+       if(!($.trim( $("#reply-field").val() ) == '' )){
+           console.log('no white spaces');
+       }
+                       else{
+                       console.log('white spaces!');
+                       }
+       if (!($.trim( $("#message").val() ) == '' ) && !$('#thread-post-preview').length){
            
           var d = new Date();
 
@@ -27,7 +38,7 @@ $("document").ready(function(){
                 (day<10 ? '0' : '') + day + '-' +
                 (d.getFullYear() % 2000);;
            
-           var message = $('textarea#reply-field').val();
+           var message = $('textarea#message').val();
            console.log("reply field value is " + message);
            var thread = $("#thread-div");
            var previewText = "<div class=\"row reply-div\" id = \"thread-post-preview\">" +
