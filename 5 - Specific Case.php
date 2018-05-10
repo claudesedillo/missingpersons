@@ -16,12 +16,12 @@
 		
 		$threadid  	 = $caseid;
 		$message 	 = $_POST['message'];
-		$query = "SELECT MAX(postID) AS latest from threadpost WHERE threadID ='$threadid'";
+		$query = "SELECT MAX(threadId) AS latest from threadpost WHERE threadID ='$threadid'";
         $result = $wpdb->get_results($query);
         $max = $result[0]->latest;
 		if($wpdb -> insert('threadpost', array(
-		   'threadId'  	  => $caseid,
-		   'postId'		  => $max + 1,
+		   'threadId'  	  => $max + 1,
+		   'postId'		  => $caseid,
            'userId'   	  => $userID,
 		   'message' 	  => $message
         )) == false){
@@ -29,7 +29,7 @@
             echo $wpdb->last_error;
 			wp_die('Database Insertion Failed');
         }
-		else echo 'Database insertion successful<p/>';
+		else echo "<meta http-equiv='refresh' content='0'>";
 	}
 ?>
     <div class="container-fluid feed">
