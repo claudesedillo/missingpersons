@@ -26,7 +26,7 @@ $query = $_GET['query'] == null ? "" : $_GET['query'];
 <?php
 	foreach($result as $row){
 		$id = $row['userID'];
-        $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
+        $src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$row['id']}";
 		$postId = $row['id'];
 		$result2 = $wpdb->get_results("SELECT username FROM users WHERE userID = '$id'");
 		$result3 = $wpdb->get_results("SELECT COUNT(*) AS n FROM threadpost WHERE postId = $postId");

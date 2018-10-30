@@ -21,7 +21,7 @@
 				<h4 class="h4-color"><?php echo strtoupper($type)?> CASES</h4><br>
 <?php
 	foreach($result as $row){
-        $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
+        $src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$row['id']}";
 ?>      
 				<div class="col-sm-3 offset-sm-1 pic-div">
                     <a href = "<?php echo $src ?>">
@@ -34,7 +34,7 @@
 			</div>
 <?php  }
 ?>
-				<button class="btn btn-default" id="btn-viewallBP"><a href = "http://wordpress.local/5-specific-case?type={unsolved}">VIEW ALL</a></button>
+				<button class="btn btn-default" id="btn-viewallBP"><a href = "http://wordpress.local/wordpress/5-specific-case?type={unsolved}">VIEW ALL</a></button>
 			</div>
 <?php }
 ?>
@@ -48,7 +48,7 @@
 								  ORDER BY lastseen DESC, datePosted DESC 
 								  LIMIT 4", ARRAY_A);
 	foreach($result as $row){
-        $src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
+        $src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$row['id']}";
 ?>   
 			<div class="row forumcase-div">
                     <a id="title" class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($row['status']) ?>] 
