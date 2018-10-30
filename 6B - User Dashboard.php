@@ -34,7 +34,7 @@
 				
 				foreach ( $result as $mycase )   {
                     $caseID = $mycase['id'];
-					$src = "http://wordpress.local/5-specific-case?caseNumber={$caseID}";
+					$src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$caseID}";
                     		
                     $replies = $wpdb->get_results("SELECT COUNT(*) AS n FROM threadpost WHERE postId = $caseID");
 			?>
@@ -64,11 +64,11 @@
 							$casedetails = $wpdb->get_results ( "SELECT * FROM casedetails 
 																 WHERE id=".$pinnedcase."");
                             $caseID = $casedetails[0]->id;
-					        $src = "http://wordpress.local/5-specific-case?caseNumber={$caseID}";
+					        $src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$caseID}";
                     		
                             $replies = $wpdb->get_results("SELECT COUNT(*) AS n FROM threadpost WHERE postId = $caseID");
                     
-							$src = "http://wordpress.local/5-specific-case?caseNumber={$caseID}";
+							$src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$caseID}";
 						?>
                     <a class="maintext" href="<?php echo $src ?>">[<?php echo strtoupper($casedetails[0]->status) ?>] 
 								<?php echo strtoupper($casedetails[0]->lName) ?>, 
