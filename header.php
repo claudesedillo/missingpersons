@@ -32,7 +32,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span> 
 					</button>
-					<a class="navbar-brand" href="http://wordpress.local/wordpress/">LOGO</a>
+					<a class="navbar-brand" href="http://wordpress.local/">LOGO</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="nav-opts">
@@ -40,15 +40,15 @@
 						<li class="dropdown"><a class="dropdown-toggler" 
 							data-toggle="dropdown">CASES <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="http://wordpress.local/wordpress/2-browse-cases-full?type={unsolved}">Unsolved Cases</a></li>
-								<li><a href="http://wordpress.local/wordpress/2-browse-cases-full?type={solved}">Solved Cases</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full?type={unsolved}">Unsolved Cases</a></li>
+								<li><a href="http://wordpress.local/2-browse-cases-full?type={solved}">Solved Cases</a></li>
 							</ul>
 						</li>
-						<li><a href="http://wordpress.local/wordpress/7a-guidelines/">SUBMIT A REPORT</a></li>
+						<li><a href="http://wordpress.local/7a-guidelines/">SUBMIT A REPORT</a></li>
 						<li class="dropdown"><a class="dropdown-toggler" data-toggle="dropdown">ABOUT <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="http://wordpress.local/wordpress/9-faq/">FAQs</a></li>
-								<li><a href="http://wordpress.local/wordpress/8-about/">Contact Us</a></li>
+								<li><a href="http://wordpress.local/9-faq/">FAQs</a></li>
+								<li><a href="http://wordpress.local/8-about/">Contact Us</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -56,7 +56,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li id="search-div">
 							<div class="form-group">
-								<form action="http://wordpress.local/wordpress/4-search-page" method="GET">
+								<form action="http://wordpress.local/4-search-page" method="GET">
 									<input type="text" name="query" id="search-bar"/>
 								</form>
 							</div>
@@ -80,7 +80,7 @@
                             else{
                         ?>
                             <li id = "account-div">
-                                <a href = "http://wordpress.local/wordpress/6-user-dashboard/"> Your Account</a>
+                                <a href = "http://wordpress.local/6-user-dashboard/"> Your Account</a>
                             </li>
                         <?php 
                             }

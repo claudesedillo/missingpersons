@@ -96,7 +96,7 @@
 
                 if($result->numRows == 0){
                     //error
-                    header("location: http://wordpress.local/wordpress/login");
+                    header("location: http://wordpress.local/login");
                 }
                 else{
                     $user = $result[0];
@@ -104,7 +104,7 @@
                     $_SESSION['username'] = $user['username'];
                     $_SESSION['userid'] = $user['userID'];
 
-                    header("location: http://wordpress.local/wordpress/6-user-dashboard");   
+                    header("location: http://wordpress.local/6-user-dashboard");   
                 }
         }
         if(true){
@@ -119,7 +119,7 @@
 					$currentIndex = $_GET['currentIndex'];
 					
 					foreach($result as $row){
-						$src = "http://wordpress.local/wordpress/5-specific-case?caseNumber={$row['id']}";
+						$src = "http://wordpress.local/5-specific-case?caseNumber={$row['id']}";
 						$currentIndex += 1;
 						$htmlSnippet .= 
 										'<div class="col-sm-3 offset-sm-1 pic-div">

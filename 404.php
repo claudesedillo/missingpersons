@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     //setcookie("logged", "claude");
 	/* Template Name: 404
 	 */
@@ -31,7 +31,7 @@
         <div class="error-code m-b-10 m-t-20 h4-color">404 <i class="fa fa-warning"></i></div>
 
         <div>
-            <img id = "oops_img" src="wp-content/themes/missingPersons/images/oopse.jpg">
+            <img id = "oops_img" src="../wp-content/themes/missingPersons/images/oopse.jpg">
         </div>
 
 
