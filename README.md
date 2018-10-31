@@ -9,8 +9,10 @@
 ### Instructions for setting up WordPress website
 1. Download XAMPP
 2. Download Bitnami WordPress module
-3. Transfer this directory to the themes folder of the xampp wordpress (e.g. "C:\xampp\apps\wordpress\htdocs\wp-content\themes")
-4. Import WordPress' pages/posts XML file through the site's wp-admin -> tools (e.g. "http://wordpress.local/wordpress/wp-admin/import.php")
+3. Transfer this directory to the themes folder of the xampp wordpress 
+(e.g. "C:\xampp\apps\wordpress\htdocs\wp-content\themes")
+4. Import WordPress' pages/posts XML file through the site's wp-admin -> tools 
+(e.g. "http://wordpress.local/wordpress/wp-admin/import.php")
 
 NOTE:
 - You might need to restart XAMPP
